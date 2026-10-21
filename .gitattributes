@@ -1,0 +1,23 @@
+# ---- Text normalisation -------------------------------------------------
+* text=auto
+*.md   text eol=lf
+*.py   text eol=lf
+*.sh   text eol=lf
+*.csv  text eol=lf
+# Windows scripts must keep CRLF or cmd.exe / PowerShell 5.1 misbehave
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.ps1  text eol=crlf
+
+# ---- Large media: always stored with Git LFS ----------------------------
+# (see docs/storage-policy.md — thumbnails/posters stay in plain git)
+*.mp4  filter=lfs diff=lfs merge=lfs -text
+*.mov  filter=lfs diff=lfs merge=lfs -text
+*.mkv  filter=lfs diff=lfs merge=lfs -text
+*.webm filter=lfs diff=lfs merge=lfs -text
+*.avi  filter=lfs diff=lfs merge=lfs -text
+*.m4a  filter=lfs diff=lfs merge=lfs -text
+*.wav  filter=lfs diff=lfs merge=lfs -text
+*.mp3  filter=lfs diff=lfs merge=lfs -text
+*.flac filter=lfs diff=lfs merge=lfs -text
+*.gif  filter=lfs diff=lfs merge=lfs -text

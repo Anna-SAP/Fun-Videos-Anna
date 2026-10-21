@@ -1,0 +1,25 @@
+# ---- Third-party raw footage never enters the repo ----------------------
+# Record the source (link + size) in the project README instead.
+raw/
+sources/
+**/raw/
+jre_parts/
+
+# ---- Intermediate render / analysis artefacts ----------------------------
+build/
+tmp/
+work/
+*.raw
+*.part
+*.bin
+*.mov.tmp
+*.wav.tmp
+
+# ---- OS / editor noise ---------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+__pycache__/
+*.pyc
