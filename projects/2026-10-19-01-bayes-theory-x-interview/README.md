@@ -6,7 +6,7 @@
 | 类型 | 解说 + 证据插入剪辑（竖屏） |
 | 工具 | **骨架：** Gemini Notebook 生成的《非常贝叶斯》（画面水印 + 片尾卡，元数据 `encoder=Google`）<br>**剪辑：** Claude（对话里完成，在电脑上的沙盒里跑 Python / Pillow / ffmpeg） |
 | 输入 | 骨架：[`materials/very-bayesian_theory.mp4`](materials/very-bayesian_theory.mp4)（入库）<br>证据：`clip_贝叶斯.mp4`，YouTube 录屏，访谈《Zuckerberg's $100 Billion Bet》片段，104.7 MB，**不入库** |
-| 产出 | 1 条成片 + [剪辑脚本](edit-script.md)；另有 1 条 64 秒的[对照版](variants/alt-64s/)（制作工具待确认） |
+| 产出 | 1 条成片 + [剪辑脚本](edit-script.md)；另有 1 条 64 秒的[对照版](variants/alt-64s/)（Anna 决定保留；制作工具未记录） |
 | 对话 | claude.ai「贝叶斯理论短视频创作」，已加入本 Project |
 
 ## 成片

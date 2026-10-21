@@ -19,7 +19,7 @@ scripts/       这个作品用到的脚本（可选）
 | 作品 | 角色 | 文件 | 时长 | 规格 | 大小 | 工具 |
 |---|---|---|---|---|---|---|
 | [贝叶斯](2026-10-19-01-bayes-theory-x-interview/) | **成片** | `media/bayes_theory-x-interview.mp4` | 2:08.2 | 1080×1920 | 46.9 MB | Claude |
-| | 对照版 | `variants/alt-64s/bayes_theory-x-interview_alt-64s.mp4` | 1:04.6 | 1080×1920 | 5.6 MB | 待确认 |
+| | 对照版 | `variants/alt-64s/bayes_theory-x-interview_alt-64s.mp4` | 1:04.6 | 1080×1920 | 5.6 MB | 未记录 |
 | | 骨架素材 | `materials/very-bayesian_theory.mp4` | 1:06.7 | 720×1280 | 8.6 MB | Gemini Notebook |
 | [NEON](2026-10-21-01-neon-cartoon-vs-mv-split/) | **成片** | `media/neon_split_fit.mp4` | 0:23.1 | 1080×1920 | 12.0 MB | Claude |
 | | **成片** | `media/neon_split_crop.mp4` | 0:23.1 | 1080×1920 | 14.7 MB | Claude |
