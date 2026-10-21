@@ -19,9 +19,17 @@
 | <img src="thumbs/xxx_poster.jpg" width="120"> | [`media/xxx.mp4`](media/xxx.mp4)<br>原名： | m:ss | 1080×1920 · 30 fps | MB |
 
 <!-- 缩略图：tools/av/contact_sheet.sh media/xxx.mp4 thumbs/xxx 10 -->
-<!-- 视频：在 tools/video-manifest.csv 里加一行，然后在本机运行 tools/publish_videos_lfs.bat -->
+<!-- 视频：在 tools/video-manifest.csv 里加一行，然后在本机运行 publish_videos_lfs.bat -->
 
-## 输入素材（不入库的写在这里）
+## 素材
+
+<!-- 自有素材（比如 Gemini Notebook 生成的骨架视频）放 materials/，走 LFS；旁白文稿放 materials/transcripts/ -->
+
+| 预览 | 文件 | 来源工具 | 时长 | 规格 | 大小 |
+|---|---|---|---|---|---|
+| <img src="thumbs/xxx_poster.jpg" width="120"> | [`materials/xxx.mp4`](materials/xxx.mp4) |  |  |  |  |
+
+## 第三方素材（不入库，只登记）
 
 | 素材 | 来源 | 体积 | 为什么不入库 |
 |---|---|---|---|

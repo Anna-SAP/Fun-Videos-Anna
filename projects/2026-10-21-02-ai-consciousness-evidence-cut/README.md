@@ -1,12 +1,13 @@
-# 03 · 《AI有意识吗》访谈实证版：科普解析 + 实证实录
+# 2026-10-21 · 《AI有意识吗》访谈实证版：科普解析 + 实证实录
 
 | 项 | 内容 |
 |---|---|
 | 日期 | 2026-10-21 |
 | 类型 | 解说 + 证据插入剪辑（竖屏） |
 | 工具 | Claude（对话里完成）+ ffmpeg、sherpa-onnx（本地语音识别）、Pillow（图形） |
-| 输入 | 主视频：[项目 01 的拼接版](../2026-10-21-01-gemini-notebook-ai-consciousness/)（2:22）<br>证据源：*The Joe Rogan Experience* #2541 · Thomas Campbell（[YouTube v2oBLSDCZaY](https://www.youtube.com/watch?v=v2oBLSDCZaY)，2 小时 47 分钟，本地文件 1.16 GB，**不入库**） |
+| 输入 | 骨架：[`materials/ai-consciousness_main.mp4`](materials/)《AI有意识吗》（2:22），由 Gemini Notebook 生成的方案三、方案四经 Clipchamp 拼接而成（**入库**，见 [materials/](materials/)）<br>证据源：*The Joe Rogan Experience* #2541 · Thomas Campbell（[YouTube v2oBLSDCZaY](https://www.youtube.com/watch?v=v2oBLSDCZaY)，2 小时 47 分钟，本地文件 1.16 GB，**不入库**） |
 | 产出 | 1 条成片 + 剪辑清单 |
+| 同类作品 | [2026-10-19《非常贝叶斯》理论解析 × 访谈实录](../2026-10-19-01-bayes-theory-x-interview/)：同样是“Gemini Notebook 骨架 + 访谈证据”的结构 |
 | 对话 | claude.ai「AI意识科普视频制作」，在本 Project 内 |
 
 ## 成片
@@ -39,7 +40,8 @@
 访谈源 ─ 本机预处理 ─ 英文词级 ASR ─ 关键词检索 ┘
 ```
 
-1. **获取素材**（[大文件 playbook](../../playbooks/large-files-and-transfer-limits.md)）
+0. **骨架素材**：Gemini Notebook 生成方案三、方案四，Clipchamp 拼成《AI有意识吗》。详见 [materials/](materials/)。
+1. **获取访谈素材**（[大文件 playbook](../../playbooks/large-files-and-transfer-limits.md)）
    - 云端访问不了 YouTube，所以由 Anna 把整集下载到本地文件夹。
    - 1.16 GB 超过了单文件 400 MB 的传输上限。[`scripts/prep_jre_source.bat`](scripts/prep_jre_source.bat) 在本机做两件事：抽出一条 16 kHz、单声道、40 kbps 的音轨（约 50 MB），并用 `-c copy -f segment -segment_time 1500` 把视频**无损**切成 7 段，同时生成偏移表 `parts.csv`。
    - 之后只把需要的分段传到云端。
@@ -71,7 +73,7 @@
 | 文件 | 说明 | 状态 |
 |---|---|---|
 | [`scripts/prep_jre_source.bat`](scripts/prep_jre_source.bat) | 本机预处理：抽音轨 + 无损分段（没装 ffmpeg 时自动用 winget 安装） | 原样收录，已在 Anna 电脑上运行过 |
-| [`scripts/asr_zh.py`](scripts/asr_zh.py) | 中文旁白识别（SenseVoice + VAD） | 归档时重新跑过（项目 01 的旁白文稿就是用它生成的） |
+| [`scripts/asr_zh.py`](scripts/asr_zh.py) | 中文旁白识别（SenseVoice + VAD） | 归档时重新跑过（[materials](materials/transcripts/) 和贝叶斯理论片的旁白文稿都是用它生成的） |
 | [`scripts/asr_en.py`](scripts/asr_en.py) | 英文词级时间码识别（Parakeet-TDT + VAD，流式写 JSONL） | 原会话版本 |
 | [`../../tools/av/find_offset.py`](../../tools/av/find_offset.py) | 互相关对齐 / 定位（通用版） | 归档时重写并测试过 |
 

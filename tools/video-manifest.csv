@@ -1,7 +1,10 @@
 repo_path,local_file,bytes,sha256,note
-projects/2026-10-21-01-gemini-notebook-ai-consciousness/media/plan3_consciousness-and-vr.mp4,方案三意识与虚拟现实的本质.mp4,9128730,3da74a2b2872d1044c7dcf2c3591f49f0577654ffdf108898bd5159ca06c2414,Gemini Notebook 生成 · 方案三
-projects/2026-10-21-01-gemini-notebook-ai-consciousness/media/plan4_consciousness-and-vr.mp4,方案四意识与虚拟现实的本质.mp4,9901422,a7a5f08796d2940bf09a192483dfa38fa5dc04e32992c5b38d0080f154973002,Gemini Notebook 生成 · 方案四
-projects/2026-10-21-01-gemini-notebook-ai-consciousness/media/ai-consciousness_main.mp4,AI有意识吗.mp4,114247158,07cdf345bce08bf3dfa8e11c83dba0c7a02cd9e7216ae3b22de25cc039989ae0,Clipchamp 拼接版（方案三 + 方案四）
-projects/2026-10-21-02-neon-cartoon-vs-mv-split/media/neon_split_fit.mp4,NEON_卡通vs原版_9x16分屏_完整画面.mp4,12591501,7da17bff2478893a0e74487c644291ce4bc8c6f7573704654ba7a6e5064a8ca7,9:16 分屏 · 完整画面
-projects/2026-10-21-02-neon-cartoon-vs-mv-split/media/neon_split_crop.mp4,NEON_卡通vs原版_9x16分屏_铺满裁切.mp4,15376663,1d212df7c8e91f00960b21807e18a3954e9e6be596c02616ff533f7633af6e39,9:16 分屏 · 铺满裁切
-projects/2026-10-21-03-ai-consciousness-evidence-cut/media/ai-consciousness_evidence-cut.mp4,AI有意识吗_访谈实证版.mp4,61768149,c435991a4498bf4c74d137ab3be26517478775df78d2751ab2e2f7a5ba1d7e02,访谈实证版成片
+projects/2026-10-19-01-bayes-theory-x-interview/media/bayes_theory-x-interview.mp4,非常贝叶斯_理论解析x访谈实录.mp4,49181910,223e49d48fdbb1f1eff67a2485e5a562f9b4000b53b0fcd6f1756fc845c1b1ad,贝叶斯 · 成片
+projects/2026-10-19-01-bayes-theory-x-interview/variants/alt-64s/bayes_theory-x-interview_alt-64s.mp4,贝叶斯_理论解析与实证实录/非常贝叶斯_理论解析与实证实录.mp4,5913230,375f912aee0c2aba16638b2d62cc65a579c9757c3642cce9f8bf3ee872ad4d69,贝叶斯 · 64 秒对照版
+projects/2026-10-19-01-bayes-theory-x-interview/materials/very-bayesian_theory.mp4,非常贝叶斯.mp4,8998020,685da3b20ecb4cc7f23953265f882630edc45895ff0b42a7e1f11f52c249cfdf,贝叶斯 · 骨架素材（Gemini Notebook）
+projects/2026-10-21-01-neon-cartoon-vs-mv-split/media/neon_split_fit.mp4,NEON_卡通vs原版_9x16分屏_完整画面.mp4,12591501,7da17bff2478893a0e74487c644291ce4bc8c6f7573704654ba7a6e5064a8ca7,NEON · 成片 · 完整画面
+projects/2026-10-21-01-neon-cartoon-vs-mv-split/media/neon_split_crop.mp4,NEON_卡通vs原版_9x16分屏_铺满裁切.mp4,15376663,1d212df7c8e91f00960b21807e18a3954e9e6be596c02616ff533f7633af6e39,NEON · 成片 · 铺满裁切
+projects/2026-10-21-02-ai-consciousness-evidence-cut/media/ai-consciousness_evidence-cut.mp4,AI有意识吗_访谈实证版.mp4,61768149,c435991a4498bf4c74d137ab3be26517478775df78d2751ab2e2f7a5ba1d7e02,AI 意识 · 成片
+projects/2026-10-21-02-ai-consciousness-evidence-cut/materials/ai-consciousness_main.mp4,AI有意识吗.mp4,114247158,07cdf345bce08bf3dfa8e11c83dba0c7a02cd9e7216ae3b22de25cc039989ae0,AI 意识 · 骨架素材（Clipchamp 拼接）
+projects/2026-10-21-02-ai-consciousness-evidence-cut/materials/plan3_consciousness-and-vr.mp4,方案三意识与虚拟现实的本质.mp4,9128730,3da74a2b2872d1044c7dcf2c3591f49f0577654ffdf108898bd5159ca06c2414,AI 意识 · 骨架素材（Gemini Notebook 方案三）
+projects/2026-10-21-02-ai-consciousness-evidence-cut/materials/plan4_consciousness-and-vr.mp4,方案四意识与虚拟现实的本质.mp4,9901422,a7a5f08796d2940bf09a192483dfa38fa5dc04e32992c5b38d0080f154973002,AI 意识 · 骨架素材（Gemini Notebook 方案四）

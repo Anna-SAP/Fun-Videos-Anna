@@ -1,6 +1,6 @@
-# 01 · 生成提示词
+# 素材 · Gemini Notebook 生成提示词
 
-> **待补充**：这两条视频是在 Gemini Notebook 里生成的，不在 Claude 的对话记录里。补充时可以按下面的格式填。
+> **待补充**：方案三、方案四是在 Gemini Notebook 里生成的，用的资料和指令没有留在 Claude 的对话记录里。补充时可以按下面的格式填。
 
 ## 输入资料（Sources）
 

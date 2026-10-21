@@ -9,12 +9,15 @@
 #   1. makes sure Git and Git LFS are installed (installs them with winget if not)
 #   2. clones https://github.com/Anna-SAP/Fun-Videos-Anna (or updates an existing clone)
 #   3. reads tools/video-manifest.csv: repo_path, local_file, bytes, sha256, note
-#   4. for every row whose local_file exists in -SourceDir: verifies the SHA-256,
-#      copies it to repo_path and stages it (the repo's .gitattributes routes it to LFS)
+#   4. for every row, looks for local_file in each -SourceDir folder (first match wins),
+#      verifies the SHA-256, copies it to repo_path and stages it (the repo's
+#      .gitattributes routes it to LFS)
 #   5. refuses to commit if any staged video is not an LFS pointer, then commits and pushes
 #
 # Usage: double-click publish_videos_lfs.bat placed in the folder with the videos, or
-#   powershell -ExecutionPolicy Bypass -File publish_videos_lfs.ps1 [-SourceDir <folder>]
+#   powershell -ExecutionPolicy Bypass -File publish_videos_lfs.ps1 [-SourceDir "<folder>;<folder>"]
+# -SourceDir takes one or more folders separated by ';'. The repository clone is kept
+# in the first one. local_file may contain a sub-folder (written with '/').
 # Safe to run again: unchanged videos are skipped and nothing is committed twice.
 
 param(
@@ -23,6 +26,8 @@ param(
 )
 
 $ErrorActionPreference = 'Continue'
+$SourceDirs = @($SourceDir -split ';' | ForEach-Object { $_.Trim() } | Where-Object { $_ -and (Test-Path -LiteralPath $_) })
+if ($SourceDirs.Count -eq 0) { Write-Host ('ERROR: none of the source folders exist: ' + $SourceDir) -ForegroundColor Red; exit 1 }
 try { [Console]::OutputEncoding = [System.Text.Encoding]::UTF8 } catch {}
 
 function Fail([string]$msg) {
@@ -68,7 +73,7 @@ if ($runningInsideRepo) {
     $RepoDir = $parent                                   # script is running from <repo>\tools
     git -C $RepoDir pull --ff-only
 } else {
-    $RepoDir = Join-Path $SourceDir 'Fun-Videos-Anna'    # keep a clone next to the videos
+    $RepoDir = Join-Path $SourceDirs[0] 'Fun-Videos-Anna'    # keep a clone next to the videos
     if (Test-Path -LiteralPath (Join-Path $RepoDir '.git')) {
         git -C $RepoDir pull --ff-only
     } else {
@@ -88,15 +93,21 @@ if (-not $gname -or -not $gmail) {
 
 # ---------------------------------------------------------------- 3. copy + verify
 Write-Host ''
-Write-Host ('[3/5] Copying videos listed in tools\video-manifest.csv from ' + $SourceDir + ' ...')
+Write-Host '[3/5] Copying videos listed in tools\video-manifest.csv from:'
+foreach ($d in $SourceDirs) { Write-Host ('      ' + $d) }
 $manifest = Join-Path (Join-Path $RepoDir 'tools') 'video-manifest.csv'
 if (-not (Test-Path -LiteralPath $manifest)) { Fail 'tools\video-manifest.csv not found in the repository.' }
 $rows = Import-Csv -LiteralPath $manifest -Encoding UTF8
 
 $missing = @(); $mismatch = @(); $ready = 0
 foreach ($r in $rows) {
-    $src = Join-Path $SourceDir $r.local_file
-    if (-not (Test-Path -LiteralPath $src)) { $missing += $r.local_file; continue }
+    $rel = $r.local_file -replace '/', [IO.Path]::DirectorySeparatorChar
+    $src = $null
+    foreach ($d in $SourceDirs) {
+        $cand = Join-Path $d $rel
+        if (Test-Path -LiteralPath $cand) { $src = $cand; break }
+    }
+    if (-not $src) { $missing += $r.local_file; continue }
     $hash = (Get-FileHash -Algorithm SHA256 -LiteralPath $src).Hash.ToLower()
     if ($r.sha256 -and ($hash -ne $r.sha256.ToLower())) { $mismatch += $r.local_file; continue }
 
