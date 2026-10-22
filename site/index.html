@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fun Videos · Anna — 用 AI 做科普短视频</title>
-  <meta name="description" content="三支用 AI 做的竖屏科普短视频，以及它们的关键制作过程：Gemini Notebook 生成解说骨架，Claude 插入访谈原声作为证据、核对事实、合成成片。">
+  <meta name="description" content="四支用 AI 做的竖屏短视频，以及它们的关键制作过程：Gemini Notebook 生成解说骨架，Claude 插入访谈原声作为证据、核对事实、合成成片。">
   <meta name="theme-color" content="#FAF8F4">
   <meta property="og:title" content="Fun Videos · Anna">
-  <meta property="og:description" content="三支用 AI 做的竖屏科普短视频，以及它们是怎么做出来的。">
+  <meta property="og:description" content="四支用 AI 做的竖屏短视频，以及它们是怎么做出来的。">
   <meta property="og:image" content="assets/posters/bayes.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23D9572A'/%3E%3Cpath d='M12.5 9.5v13l10-6.5z' fill='%23fff'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/style.css">
@@ -37,7 +37,7 @@
     <section class="hero" id="works" aria-labelledby="works-title">
       <div class="hero__intro">
         <p class="eyebrow">AI 科普短视频 · 学习记录</p>
-        <h1 id="works-title">三支竖屏短片，<br>和它们的制作过程。</h1>
+        <h1 id="works-title">四支竖屏短片，<br>和它们的制作过程。</h1>
         <p class="hero__lede">解说骨架由 Gemini Notebook 生成；Claude 找来访谈原声作为证据、核对事实，再合成为成片。</p>
         <a class="hero__more" href="#process">看看是怎么做的<span aria-hidden="true"> ↓</span></a>
       </div>
@@ -107,6 +107,23 @@
             <p class="work__idx">03 · 2026-10-21</p>
             <h2 class="work__title">AI 有意识吗</h2>
             <p class="work__sub">科普解析 × 访谈实证</p>
+          </div>
+        </article>
+
+        <article class="work" style="--i:3">
+          <div class="player" id="hero-neon3" data-player>
+            <video preload="none" playsinline poster="assets/posters/neon-x3.jpg"
+                   src="projects/2026-10-22-01-neon-three-universes/media/neon_three-universes.mp4"
+                   aria-label="NEON ×3：AI 卡通版 × 官方 MV × 舞台版"></video>
+            <button class="player__cover" type="button" aria-label="播放 NEON ×3">
+              <span class="player__btn" aria-hidden="true"></span>
+              <span class="player__time" data-time>0:25</span>
+            </button>
+          </div>
+          <div class="work__meta">
+            <p class="work__idx">04 · 2026-10-22</p>
+            <h2 class="work__title">NEON ×3</h2>
+            <p class="work__sub">卡通 × MV × 舞台 · 卡拍混剪</p>
           </div>
         </article>
       </div>
@@ -417,6 +434,91 @@
             </p>
           </div>
         </article>
+
+        <!-- 04 NEON ×3 -->
+        <article class="case" id="case-neon3" aria-labelledby="case-neon3-title">
+          <div class="case__media">
+            <div class="viewer">
+              <div class="seg seg--block" role="group" aria-label="切换上一版与这一版">
+                <button type="button" class="seg__btn" aria-pressed="true" data-for="case-neon3-player"
+                        data-src="projects/2026-10-21-01-neon-cartoon-vs-mv-split/media/neon_split_fit.mp4"
+                        data-poster="assets/posters/neon-fit.jpg" data-time="0:23"
+                        data-caption="上一版：卡通版和官方 MV 上下分屏，全程同一个版式">上一版 · 分屏</button>
+                <button type="button" class="seg__btn" aria-pressed="false" data-for="case-neon3-player"
+                        data-src="projects/2026-10-22-01-neon-three-universes/media/neon_three-universes.mp4"
+                        data-poster="assets/posters/neon-x3.jpg" data-time="0:25"
+                        data-caption="这一版：加入舞台版，三个版本卡着节拍在三分屏和全屏之间切换">NEON ×3</button>
+              </div>
+              <div class="player player--case" id="case-neon3-player" data-player>
+                <video preload="none" playsinline poster="assets/posters/neon-fit.jpg"
+                       src="projects/2026-10-21-01-neon-cartoon-vs-mv-split/media/neon_split_fit.mp4"
+                       aria-label="NEON 分屏与 NEON ×3"></video>
+                <button class="player__cover" type="button" aria-label="播放">
+                  <span class="player__btn" aria-hidden="true"></span>
+                  <span class="player__time" data-time>0:23</span>
+                </button>
+              </div>
+              <p class="viewer__cap" data-viewer-cap>上一版：卡通版和官方 MV 上下分屏，全程同一个版式</p>
+            </div>
+          </div>
+
+          <div class="case__body">
+            <p class="case__kicker"><span>04</span>2026-10-22 · 剪辑 Claude · ffmpeg + Pillow / numpy</p>
+            <h3 class="case__title" id="case-neon3-title">NEON ×3：卡通版 × 官方 MV × 舞台版</h3>
+            <p class="case__lead">新来的舞台版和 MV 开头是同一段音乐。三个版本对齐到同一个时钟之后，任何时刻切到哪一版都是同步的，所以整支片子按歌的段落来编排：前奏认识三个版本，drop 之后卡着节拍轮流切换，间奏上三版并排定格。</p>
+
+            <dl class="facts">
+              <div><dt>三个版本共用一个时钟</dt><dd>3<small>路</small></dd></div>
+              <div><dt>切点按拍点网格编排</dt><dd>130<small>BPM</small></dd></div>
+              <div><dt>成片对原音轨的偏差</dt><dd>5<small>ms</small></dd></div>
+            </dl>
+
+            <ol class="steps">
+              <li><h4>先确认是同一段音乐</h4><p>舞台版对 MV 做滑窗互相关：它就是 MV 开头的 0:00–0:22，早 1.06 秒开始。再和卡通版的偏移做闭环校验，三个数首尾相接。</p></li>
+              <li><h4>求拍点网格</h4><p>频谱通量找起音，最小二乘拟合出 129.98 BPM。drop 在 7.58 秒，间奏在 22.35 秒；每个切点都写成「第几小节第几拍」。</p></li>
+              <li><h4>动态版式</h4><p>三分屏和全屏之间对面板位置和取景参数做缓动插值；全屏之间用霓虹光线扫过，卡通版和 MV 构图相同的地方，用扫描线把卡通“变成”真人。</p></li>
+              <li><h4>跟拍同一个人</h4><p>竖屏只容得下一个人：按头发的暗像素分出左右两人，三个版本都跟拍同一位成员，切换时视线不用跳。</p></li>
+            </ol>
+
+            <aside class="note">
+              <p class="note__tag">注意</p>
+              <p>MV 原声本身就很响（−10.6 LUFS，解码后峰值 +2 dBFS），第一版成片真峰值到了 +2.2 dBTP。降 3.5 dB、加限幅，AAC 改用 256 kbps 后是 −14.1 LUFS、−0.6 dBTP。要量编码后的文件，编码器会让峰值反弹。</p>
+            </aside>
+
+            <div class="retro">
+              <div>
+                <h4 class="retro__h retro__h--good">做得好</h4>
+                <ul>
+                  <li>结构跟着歌走，切点都落在小节的重拍上。</li>
+                  <li>MV 画面出现「Stage 1」字样时，切进真正的舞台版。</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="retro__h retro__h--next">下次改进</h4>
+                <ul>
+                  <li>第一版预览里双人镜头居中裁切只拍到白墙。全屏段要逐帧检查取景。</li>
+                  <li>出一个不带文字的纯净版；把版式引擎抽成通用工具。</li>
+                </ul>
+              </div>
+            </div>
+
+            <figure class="sheet">
+              <button type="button" class="sheet__btn" data-lightbox
+                      data-src="projects/2026-10-22-01-neon-three-universes/thumbs/neon_three-universes_sheet.jpg"
+                      aria-label="放大成片逐帧预览">
+                <img src="projects/2026-10-22-01-neon-three-universes/thumbs/neon_three-universes_sheet.jpg"
+                     alt="NEON ×3 逐帧预览：三分屏和全屏交替，三个版本轮流出现" width="1232" height="724" loading="lazy">
+              </button>
+              <figcaption>成片逐帧预览：三分屏和全屏交替出现</figcaption>
+            </figure>
+
+            <p class="links">
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/tree/main/projects/2026-10-22-01-neon-three-universes" target="_blank" rel="noopener">完整作品卡</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-10-22-01-neon-three-universes/prompt.md" target="_blank" rel="noopener">提示词</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-10-22-01-neon-three-universes/scripts/render_neon_three_universes.py" target="_blank" rel="noopener">渲染脚本</a>
+            </p>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -432,11 +534,11 @@
           <li><a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/playbooks/evidence-insert-editing.md" target="_blank" rel="noopener">
             <h3>证据插入式剪辑</h3><p>往解说视频里插原声：切点、音频门控、转场、响度、版式和事实核对。</p><span>贝叶斯 · AI 意识</span></a></li>
           <li><a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/playbooks/audio-sync-cross-correlation.md" target="_blank" rel="noopener">
-            <h3>音频互相关对齐</h3><p>两段视频对齐到 1 帧以内；判断一段素材是从哪里剪出来的。</p><span>NEON · AI 意识</span></a></li>
+            <h3>音频互相关对齐</h3><p>多段视频对齐到 1 帧以内；判断一段素材是从哪里剪出来的；求拍点网格卡拍剪辑。</p><span>NEON · AI 意识 · NEON ×3</span></a></li>
           <li><a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/playbooks/local-asr-timestamps.md" target="_blank" rel="noopener">
             <h3>本地语音识别与时间码</h3><p>不依赖平台字幕拿到时间码；没有语音识别时，从硬字幕读时间轴。</p><span>AI 意识 · 贝叶斯</span></a></li>
           <li><a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/playbooks/vertical-9x16-composition.md" target="_blank" rel="noopener">
-            <h3>竖屏 9:16 构图</h3><p>横屏素材放进竖屏：模糊填充、铺满裁切、相框嵌入。</p><span>NEON · 贝叶斯 · AI 意识</span></a></li>
+            <h3>竖屏 9:16 构图</h3><p>横屏素材放进竖屏：模糊填充、铺满裁切、相框嵌入，以及三分屏 ↔ 全屏的动态版式。</p><span>NEON · 贝叶斯 · AI 意识 · NEON ×3</span></a></li>
           <li><a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/playbooks/large-files-and-transfer-limits.md" target="_blank" rel="noopener">
             <h3>大文件与传输限制</h3><p>源片传不上去、成片写不回来、GitHub 单文件 100 MB 限制。</p><span>AI 意识 · 贝叶斯</span></a></li>
           <li><a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/playbooks/prompt-patterns.md" target="_blank" rel="noopener">

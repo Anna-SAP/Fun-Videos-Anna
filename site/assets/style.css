@@ -140,7 +140,7 @@ code {
   padding: clamp(20px, 4vh, 44px) var(--gutter) clamp(48px, 8vh, 88px);
   display: grid;
   grid-template-columns: minmax(230px, 290px) 1fr;
-  gap: clamp(28px, 4vw, 64px);
+  gap: clamp(28px, 3.6vw, 56px);
   align-items: center;
 }
 
@@ -160,8 +160,8 @@ code {
 
 .reel {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(16px, 2.2vw, 36px);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(14px, 1.8vw, 28px);
   align-items: start;
 }
 
@@ -469,6 +469,7 @@ code {
 }
 
 @media (max-width: 900px) {
+  .reel { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 36px; }
   .case { grid-template-columns: 1fr; }
   .viewer { align-items: center; }
   .viewer__cap { text-align: center; }
