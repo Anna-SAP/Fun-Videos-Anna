@@ -1,0 +1,66 @@
+# Build site/ and publish it to GitHub Pages.
+# Pages cannot serve Git LFS files from the repo directly, so this pulls only the videos
+# index.html references (see site/build.mjs) and ships them inside the Pages artifact.
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - "projects/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: List the videos the site uses
+        id: videos
+        run: |
+          include="$(node site/build.mjs --list-lfs)"
+          echo "include=$include" >> "$GITHUB_OUTPUT"
+          git lfs ls-files --long --include="$include" | cut -d' ' -f1 | sort > "$RUNNER_TEMP/lfs-ids"
+          cat "$RUNNER_TEMP/lfs-ids"
+
+      # LFS bandwidth is metered; reuse downloaded objects until a video actually changes.
+      - name: Restore LFS cache
+        uses: actions/cache@v4
+        with:
+          path: .git/lfs/objects
+          key: site-lfs-${{ hashFiles(format('{0}/lfs-ids', runner.temp)) }}
+          restore-keys: site-lfs-
+
+      - name: Pull videos from Git LFS
+        run: git lfs pull --include="${{ steps.videos.outputs.include }}"
+
+      - name: Build
+        run: node site/build.mjs
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

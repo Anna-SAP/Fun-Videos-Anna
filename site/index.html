@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fun Videos · Anna — 用 AI 做科普短视频</title>
+  <meta name="description" content="三支用 AI 做的竖屏科普短视频，以及它们的关键制作过程：Gemini Notebook 生成解说骨架，Claude 插入访谈原声作为证据、核对事实、合成成片。">
+  <meta name="theme-color" content="#FAF8F4">
+  <meta property="og:title" content="Fun Videos · Anna">
+  <meta property="og:description" content="三支用 AI 做的竖屏科普短视频，以及它们是怎么做出来的。">
+  <meta property="og:image" content="assets/posters/bayes.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23D9572A'/%3E%3Cpath d='M12.5 9.5v13l10-6.5z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip" href="#works">跳到作品</a>
+
+  <header class="topbar" data-topbar>
+    <div class="topbar__inner">
+      <a class="brand" href="#top" aria-label="Fun Videos · Anna，回到顶部">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__name">Fun Videos</span>
+        <span class="brand__by">· Anna</span>
+      </a>
+      <nav class="nav" aria-label="页面导航">
+        <a href="#works" data-nav>作品</a>
+        <a href="#process" data-nav>制作历程</a>
+        <a href="#methods" data-nav class="nav__opt">方法</a>
+        <a class="nav__gh" href="https://github.com/Anna-SAP/Fun-Videos-Anna" target="_blank" rel="noopener">GitHub<span aria-hidden="true"> ↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ 作品 ============ -->
+    <section class="hero" id="works" aria-labelledby="works-title">
+      <div class="hero__intro">
+        <p class="eyebrow">AI 科普短视频 · 学习记录</p>
+        <h1 id="works-title">三支竖屏短片，<br>和它们的制作过程。</h1>
+        <p class="hero__lede">解说骨架由 Gemini Notebook 生成；Claude 找来访谈原声作为证据、核对事实，再合成为成片。</p>
+        <a class="hero__more" href="#process">看看是怎么做的<span aria-hidden="true"> ↓</span></a>
+      </div>
+
+      <div class="reel">
+        <article class="work" style="--i:0">
+          <div class="player" id="hero-bayes" data-player>
+            <video preload="none" playsinline poster="assets/posters/bayes.jpg"
+                   src="projects/2026-10-19-01-bayes-theory-x-interview/media/bayes_theory-x-interview.mp4"
+                   aria-label="《非常贝叶斯》理论解析 × 访谈实录"></video>
+            <button class="player__cover" type="button" aria-label="播放《非常贝叶斯》">
+              <span class="player__btn" aria-hidden="true"></span>
+              <span class="player__time" data-time>2:08</span>
+            </button>
+          </div>
+          <div class="work__meta">
+            <p class="work__idx">01 · 2026-10-19</p>
+            <h2 class="work__title">非常贝叶斯</h2>
+            <p class="work__sub">理论解析 × 访谈实录</p>
+            <div class="seg" role="group" aria-label="选择版本">
+              <button type="button" class="seg__btn" aria-pressed="true" data-for="hero-bayes"
+                      data-src="projects/2026-10-19-01-bayes-theory-x-interview/media/bayes_theory-x-interview.mp4"
+                      data-poster="assets/posters/bayes.jpg" data-time="2:08">成片 2:08</button>
+              <button type="button" class="seg__btn" aria-pressed="false" data-for="hero-bayes"
+                      data-src="projects/2026-10-19-01-bayes-theory-x-interview/variants/alt-64s/bayes_theory-x-interview_alt-64s.mp4"
+                      data-poster="assets/posters/bayes-alt.jpg" data-time="1:04">对照版 1:04</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="work" style="--i:1">
+          <div class="player" id="hero-neon" data-player>
+            <video preload="none" playsinline poster="assets/posters/neon-fit.jpg"
+                   src="projects/2026-10-21-01-neon-cartoon-vs-mv-split/media/neon_split_fit.mp4"
+                   aria-label="NEON：AI 卡通版 vs 官方 MV 分屏"></video>
+            <button class="player__cover" type="button" aria-label="播放 NEON 分屏对比">
+              <span class="player__btn" aria-hidden="true"></span>
+              <span class="player__time" data-time>0:23</span>
+            </button>
+          </div>
+          <div class="work__meta">
+            <p class="work__idx">02 · 2026-10-21</p>
+            <h2 class="work__title">NEON</h2>
+            <p class="work__sub">AI 卡通版 vs 官方 MV · 上下分屏</p>
+            <div class="seg" role="group" aria-label="选择画面适配">
+              <button type="button" class="seg__btn" aria-pressed="true" data-for="hero-neon"
+                      data-src="projects/2026-10-21-01-neon-cartoon-vs-mv-split/media/neon_split_fit.mp4"
+                      data-poster="assets/posters/neon-fit.jpg" data-time="0:23">完整画面</button>
+              <button type="button" class="seg__btn" aria-pressed="false" data-for="hero-neon"
+                      data-src="projects/2026-10-21-01-neon-cartoon-vs-mv-split/media/neon_split_crop.mp4"
+                      data-poster="assets/posters/neon-crop.jpg" data-time="0:23">铺满裁切</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="work" style="--i:2">
+          <div class="player" id="hero-ai" data-player>
+            <video preload="none" playsinline poster="assets/posters/ai.jpg"
+                   src="projects/2026-10-21-02-ai-consciousness-evidence-cut/media/ai-consciousness_evidence-cut.mp4"
+                   aria-label="《AI 有意识吗》访谈实证版"></video>
+            <button class="player__cover" type="button" aria-label="播放《AI 有意识吗》">
+              <span class="player__btn" aria-hidden="true"></span>
+              <span class="player__time" data-time>5:41</span>
+            </button>
+          </div>
+          <div class="work__meta">
+            <p class="work__idx">03 · 2026-10-21</p>
+            <h2 class="work__title">AI 有意识吗</h2>
+            <p class="work__sub">科普解析 × 访谈实证</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 工作模式 ============ -->
+    <section class="flow" aria-labelledby="flow-title">
+      <div class="wrap">
+        <div class="flow__head">
+          <p class="eyebrow">工作模式</p>
+          <h2 id="flow-title" class="flow__title">贝叶斯和 AI 意识两支，用的是同一套流程</h2>
+        </div>
+        <ol class="flow__steps">
+          <li>
+            <span class="flow__n">1</span>
+            <h3>生成骨架</h3>
+            <p class="flow__tool">Gemini Notebook</p>
+            <p>把资料生成带旁白的科普短片：纸张底、手绘插画、硬字幕。</p>
+          </li>
+          <li>
+            <span class="flow__n">2</span>
+            <h3>插入证据</h3>
+            <p class="flow__tool">Claude</p>
+            <p>每讲完一个论点，切进访谈里对应的原话；用语音识别和音频对齐找准切点。</p>
+          </li>
+          <li>
+            <span class="flow__n">3</span>
+            <h3>核对事实</h3>
+            <p class="flow__tool">Claude</p>
+            <p>回到一手来源核对 AI 写的骨架，说法不准的地方加注更正。</p>
+          </li>
+          <li>
+            <span class="flow__n">4</span>
+            <h3>合成成片</h3>
+            <p class="flow__tool">Pillow · ffmpeg</p>
+            <p>复刻骨架的画面风格画图层，分段渲染、拼接，统一响度。</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 制作历程 ============ -->
+    <section class="process" id="process" aria-labelledby="process-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">制作历程</p>
+          <h2 id="process-title">每支视频背后的关键步骤</h2>
+          <p>左边可以切换素材和成片对照着看。完整的步骤、脚本和提示词都在 GitHub 仓库里。</p>
+        </header>
+
+        <!-- 01 贝叶斯 -->
+        <article class="case" id="case-bayes" aria-labelledby="case-bayes-title">
+          <div class="case__media">
+            <div class="viewer">
+              <div class="seg seg--block" role="group" aria-label="切换素材与成片">
+                <button type="button" class="seg__btn" aria-pressed="true" data-for="case-bayes-player"
+                        data-src="projects/2026-10-19-01-bayes-theory-x-interview/materials/very-bayesian_theory.mp4"
+                        data-poster="assets/posters/bayes-skeleton.jpg" data-time="1:07"
+                        data-caption="改造前：Gemini Notebook 生成的骨架，720×1280">骨架 1:07</button>
+                <button type="button" class="seg__btn" aria-pressed="false" data-for="case-bayes-player"
+                        data-src="projects/2026-10-19-01-bayes-theory-x-interview/media/bayes_theory-x-interview.mp4"
+                        data-poster="assets/posters/bayes.jpg" data-time="2:08"
+                        data-caption="改造后：插入 6 段访谈原话的成片，1080×1920">成片 2:08</button>
+              </div>
+              <div class="player player--case" id="case-bayes-player" data-player>
+                <video preload="none" playsinline poster="assets/posters/bayes-skeleton.jpg"
+                       src="projects/2026-10-19-01-bayes-theory-x-interview/materials/very-bayesian_theory.mp4"
+                       aria-label="《非常贝叶斯》素材与成片"></video>
+                <button class="player__cover" type="button" aria-label="播放">
+                  <span class="player__btn" aria-hidden="true"></span>
+                  <span class="player__time" data-time>1:07</span>
+                </button>
+              </div>
+              <p class="viewer__cap" data-viewer-cap>改造前：Gemini Notebook 生成的骨架，720×1280</p>
+            </div>
+          </div>
+
+          <div class="case__body">
+            <p class="case__kicker"><span>01</span>2026-10-19 · 骨架 Gemini Notebook · 剪辑 Claude</p>
+            <h3 class="case__title" id="case-bayes-title">《非常贝叶斯》理论解析 × 访谈实录</h3>
+            <p class="case__lead">骨架旁白一句都不切断。每讲完一个论点，理论动画停下，切进扎克伯格访谈里对应的原话，再用解析卡把两边的关键词连起来。</p>
+
+            <dl class="facts">
+              <div><dt>访谈原话插入</dt><dd>6<small>段</small></dd></div>
+              <div><dt>字幕靠像素差分定位</dt><dd>21<small>句</small></dd></div>
+              <div><dt>成片时长（骨架 1:07）</dt><dd>2:08</dd></div>
+            </dl>
+
+            <ol class="steps">
+              <li><h4>从硬字幕读时间轴</h4><p>没有跑语音识别：对访谈的英文字幕区逐帧做像素差分，找出字幕切换的时刻，得到 21 句原话的起止。</p></li>
+              <li><h4>复刻骨架的视觉</h4><p>从理论片里取色：纸张底色、点阵间距、橙青两色强调。新加的标签、相框、字幕卡、解析卡都沿用这套样式。</p></li>
+              <li><h4>用 EDL 编排</h4><p><code>config.py</code> 记下 8 段理论、6 段证据的入出点和字幕，按 T1 E1 T2 E2 … T8 的顺序排。</p></li>
+              <li><h4>分段渲染，锁死音画</h4><p>视频按帧数、音频按采样点裁切，每段单独渲染后再拼接；每个切点前后都检查了音量。</p></li>
+            </ol>
+
+            <aside class="note">
+              <p class="note__tag">严谨注</p>
+              <p>原片把 Prior 标成“先验偏见”。成片在这里叠了一张注释卡：先验是看到新证据之前的信念，不等于偏见。</p>
+            </aside>
+
+            <div class="retro">
+              <div>
+                <h4 class="retro__h retro__h--good">做得好</h4>
+                <ul>
+                  <li>论点刚说完就是原话：听到“极具魄力”，马上看到 boldness。</li>
+                  <li>第 3 段提前埋下 prior 这个词，第 6 段 prior / posterior 的双关才接得上。</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="retro__h retro__h--next">下次改进</h4>
+                <ul>
+                  <li>成片由三个版本脚本渲染的片段拼成，很难复现。以后每次改版都整体重渲染。</li>
+                  <li>响度统一到 -16 LUFS；再试一个 60 秒以内、只保留 3 段证据的版本。</li>
+                </ul>
+              </div>
+            </div>
+
+            <figure class="sheet">
+              <button type="button" class="sheet__btn" data-lightbox
+                      data-src="projects/2026-10-19-01-bayes-theory-x-interview/thumbs/bayes_theory-x-interview_sheet.jpg"
+                      aria-label="放大成片逐帧预览">
+                <img src="projects/2026-10-19-01-bayes-theory-x-interview/thumbs/bayes_theory-x-interview_sheet.jpg"
+                     alt="《非常贝叶斯》成片逐帧预览：理论解析段与访谈实录段交替出现" width="1232" height="724" loading="lazy">
+              </button>
+              <figcaption>成片逐帧预览：理论段和访谈段交替出现</figcaption>
+            </figure>
+
+            <p class="links">
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/tree/main/projects/2026-10-19-01-bayes-theory-x-interview" target="_blank" rel="noopener">完整作品卡</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-10-19-01-bayes-theory-x-interview/prompt.md" target="_blank" rel="noopener">提示词</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-10-19-01-bayes-theory-x-interview/edit-script.md" target="_blank" rel="noopener">剪辑脚本</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/tree/main/projects/2026-10-19-01-bayes-theory-x-interview/variants/alt-64s" target="_blank" rel="noopener">64 秒对照版</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- 02 NEON -->
+        <article class="case" id="case-neon" aria-labelledby="case-neon-title">
+          <div class="case__media">
+            <div class="viewer">
+              <div class="seg seg--block" role="group" aria-label="切换画面适配方式">
+                <button type="button" class="seg__btn" aria-pressed="true" data-for="case-neon-player"
+                        data-src="projects/2026-10-21-01-neon-cartoon-vs-mv-split/media/neon_split_fit.mp4"
+                        data-poster="assets/posters/neon-fit.jpg" data-time="0:23"
+                        data-caption="完整画面：保留 16:9 全画面，空白处用模糊放大的同一画面填充">完整画面</button>
+                <button type="button" class="seg__btn" aria-pressed="false" data-for="case-neon-player"
+                        data-src="projects/2026-10-21-01-neon-cartoon-vs-mv-split/media/neon_split_crop.mp4"
+                        data-poster="assets/posters/neon-crop.jpg" data-time="0:23"
+                        data-caption="铺满裁切：居中裁切铺满半屏，冲击力更强，两侧会被裁掉">铺满裁切</button>
+              </div>
+              <div class="player player--case" id="case-neon-player" data-player>
+                <video preload="none" playsinline poster="assets/posters/neon-fit.jpg"
+                       src="projects/2026-10-21-01-neon-cartoon-vs-mv-split/media/neon_split_fit.mp4"
+                       aria-label="NEON 分屏的两种画面适配"></video>
+                <button class="player__cover" type="button" aria-label="播放">
+                  <span class="player__btn" aria-hidden="true"></span>
+                  <span class="player__time" data-time>0:23</span>
+                </button>
+              </div>
+              <p class="viewer__cap" data-viewer-cap>完整画面：保留 16:9 全画面，空白处用模糊放大的同一画面填充</p>
+            </div>
+          </div>
+
+          <div class="case__body">
+            <p class="case__kicker"><span>02</span>2026-10-21 · 剪辑 Claude · ffmpeg + numpy/scipy</p>
+            <h3 class="case__title" id="case-neon-title">NEON：AI 卡通版 vs 官方 MV</h3>
+            <p class="case__lead">AI 重绘会改变画面，但不会改变节拍。所以用音频做对齐基准，把卡通版和官方 MV 拼成上下同步的竖屏分屏。</p>
+
+            <dl class="facts">
+              <div><dt>两版之间的固定偏移</dt><dd>40.7<small>ms</small></dd></div>
+              <div><dt>成片上下残差，不到 1 帧</dt><dd>≈7<small>ms</small></dd></div>
+              <div><dt>竖屏画面适配方式</dt><dd>2<small>种</small></dd></div>
+            </dl>
+
+            <ol class="steps">
+              <li><h4>全局粗定位</h4><p>两路音频转成 8 kHz 单声道，做归一化互相关：卡通版对应的是 MV 开头的 0:00–0:23。</p></li>
+              <li><h4>滑窗逐段复核</h4><p>1.5 秒窗口、每 0.5 秒一次，屏蔽静音段：全段偏移恒为 40.7 ms，没有越播越偏。</p></li>
+              <li><h4>用画面再确认</h4><p>帧差信号做相关，再拼 9 组对照帧检查：16 秒处的 A2O 标志，上下两边在同一帧出现。</p></li>
+              <li><h4>合成两版分屏</h4><p>MV 开头补帧对齐，统一 30 fps；完整画面版用模糊填充，铺满版居中裁切，最后上下拼接。</p></li>
+            </ol>
+
+            <aside class="note">
+              <p class="note__tag">注意</p>
+              <p>卡通版自带的音轨约 22.5 秒就没声了。成片改用 MV 原声，合成后再和卡通版逐段做互相关：上下偏差约 7 ms。</p>
+            </aside>
+
+            <div class="retro">
+              <div>
+                <h4 class="retro__h retro__h--good">做得好</h4>
+                <ul>
+                  <li>先粗后细，一次排除“偏移不对”和“越播越偏”两种问题。</li>
+                  <li>两种画面适配一起交付，按使用场景挑。</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="retro__h retro__h--next">下次改进</h4>
+                <ul>
+                  <li>在两半画面加上「AI 卡通版 / 原版 MV」角标。</li>
+                  <li>试试加分隔线或左右对比，看哪种在手机上更清楚。</li>
+                </ul>
+              </div>
+            </div>
+
+            <figure class="sheet">
+              <button type="button" class="sheet__btn" data-lightbox
+                      data-src="projects/2026-10-21-01-neon-cartoon-vs-mv-split/thumbs/neon_split_fit_sheet.jpg"
+                      aria-label="放大成片逐帧预览">
+                <img src="projects/2026-10-21-01-neon-cartoon-vs-mv-split/thumbs/neon_split_fit_sheet.jpg"
+                     alt="NEON 完整画面版逐帧预览：上方卡通版、下方官方 MV，动作同步" width="1232" height="724" loading="lazy">
+              </button>
+              <figcaption>完整画面版逐帧预览：上方卡通版，下方官方 MV</figcaption>
+            </figure>
+
+            <p class="links">
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/tree/main/projects/2026-10-21-01-neon-cartoon-vs-mv-split" target="_blank" rel="noopener">完整作品卡</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-10-21-01-neon-cartoon-vs-mv-split/prompt.md" target="_blank" rel="noopener">提示词</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-10-21-01-neon-cartoon-vs-mv-split/scripts/render_split_9x16.sh" target="_blank" rel="noopener">渲染脚本</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- 03 AI 意识 -->
+        <article class="case" id="case-ai" aria-labelledby="case-ai-title">
+          <div class="case__media">
+            <div class="viewer">
+              <div class="seg seg--block" role="group" aria-label="切换素材与成片">
+                <button type="button" class="seg__btn" aria-pressed="true" data-for="case-ai-player"
+                        data-src="projects/2026-10-21-02-ai-consciousness-evidence-cut/materials/plan3_consciousness-and-vr.mp4"
+                        data-poster="assets/posters/ai-plan3.jpg" data-time="1:11"
+                        data-caption="骨架之一：Gemini Notebook 方案三《AI 学遥视》">方案三</button>
+                <button type="button" class="seg__btn" aria-pressed="false" data-for="case-ai-player"
+                        data-src="projects/2026-10-21-02-ai-consciousness-evidence-cut/materials/plan4_consciousness-and-vr.mp4"
+                        data-poster="assets/posters/ai-plan4.jpg" data-time="1:18"
+                        data-caption="骨架之二：Gemini Notebook 方案四《意识熵值光谱》">方案四</button>
+                <button type="button" class="seg__btn" aria-pressed="false" data-for="case-ai-player"
+                        data-src="projects/2026-10-21-02-ai-consciousness-evidence-cut/media/ai-consciousness_evidence-cut.mp4"
+                        data-poster="assets/posters/ai.jpg" data-time="5:41"
+                        data-caption="成片：两版骨架拼接后，插入 9 段访谈原声">成片</button>
+              </div>
+              <div class="player player--case" id="case-ai-player" data-player>
+                <video preload="none" playsinline poster="assets/posters/ai-plan3.jpg"
+                       src="projects/2026-10-21-02-ai-consciousness-evidence-cut/materials/plan3_consciousness-and-vr.mp4"
+                       aria-label="《AI 有意识吗》素材与成片"></video>
+                <button class="player__cover" type="button" aria-label="播放">
+                  <span class="player__btn" aria-hidden="true"></span>
+                  <span class="player__time" data-time>1:11</span>
+                </button>
+              </div>
+              <p class="viewer__cap" data-viewer-cap>骨架之一：Gemini Notebook 方案三《AI 学遥视》</p>
+            </div>
+          </div>
+
+          <div class="case__body">
+            <p class="case__kicker"><span>03</span>2026-10-21 · 骨架 Gemini Notebook + Clipchamp · 剪辑 Claude</p>
+            <h3 class="case__title" id="case-ai-title">《AI 有意识吗》访谈实证版</h3>
+            <p class="case__lead">以 2 分 22 秒的科普短片为骨架，在片头、7 个论证节点和片尾插入 9 段 <i>The Joe Rogan Experience</i> #2541 的访谈原声，每段配解析卡和中英字幕。</p>
+
+            <dl class="facts">
+              <div><dt>访谈原声插入</dt><dd>9<small>段</small></dd></div>
+              <div><dt>中文旁白切出的论述句群</dt><dd>13<small>个</small></dd></div>
+              <div><dt>源片在本机预处理</dt><dd>1.16<small>GB</small></dd></div>
+            </dl>
+
+            <ol class="steps">
+              <li><h4>拼出骨架</h4><p>Gemini Notebook 生成的方案三和方案四，在 Clipchamp 里拼成 2:22 的主片。</p></li>
+              <li><h4>处理 1.16 GB 源片</h4><p>超过单文件传输上限。本机脚本抽出 16 kHz 音轨用来转写，并把视频无损切成 7 段，按需上传。</p></li>
+              <li><h4>两路语音识别</h4><p>中文旁白用 SenseVoice 划出 13 个论述句群；英文访谈用 Parakeet-TDT 拿到词级时间码，再按关键词找原话。</p></li>
+              <li><h4>切在停顿里</h4><p>主片切点按 10 ms 粒度的能量扫描放进旁白停顿；访谈音频只留讲者本人的话。0.4 秒溶解串联，响度统一到 -16 LUFS。</p></li>
+            </ol>
+
+            <aside class="note">
+              <p class="note__tag">事实核对</p>
+              <p>骨架说人类“往往需要苦修几十个小时深度冥想”，原声里找不到。原话是“两三次课程，每次好几个小时”。解析卡用了原话，片尾注明实验是讲者本人的讲述，未经独立验证。</p>
+            </aside>
+
+            <div class="retro">
+              <div>
+                <h4 class="retro__h retro__h--good">做得好</h4>
+                <ul>
+                  <li>每个说法后面紧跟原话，再用解析卡把两者连起来。</li>
+                  <li>插入段重新识别一遍，和字幕逐句核对。</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="retro__h retro__h--next">下次改进</h4>
+                <ul>
+                  <li>中间脚本只留在云端工作区，会话结束后没法完整复现。以后随做随存进仓库。</li>
+                  <li>成片是骨架的 2.4 倍长，可以再剪一个约 3 分钟的版本。</li>
+                </ul>
+              </div>
+            </div>
+
+            <figure class="sheet">
+              <button type="button" class="sheet__btn" data-lightbox
+                      data-src="projects/2026-10-21-02-ai-consciousness-evidence-cut/thumbs/ai-consciousness_evidence-cut_sheet.jpg"
+                      aria-label="放大成片逐帧预览">
+                <img src="projects/2026-10-21-02-ai-consciousness-evidence-cut/thumbs/ai-consciousness_evidence-cut_sheet.jpg"
+                     alt="《AI 有意识吗》访谈实证版逐帧预览：科普解析段与访谈实证段交替出现" width="1232" height="724" loading="lazy">
+              </button>
+              <figcaption>成片逐帧预览：科普段和访谈段交替出现</figcaption>
+            </figure>
+
+            <p class="links">
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/tree/main/projects/2026-10-21-02-ai-consciousness-evidence-cut" target="_blank" rel="noopener">完整作品卡</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-10-21-02-ai-consciousness-evidence-cut/prompt.md" target="_blank" rel="noopener">提示词</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-10-21-02-ai-consciousness-evidence-cut/edit-list.md" target="_blank" rel="noopener">剪辑清单</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/tree/main/projects/2026-10-21-02-ai-consciousness-evidence-cut/materials" target="_blank" rel="noopener">素材说明</a>
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 方法沉淀 ============ -->
+    <section class="methods" id="methods" aria-labelledby="methods-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">方法沉淀</p>
+          <h2 id="methods-title">下次能直接用的方法</h2>
+          <p>同一个方法在两个以上作品里用到，或者踩过一次值得记下的坑，就整理成一篇 playbook。</p>
+        </header>
+        <ul class="method-list">
+          <li><a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/playbooks/evidence-insert-editing.md" target="_blank" rel="noopener">
+            <h3>证据插入式剪辑</h3><p>往解说视频里插原声：切点、音频门控、转场、响度、版式和事实核对。</p><span>贝叶斯 · AI 意识</span></a></li>
+          <li><a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/playbooks/audio-sync-cross-correlation.md" target="_blank" rel="noopener">
+            <h3>音频互相关对齐</h3><p>两段视频对齐到 1 帧以内；判断一段素材是从哪里剪出来的。</p><span>NEON · AI 意识</span></a></li>
+          <li><a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/playbooks/local-asr-timestamps.md" target="_blank" rel="noopener">
+            <h3>本地语音识别与时间码</h3><p>不依赖平台字幕拿到时间码；没有语音识别时，从硬字幕读时间轴。</p><span>AI 意识 · 贝叶斯</span></a></li>
+          <li><a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/playbooks/vertical-9x16-composition.md" target="_blank" rel="noopener">
+            <h3>竖屏 9:16 构图</h3><p>横屏素材放进竖屏：模糊填充、铺满裁切、相框嵌入。</p><span>NEON · 贝叶斯 · AI 意识</span></a></li>
+          <li><a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/playbooks/large-files-and-transfer-limits.md" target="_blank" rel="noopener">
+            <h3>大文件与传输限制</h3><p>源片传不上去、成片写不回来、GitHub 单文件 100 MB 限制。</p><span>AI 意识 · 贝叶斯</span></a></li>
+          <li><a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/playbooks/prompt-patterns.md" target="_blank" rel="noopener">
+            <h3>提示词模式</h3><p>视频任务的提示词该写什么，漏写哪些会返工。</p><span>全部作品</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p class="footer__brand">Fun Videos · Anna</p>
+      <p class="footer__note">个人学习记录。部分成片含有第三方素材的片段（访谈原声、官方 MV、其他创作者的作品），版权归原作者所有。</p>
+      <p class="footer__links">
+        <a href="https://github.com/Anna-SAP/Fun-Videos-Anna" target="_blank" rel="noopener">GitHub 仓库</a>
+        <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/docs/learning-log.md" target="_blank" rel="noopener">学习轨迹</a>
+        <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/docs/storage-policy.md" target="_blank" rel="noopener">素材登记</a>
+      </p>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" data-lightbox-dialog aria-label="逐帧预览大图">
+    <button type="button" class="lightbox__close" data-lightbox-close aria-label="关闭">×</button>
+    <img alt="" data-lightbox-img>
+  </dialog>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

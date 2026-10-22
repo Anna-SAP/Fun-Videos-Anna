@@ -2,6 +2,8 @@
 
 > 记录我用 AI 做科普 / 趣味短视频的学习过程：每个作品的**成片、素材、生成提示词、关键制作步骤和复盘**，以及从中沉淀下来、下次能直接用的**方法和脚本**。
 
+**在线观看：<https://anna-sap.github.io/Fun-Videos-Anna/>**（成片可直接播放，附每支视频的制作历程）
+
 <table>
 <tr>
 <td align="center"><a href="projects/2026-10-19-01-bayes-theory-x-interview/"><img src="projects/2026-10-19-01-bayes-theory-x-interview/thumbs/bayes_theory-x-interview_poster.jpg" width="150"></a><br><sub>贝叶斯 · 理论解析 × 访谈实录</sub></td>
@@ -53,6 +55,7 @@
 │   ├── av/                    find_offset.py（对齐）、contact_sheet.sh（缩略图）
 │   ├── video-manifest.csv     视频清单：仓库路径 ↔ 本地文件名 + SHA-256
 │   └── publish_videos_lfs.*   在本机把视频经 Git LFS 推上来
+├── site/                      展示网站（GitHub Pages）：index.html 引用的视频由 build.mjs 打包
 ├── templates/project/         新作品模板
 └── docs/
     ├── storage-policy.md      什么入库、怎么入库（LFS）、第三方素材登记
@@ -66,6 +69,7 @@
 3. 在 `README.md` 里写步骤和复盘；用 `tools/av/contact_sheet.sh` 生成缩略图
 4. 在 `tools/video-manifest.csv` 里给成片和自有素材各加一行，然后在本机双击 `publish_videos_lfs.bat` 上传
 5. 更新本页的作品表、`projects/README.md` 和 `docs/learning-log.md`；有可复用的方法就补进 `playbooks/`
+6. 在 `site/index.html` 里加上这个作品（视频用仓库路径 `projects/...` 引用），推送后网站会自动重新部署。本地预览：`node site/build.mjs && node site/serve.mjs`
 
 ## 克隆
 

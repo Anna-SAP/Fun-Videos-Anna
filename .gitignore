@@ -23,3 +23,6 @@ desktop.ini
 .idea/
 __pycache__/
 *.pyc
+
+# ---- Built GitHub Pages site (site/build.mjs) -----------------------------
+_site/
