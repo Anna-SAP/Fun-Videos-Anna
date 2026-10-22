@@ -63,6 +63,7 @@ git lfs pull --include "projects/2026-10-19-01-*"                   # 之后按�
 | 贝叶斯 | 访谈录屏 | YouTube 播放页录屏，访谈《Zuckerberg's $100 Billion Bet》片段，带英文硬字幕 | `clip_贝叶斯.mp4` / 99.8 MB |
 | NEON | 卡通版片段 | Higgsfield 创作者作品（文件名标注 `#higgsfieldcreator … Made @higgsfield.ai`） | `🩵 Comment [neon] 🩵 … Made @higgsfield.ai.mp4` / 3.1 MB |
 | NEON | 官方 MV | A2O LITE《NEON》Official Video | `A2O LITE 'NEON' Official Video.mkv` / 201 MB |
+| NEON ×3 | 舞台版片段 | 舞台表演片段，画面带「WORLD PREMIERE」字样，具体节目未核实 | `23 secondes A2O_20261022.mp4` / 5.1 MB |
 | AI 意识 | 访谈整集 | *The Joe Rogan Experience* #2541 · Thomas Campbell，[YouTube v2oBLSDCZaY](https://www.youtube.com/watch?v=v2oBLSDCZaY) | `Joe Rogan Experience #2541 - Thomas Campbell.mp4` / 1.16 GB |
 
-成片里包含这些素材的片段（NEON 的 MV 和卡通画面，两条访谈实证版里的访谈原声）。本库是公开仓库，素材版权归原作者所有，这里只作个人学习记录。
+成片里包含这些素材的片段（NEON 和 NEON ×3 的 MV、卡通、舞台画面，两条访谈实证版里的访谈原声）。本库是公开仓库，素材版权归原作者所有，这里只作个人学习记录。

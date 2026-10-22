@@ -9,6 +9,7 @@
 <td align="center"><a href="projects/2026-10-19-01-bayes-theory-x-interview/"><img src="projects/2026-10-19-01-bayes-theory-x-interview/thumbs/bayes_theory-x-interview_poster.jpg" width="150"></a><br><sub>贝叶斯 · 理论解析 × 访谈实录</sub></td>
 <td align="center"><a href="projects/2026-10-21-01-neon-cartoon-vs-mv-split/"><img src="projects/2026-10-21-01-neon-cartoon-vs-mv-split/thumbs/neon_split_fit_poster.jpg" width="150"></a><br><sub>NEON · 卡通版 vs 原版分屏</sub></td>
 <td align="center"><a href="projects/2026-10-21-02-ai-consciousness-evidence-cut/"><img src="projects/2026-10-21-02-ai-consciousness-evidence-cut/thumbs/ai-consciousness_evidence-cut_poster.jpg" width="150"></a><br><sub>AI 意识 · 访谈实证版</sub></td>
+<td align="center"><a href="projects/2026-10-22-01-neon-three-universes/"><img src="projects/2026-10-22-01-neon-three-universes/thumbs/neon_three-universes_poster.jpg" width="150"></a><br><sub>NEON ×3 · 三个宇宙</sub></td>
 </tr>
 </table>
 
@@ -19,6 +20,7 @@
 | 2026-10-19 | [《非常贝叶斯》理论解析 × 访谈实录](projects/2026-10-19-01-bayes-theory-x-interview/) | 在理论解析片的论点之后插入 6 段扎克伯格访谈原话，配解析卡和「严谨注」，成片 2:08 | Gemini Notebook | Claude |
 | 2026-10-21 | [NEON：AI 卡通版 vs 官方 MV](projects/2026-10-21-01-neon-cartoon-vs-mv-split/) | 用音频互相关精确对齐，做成 9:16 上下分屏（两种适配方式） | —（第三方素材） | Claude |
 | 2026-10-21 | [《AI有意识吗》访谈实证版](projects/2026-10-21-02-ai-consciousness-evidence-cut/) | 在科普短片的 9 个节点插入 JRE #2541 访谈原声，配双语字幕和解析卡，成片 5:41 | Gemini Notebook + Clipchamp | Claude |
+| 2026-10-22 | [NEON ×3：三个宇宙](projects/2026-10-22-01-neon-three-universes/) | AI 卡通版、官方 MV、舞台版三路音频对齐到同一个主时钟，按拍点网格在三分屏和全屏之间切换，成片 0:24.6 | —（第三方素材） | Claude |
 
 工作模式基本固定为：**Gemini Notebook 生成解说骨架 → Claude 插入一手证据、核对事实、合成成片**。完整清单（每条视频的规格、大小、角色）见 [projects/README.md](projects/README.md)。
 
