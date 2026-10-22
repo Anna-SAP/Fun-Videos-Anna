@@ -1,6 +1,6 @@
 # 作品索引
 
-目录命名：`YYYY-MM-DD-NN-slug`。按日期排序，`NN` 是当天的序号，`slug` 用小写英文。文档里互相引用时用短名：**贝叶斯**、**NEON**、**AI 意识**。
+目录命名：`YYYY-MM-DD-NN-slug`。按日期排序，`NN` 是当天的序号，`slug` 用小写英文。文档里互相引用时用短名：**贝叶斯**、**NEON**、**AI 意识**、**NEON ×3**。
 
 每个作品目录的结构都一样：
 
@@ -27,6 +27,7 @@ scripts/       这个作品用到的脚本（可选）
 | | 骨架素材 | `materials/ai-consciousness_main.mp4` | 2:22.6 | 1080×1920 | 109 MB | Clipchamp 拼接 |
 | | 骨架素材 | `materials/plan3_consciousness-and-vr.mp4` | 1:10.8 | 720×1280 | 8.7 MB | Gemini Notebook |
 | | 骨架素材 | `materials/plan4_consciousness-and-vr.mp4` | 1:17.7 | 720×1280 | 9.4 MB | Gemini Notebook |
+| [NEON ×3](2026-10-22-01-neon-three-universes/) | **成片** | `media/neon_three-universes.mp4` | 0:24.6 | 1080×1920 | 23.0 MB | Claude |
 
 ## 素材和成片的关系
 
@@ -37,6 +38,8 @@ scripts/       这个作品用到的脚本（可选）
 
 NEON     卡通版片段 + 官方 MV（第三方，不入库）────────→ 两版 9:16 分屏
 
+NEON ×3  卡通版片段 + 官方 MV + 舞台版片段（第三方，不入库）→ 三版卡拍混剪（24.6 秒）
+
 AI 意识  Gemini Notebook 方案三 ─┐
          Gemini Notebook 方案四 ─┴─ Clipchamp ─→《AI有意识吗》─┐
          JRE #2541 访谈整集（第三方，不入库）────────────────┴─→ 访谈实证版（5:41）
@@ -46,8 +49,8 @@ AI 意识  Gemini Notebook 方案三 ─┐
 
 - **证据插入式剪辑**：贝叶斯、AI 意识
 - **Gemini Notebook 骨架**：贝叶斯、AI 意识
-- **对齐 / 同步**：NEON、AI 意识（素材拼接分析、分段校准）
-- **竖屏构图**：NEON（分屏）、贝叶斯 / AI 意识（相框嵌入）
+- **对齐 / 同步**：NEON、NEON ×3（三路闭环 + 拍点网格）、AI 意识（素材拼接分析、分段校准）
+- **竖屏构图**：NEON（分屏）、NEON ×3（三分屏 ↔ 全屏动态版式、主体跟随裁切）、贝叶斯 / AI 意识（相框嵌入）
 - **语音识别 / 字幕**：AI 意识（ASR）、贝叶斯（硬字幕像素差分）
 - **事实核对 / 纠错**：AI 意识（原话与骨架不符）、贝叶斯（先验 ≠ 偏见）
-- **同题多版本对比**：贝叶斯（2:08 vs 1:04）、NEON（fit vs crop）
+- **同题多版本对比**：贝叶斯（2:08 vs 1:04）、NEON（fit vs crop）、NEON ×3（同一段音乐的三个版本）
