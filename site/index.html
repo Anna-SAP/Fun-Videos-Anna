@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fun Videos · Anna — 用 AI 做科普短视频</title>
-  <meta name="description" content="四支用 AI 做的竖屏短视频，以及它们的关键制作过程：Gemini Notebook 生成解说骨架，Claude 插入访谈原声作为证据、核对事实、合成成片。">
+  <meta name="description" content="五支用 AI 做的短视频，以及它们的关键制作过程：Gemini Notebook 生成解说骨架，Claude 插入访谈原声作为证据、核对事实、合成成片。">
   <meta name="theme-color" content="#FAF8F4">
   <meta property="og:title" content="Fun Videos · Anna">
-  <meta property="og:description" content="四支用 AI 做的竖屏短视频，以及它们是怎么做出来的。">
+  <meta property="og:description" content="五支用 AI 做的短视频，以及它们是怎么做出来的。">
   <meta property="og:image" content="assets/posters/bayes.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23D9572A'/%3E%3Cpath d='M12.5 9.5v13l10-6.5z' fill='%23fff'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/style.css">
@@ -37,7 +37,7 @@
     <section class="hero" id="works" aria-labelledby="works-title">
       <div class="hero__intro">
         <p class="eyebrow">AI 科普短视频 · 学习记录</p>
-        <h1 id="works-title">四支竖屏短片，<br>和它们的制作过程。</h1>
+        <h1 id="works-title">五支短片，和它们的制作过程。</h1>
         <p class="hero__lede">解说骨架由 Gemini Notebook 生成；Claude 找来访谈原声作为证据、核对事实，再合成为成片。</p>
         <a class="hero__more" href="#process">看看是怎么做的<span aria-hidden="true"> ↓</span></a>
       </div>
@@ -124,6 +124,23 @@
             <p class="work__idx">04 · 2026-10-22</p>
             <h2 class="work__title">NEON ×3</h2>
             <p class="work__sub">卡通 × MV × 舞台 · 卡拍混剪</p>
+          </div>
+        </article>
+
+        <article class="work work--wide" style="--i:4">
+          <div class="player player--wide" id="hero-twintails" data-player>
+            <video preload="none" playsinline poster="assets/posters/neon-twin-tails.jpg"
+                   src="projects/2026-10-24-01-neon-twin-tails/media/neon_twin-tails.mp4"
+                   aria-label="NEON 双马尾：AI 卡通版娃娃换成双马尾"></video>
+            <button class="player__cover" type="button" aria-label="播放 NEON 双马尾">
+              <span class="player__btn" aria-hidden="true"></span>
+              <span class="player__time" data-time>0:23</span>
+            </button>
+          </div>
+          <div class="work__meta">
+            <p class="work__idx">05 · 2026-10-24</p>
+            <h2 class="work__title">NEON 双马尾</h2>
+            <p class="work__sub">AI 卡通版 · 只换发型</p>
           </div>
         </article>
       </div>
@@ -519,6 +536,94 @@
             </p>
           </div>
         </article>
+
+        <!-- 05 NEON 双马尾 -->
+        <article class="case case--wide" id="case-twintails" aria-labelledby="case-twintails-title">
+          <div class="case__media">
+            <div class="viewer">
+              <div class="seg seg--block" role="group" aria-label="切换前后对照与成片">
+                <button type="button" class="seg__btn" aria-pressed="true" data-for="case-twintails-player" data-still
+                        data-caption="前后对照：每两排一组，上排原版，下排双马尾，同一时刻">前后对照</button>
+                <button type="button" class="seg__btn" aria-pressed="false" data-for="case-twintails-player"
+                        data-src="projects/2026-10-24-01-neon-twin-tails/media/neon_twin-tails.mp4"
+                        data-poster="assets/posters/neon-twin-tails.jpg" data-time="0:23"
+                        data-caption="成片：只换了发型，画风、动作、镜头和时长都照原片，1920×1080">成片 0:23</button>
+              </div>
+              <div class="player player--wide player--case is-still" id="case-twintails-player" data-player>
+                <video preload="none" playsinline poster="assets/posters/neon-twin-tails.jpg"
+                       src="projects/2026-10-24-01-neon-twin-tails/media/neon_twin-tails.mp4"
+                       aria-label="NEON 双马尾成片"></video>
+                <button class="player__cover" type="button" aria-label="播放">
+                  <span class="player__btn" aria-hidden="true"></span>
+                  <span class="player__time" data-time>0:23</span>
+                </button>
+                <button type="button" class="player__still" data-lightbox data-src="assets/posters/neon-twin-tails-vs.jpg"
+                        aria-label="放大前后对照图">
+                  <img src="assets/posters/neon-twin-tails-vs.jpg"
+                       alt="原版与双马尾前后对照：同一时刻的八组画面，原版娃娃是披肩长发，成片换成了戴白色毛绒发圈的高位双马尾" width="1280" height="720" loading="lazy">
+                </button>
+              </div>
+              <p class="viewer__cap" data-viewer-cap>前后对照：每两排一组，上排原版，下排双马尾，同一时刻</p>
+            </div>
+          </div>
+
+          <div class="case__body">
+            <p class="case__kicker"><span>05</span>2026-10-24 · 改发型 Kling 4.0 Video Edit · 合成 Claude</p>
+            <h3 class="case__title" id="case-twintails-title">NEON 双马尾：给 AI 卡通版娃娃换发型</h3>
+            <p class="case__lead">卡通版本来就和官方 MV 同步。这次不重新生成动作，只用视频编辑把两个娃娃的长发换成高位双马尾。视频编辑不动时间轴，画风、动作、镜头和节奏都照原片，和真人 MV 的同步也就保住了。</p>
+
+            <dl class="facts">
+              <div><dt>5 次 Kling 运行一共</dt><dd>512<small>credits</small></dd></div>
+              <div><dt>舞蹈段画面对原片</dt><dd>±1<small>帧</small></dd></div>
+              <div><dt>音频对原片音轨</dt><dd>5<small>ms</small></dd></div>
+            </dl>
+
+            <ol class="steps">
+              <li><h4>只送有头发的镜头</h4><p>先逐帧找出原片的切点。手部特写和 A2O 图形段直接用原片；其余按帧剪出、缩放到 1280×720、补到整秒再上传：Kling 按整秒计费，长度对上，时间轴才不会被拉伸。</p></li>
+              <li><h4>参考图让双马尾从第 0 帧开始</h4><p>先拿甩头发最多的双人舞测试，娃娃只在甩头发的瞬间才变发型，棕发娃娃到 4.3 秒才变。把这一版里两个娃娃都已变好的一帧当参考图 <code>@Image1</code>，后面四次都从第一帧起就是双马尾。</p></li>
+              <li><h4>量出 Kling 的延迟</h4><p>Kling 输出 24 fps，固定晚 1–2 帧。运动能量互相关会对到舞蹈半拍后的重复动作上；改成只比较画面下方 40%（腿和裤子，编辑不会动到），每秒一个窗口，结果才稳定。</p></li>
+              <li><h4>补回字样和签名</h4><p>Kling 把左上角的作者签名和开场的「A2O LITE」字样都抹掉了。两者都从原片自己的像素里取回：闭运算得到背景亮度，比背景暗多少就是笔画的覆盖度，抗锯齿的边缘也和原片一样。</p></li>
+            </ol>
+
+            <aside class="note">
+              <p class="note__tag">注意</p>
+              <p>通道比模型更容易卡住：Sora API 已经停用；Figma Weave 认的是 Claude 里 Figma 连接器登录的账号；Weave 免费版不能用视频模型，要升级到 Starter（每月 1,500 credits）。每次运行前先报价，确认了再跑。</p>
+            </aside>
+
+            <div class="retro">
+              <div>
+                <h4 class="retro__h retro__h--good">做得好</h4>
+                <ul>
+                  <li>改原片，不重新生成：同步是现成的，只需要把 1–2 帧延迟量出来去掉。</li>
+                  <li>成片 690 帧，正好 23 秒；用仓库里的素材重新合成，SHA-256 和成片相同。</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="retro__h retro__h--next">下次改进</h4>
+                <ul>
+                  <li>取景要写具体。开场重做时写了“特写”，被推得太紧，双马尾出了画。</li>
+                  <li>用 1080p 重跑一段对比画质；把量帧延迟和补回叠加元素抽成通用工具。</li>
+                </ul>
+              </div>
+            </div>
+
+            <figure class="sheet">
+              <button type="button" class="sheet__btn" data-lightbox
+                      data-src="projects/2026-10-24-01-neon-twin-tails/thumbs/neon_twin-tails_sheet.jpg"
+                      aria-label="放大成片逐帧预览">
+                <img src="projects/2026-10-24-01-neon-twin-tails/thumbs/neon_twin-tails_sheet.jpg"
+                     alt="NEON 双马尾成片逐帧预览：双人舞、手部特写、A2O 图形和群舞，娃娃都是双马尾" width="1932" height="818" loading="lazy">
+              </button>
+              <figcaption>成片逐帧预览：手部特写和图形段是原片，其余镜头都换成了双马尾</figcaption>
+            </figure>
+
+            <p class="links">
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/tree/main/projects/2026-10-24-01-neon-twin-tails" target="_blank" rel="noopener">完整作品卡</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-10-24-01-neon-twin-tails/prompt.md" target="_blank" rel="noopener">提示词</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-10-24-01-neon-twin-tails/scripts/assemble_twin_tails.py" target="_blank" rel="noopener">合成脚本</a>
+            </p>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -534,13 +639,15 @@
           <li><a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/playbooks/evidence-insert-editing.md" target="_blank" rel="noopener">
             <h3>证据插入式剪辑</h3><p>往解说视频里插原声：切点、音频门控、转场、响度、版式和事实核对。</p><span>贝叶斯 · AI 意识</span></a></li>
           <li><a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/playbooks/audio-sync-cross-correlation.md" target="_blank" rel="noopener">
-            <h3>音频互相关对齐</h3><p>多段视频对齐到 1 帧以内；判断一段素材是从哪里剪出来的；求拍点网格卡拍剪辑。</p><span>NEON · AI 意识 · NEON ×3</span></a></li>
+            <h3>音频互相关对齐</h3><p>多段视频对齐到 1 帧以内；判断一段素材是从哪里剪出来的；求拍点网格卡拍剪辑。</p><span>NEON · AI 意识 · NEON ×3 · NEON 双马尾</span></a></li>
           <li><a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/playbooks/local-asr-timestamps.md" target="_blank" rel="noopener">
             <h3>本地语音识别与时间码</h3><p>不依赖平台字幕拿到时间码；没有语音识别时，从硬字幕读时间轴。</p><span>AI 意识 · 贝叶斯</span></a></li>
           <li><a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/playbooks/vertical-9x16-composition.md" target="_blank" rel="noopener">
             <h3>竖屏 9:16 构图</h3><p>横屏素材放进竖屏：模糊填充、铺满裁切、相框嵌入，以及三分屏 ↔ 全屏的动态版式。</p><span>NEON · 贝叶斯 · AI 意识 · NEON ×3</span></a></li>
           <li><a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/playbooks/large-files-and-transfer-limits.md" target="_blank" rel="noopener">
             <h3>大文件与传输限制</h3><p>源片传不上去、成片写不回来、GitHub 单文件 100 MB 限制。</p><span>AI 意识 · 贝叶斯</span></a></li>
+          <li><a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/playbooks/ai-video-edit.md" target="_blank" rel="noopener">
+            <h3>AI 视频编辑</h3><p>只改一个属性，保住原片的时间轴：选通道和报价、参考图、补回字样和签名、量帧延迟。</p><span>NEON 双马尾</span></a></li>
           <li><a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/playbooks/prompt-patterns.md" target="_blank" rel="noopener">
             <h3>提示词模式</h3><p>视频任务的提示词该写什么，漏写哪些会返工。</p><span>全部作品</span></a></li>
         </ul>

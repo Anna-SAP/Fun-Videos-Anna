@@ -139,11 +139,10 @@ code {
   max-width: var(--max-wide); margin: 0 auto;
   padding: clamp(20px, 4vh, 44px) var(--gutter) clamp(48px, 8vh, 88px);
   display: grid;
-  grid-template-columns: minmax(230px, 290px) 1fr;
-  gap: clamp(28px, 3.6vw, 56px);
-  align-items: center;
+  gap: clamp(24px, 4vh, 40px);
 }
 
+.hero__intro { max-width: 680px; }
 .hero__intro h1 {
   font-size: clamp(23px, 2.05vw, 30px);
   font-weight: 700;
@@ -160,7 +159,8 @@ code {
 
 .reel {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  /* one row, all players the same height: a 9:16 player is 81 units wide where a 16:9 one is 256 */
+  grid-template-columns: repeat(4, minmax(0, 81fr)) minmax(0, 256fr);
   gap: clamp(14px, 1.8vw, 28px);
   align-items: start;
 }
@@ -170,6 +170,7 @@ code {
   --pw: min(100%, max(220px, calc((100svh - 250px) * 9 / 16)));
   display: flex; flex-direction: column; align-items: center;
 }
+.work--wide { --pw: 100%; }
 .work .player { width: var(--pw); }
 .work__meta { width: var(--pw); padding-top: 16px; }
 .work__idx { font: 500 12px/1.2 var(--font-mono); color: var(--ink-3); letter-spacing: .04em; }
@@ -188,12 +189,23 @@ code {
   box-shadow: var(--shadow-2);
   isolation: isolate;
 }
+.player--wide { aspect-ratio: 16 / 9; }
 .player video {
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; background: #E8E2D5;
   transition: transform .6s var(--ease);
 }
 .player.is-active video { background: #000; }
+
+/* A still (e.g. a before/after grid) laid over the video while its switch is pressed */
+.player__still {
+  position: absolute; inset: 0; z-index: 2; display: none;
+  border: 0; padding: 0; margin: 0; background: var(--paper); cursor: zoom-in;
+}
+.player__still img { width: 100%; height: 100%; object-fit: cover; }
+.player__still:focus-visible { outline: none; box-shadow: inset 0 0 0 3px var(--accent); border-radius: var(--radius-lg); }
+.player.is-still .player__still { display: block; }
+.player.is-still .player__cover { visibility: hidden; }
 
 .player__cover {
   position: absolute; inset: 0; z-index: 1;
@@ -300,6 +312,11 @@ code {
 .viewer .seg--block { margin-bottom: 14px; }
 .player--case { width: min(100%, max(220px, calc((100svh - 220px) * 9 / 16))); }
 .viewer__cap { font-size: 13px; color: var(--ink-3); margin-top: 12px; line-height: 1.6; min-height: 3.2em; max-width: 320px; }
+
+/* 16:9 case: the viewer takes about half the row */
+.case--wide { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
+.player--case.player--wide { width: 100%; }
+.case--wide .viewer__cap { max-width: none; }
 
 @media (min-width: 901px) and (min-height: 760px) {
   .viewer { position: sticky; top: calc(var(--topbar-h) + 24px); }
@@ -461,19 +478,30 @@ code {
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1100px) {
-  .hero { grid-template-columns: 1fr; }
-  .hero__intro { max-width: 620px; }
-  .hero__intro h1 br { display: none; }
   .hero__more { display: none; }
+  .reel { grid-template-columns: repeat(4, minmax(0, 1fr)); row-gap: 36px; }
   .work { --pw: min(100%, max(200px, calc((100svh - 400px) * 9 / 16))); }
 }
 
+/* The 16:9 work gets its own row: player across three columns, text in the fourth */
+@media (min-width: 701px) and (max-width: 1100px) {
+  .work--wide {
+    --pw: min(100%, calc(max(356px, 100svh - 400px) * 16 / 9)); /* as tall as the 9:16 players */
+    grid-column: 1 / -1;
+    display: grid; column-gap: inherit; align-items: start;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: subgrid;
+  }
+  .work--wide .player { grid-column: 1 / 4; justify-self: center; }
+  .work--wide .work__meta { padding-top: 0; }
+}
+
 @media (max-width: 900px) {
-  .reel { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 36px; }
   .case { grid-template-columns: 1fr; }
   .viewer { align-items: center; }
   .viewer__cap { text-align: center; }
   .player--case { width: min(100%, 300px); }
+  .player--case.player--wide { width: min(100%, 640px); }
   .flow__steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 28px; }
   .flow__steps li:nth-child(odd) { padding-left: 0; border-left: 0; }
   .method-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -488,9 +516,7 @@ code {
 
   /* Swipeable reel: first video fills the screen, the next one peeks in */
   .reel {
-    grid-template-columns: none;
-    grid-auto-flow: column;
-    grid-auto-columns: 74%;
+    display: flex;
     gap: 14px;
     overflow-x: auto;
     overscroll-behavior-x: contain;
@@ -501,7 +527,8 @@ code {
     scroll-padding-inline: var(--gutter);
   }
   .reel::-webkit-scrollbar { display: none; }
-  .work { --pw: 100%; scroll-snap-align: start; align-items: stretch; }
+  .work { --pw: 100%; flex: 0 0 74%; scroll-snap-align: start; align-items: stretch; }
+  .work--wide { flex-basis: 100%; }
 
   .facts dd { font-size: 24px; }
   .facts > div + div { padding-left: 12px; }

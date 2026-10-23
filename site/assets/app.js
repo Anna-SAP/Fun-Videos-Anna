@@ -48,12 +48,17 @@
       });
 
       video.pause();
+      const caption = player.parentElement.querySelector('[data-viewer-cap]');
+      if (caption && btn.dataset.caption) caption.textContent = btn.dataset.caption;
+
+      // A data-still choice shows the player's still image instead of a video.
+      const still = 'still' in btn.dataset;
+      player.classList.toggle('is-still', still);
+      if (still) { reset(player); return; }
+
       video.poster = btn.dataset.poster;
       video.src = btn.dataset.src;
       player.querySelector('[data-time]').textContent = btn.dataset.time;
-
-      const caption = player.parentElement.querySelector('[data-viewer-cap]');
-      if (caption && btn.dataset.caption) caption.textContent = btn.dataset.caption;
 
       if (wasPlaying) activate(player, true);
       else reset(player);
