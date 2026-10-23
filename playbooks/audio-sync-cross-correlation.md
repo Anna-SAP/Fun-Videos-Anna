@@ -65,5 +65,6 @@ python3 tools/av/find_offset.py plan4.mp4 merged.mp4 --step 10
 
 - [NEON](../projects/2026-10-21-01-neon-cartoon-vs-mv-split/)：卡通版 = MV 的 0:00–0:23，偏移 −0.0407 s，没有漂移
 - [NEON ×3](../projects/2026-10-22-01-neon-three-universes/)：舞台版也是 MV 的 0:00–0:22，比 MV 早 1.0626 s 开始；三路闭环校验；拍点网格驱动剪辑
+- [NEON 双马尾](../projects/2026-10-24-01-neon-twin-tails/)：复核卡通版偏移仍是 −0.0407 s；AI 编辑后的画面和原片怎么逐帧对齐，见 [AI 视频编辑](ai-video-edit.md#对齐到原片的帧)
 - [AI 意识素材](../projects/2026-10-21-02-ai-consciousness-evidence-cut/materials/)：拼接版 = 方案三 0–67.8 s + 方案四（偏移 +67.93 s）
 - [AI 意识](../projects/2026-10-21-02-ai-consciousness-evidence-cut/)：分段视频相对转写音轨的偏移为 10.7 ms，逐个分段验证过
