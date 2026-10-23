@@ -1,6 +1,6 @@
 # 作品索引
 
-目录命名：`YYYY-MM-DD-NN-slug`。按日期排序，`NN` 是当天的序号，`slug` 用小写英文。文档里互相引用时用短名：**贝叶斯**、**NEON**、**AI 意识**、**NEON ×3**。
+目录命名：`YYYY-MM-DD-NN-slug`。按日期排序，`NN` 是当天的序号，`slug` 用小写英文。文档里互相引用时用短名：**贝叶斯**、**NEON**、**AI 意识**、**NEON ×3**、**NEON 双马尾**。
 
 每个作品目录的结构都一样：
 
@@ -28,6 +28,12 @@ scripts/       这个作品用到的脚本（可选）
 | | 骨架素材 | `materials/plan3_consciousness-and-vr.mp4` | 1:10.8 | 720×1280 | 8.7 MB | Gemini Notebook |
 | | 骨架素材 | `materials/plan4_consciousness-and-vr.mp4` | 1:17.7 | 720×1280 | 9.4 MB | Gemini Notebook |
 | [NEON ×3](2026-10-22-01-neon-three-universes/) | **成片** | `media/neon_three-universes.mp4` | 0:24.6 | 1080×1920 | 23.0 MB | Claude |
+| [NEON 双马尾](2026-10-24-01-neon-twin-tails/) | **成片** | `media/neon_twin-tails.mp4` | 0:23.0 | 1920×1080 | 16.0 MB | Kling 4.0 Video Edit + Claude |
+| | 生成素材 | `materials/kling/shot1_kling4_720p_run1.mp4` | 0:03.0 | 1280×720 | 1.7 MB | Kling 4.0 Video Edit |
+| | 生成素材 | `materials/kling/clip1_kling4_720p_run1.mp4` | 0:05.0 | 1280×720 | 2.9 MB | Kling 4.0 Video Edit |
+| | 生成素材（未用） | `materials/kling/clip2_kling4_720p_run1.mp4` | 0:09.0 | 1280×720 | 5.5 MB | Kling 4.0 Video Edit |
+| | 生成素材 | `materials/kling/clip2_kling4_720p_run2.mp4` | 0:09.0 | 1280×720 | 5.9 MB | Kling 4.0 Video Edit |
+| | 生成素材 | `materials/kling/clip3_kling4_720p_run1.mp4` | 0:06.0 | 1280×720 | 5.2 MB | Kling 4.0 Video Edit |
 
 ## 素材和成片的关系
 
@@ -40,6 +46,10 @@ NEON     卡通版片段 + 官方 MV（第三方，不入库）─────�
 
 NEON ×3  卡通版片段 + 官方 MV + 舞台版片段（第三方，不入库）→ 三版卡拍混剪（24.6 秒）
 
+NEON 双马尾  卡通版片段（第三方，不入库）─ 有头发的镜头 ─ Kling 4.0 Video Edit ─→ 5 段生成素材 ─┐
+             卡通版片段的手部、图形镜头 ───────────────────────────────────────────────────┤
+             官方 MV 的音轨（第三方，不入库）─────────────────────────────────────────────┴─→ 双马尾版（23.0 秒）
+
 AI 意识  Gemini Notebook 方案三 ─┐
          Gemini Notebook 方案四 ─┴─ Clipchamp ─→《AI有意识吗》─┐
          JRE #2541 访谈整集（第三方，不入库）────────────────┴─→ 访谈实证版（5:41）
@@ -49,8 +59,9 @@ AI 意识  Gemini Notebook 方案三 ─┐
 
 - **证据插入式剪辑**：贝叶斯、AI 意识
 - **Gemini Notebook 骨架**：贝叶斯、AI 意识
-- **对齐 / 同步**：NEON、NEON ×3（三路闭环 + 拍点网格）、AI 意识（素材拼接分析、分段校准）
+- **对齐 / 同步**：NEON、NEON ×3（三路闭环 + 拍点网格）、AI 意识（素材拼接分析、分段校准）、NEON 双马尾（AI 编辑后的画面逐帧对齐原片）
+- **AI 视频生成 / 编辑**：NEON 双马尾（Kling 4.0 Video Edit 改发型，参考图，补回字样和签名）
 - **竖屏构图**：NEON（分屏）、NEON ×3（三分屏 ↔ 全屏动态版式、主体跟随裁切）、贝叶斯 / AI 意识（相框嵌入）
 - **语音识别 / 字幕**：AI 意识（ASR）、贝叶斯（硬字幕像素差分）
 - **事实核对 / 纠错**：AI 意识（原话与骨架不符）、贝叶斯（先验 ≠ 偏见）
-- **同题多版本对比**：贝叶斯（2:08 vs 1:04）、NEON（fit vs crop）、NEON ×3（同一段音乐的三个版本）
+- **同题多版本对比**：贝叶斯（2:08 vs 1:04）、NEON（fit vs crop）、NEON ×3（同一段音乐的三个版本）、NEON 双马尾（原版 vs 双马尾，逐镜头对照）

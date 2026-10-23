@@ -10,6 +10,7 @@
 <td align="center"><a href="projects/2026-10-21-01-neon-cartoon-vs-mv-split/"><img src="projects/2026-10-21-01-neon-cartoon-vs-mv-split/thumbs/neon_split_fit_poster.jpg" width="150"></a><br><sub>NEON · 卡通版 vs 原版分屏</sub></td>
 <td align="center"><a href="projects/2026-10-21-02-ai-consciousness-evidence-cut/"><img src="projects/2026-10-21-02-ai-consciousness-evidence-cut/thumbs/ai-consciousness_evidence-cut_poster.jpg" width="150"></a><br><sub>AI 意识 · 访谈实证版</sub></td>
 <td align="center"><a href="projects/2026-10-22-01-neon-three-universes/"><img src="projects/2026-10-22-01-neon-three-universes/thumbs/neon_three-universes_poster.jpg" width="150"></a><br><sub>NEON ×3 · 三个宇宙</sub></td>
+<td align="center"><a href="projects/2026-10-24-01-neon-twin-tails/"><img src="projects/2026-10-24-01-neon-twin-tails/thumbs/neon_twin-tails_poster.jpg" width="150"></a><br><sub>NEON 双马尾 · AI 换发型</sub></td>
 </tr>
 </table>
 
@@ -21,6 +22,7 @@
 | 2026-10-21 | [NEON：AI 卡通版 vs 官方 MV](projects/2026-10-21-01-neon-cartoon-vs-mv-split/) | 用音频互相关精确对齐，做成 9:16 上下分屏（两种适配方式） | —（第三方素材） | Claude |
 | 2026-10-21 | [《AI有意识吗》访谈实证版](projects/2026-10-21-02-ai-consciousness-evidence-cut/) | 在科普短片的 9 个节点插入 JRE #2541 访谈原声，配双语字幕和解析卡，成片 5:41 | Gemini Notebook + Clipchamp | Claude |
 | 2026-10-22 | [NEON ×3：三个宇宙](projects/2026-10-22-01-neon-three-universes/) | AI 卡通版、官方 MV、舞台版三路音频对齐到同一个主时钟，按拍点网格在三分屏和全屏之间切换，成片 0:24.6 | —（第三方素材） | Claude |
+| 2026-10-24 | [NEON 双马尾：给 AI 卡通版娃娃换发型](projects/2026-10-24-01-neon-twin-tails/) | 用 Kling 4.0 Video Edit 只改有头发的镜头，参考图让双马尾从第一帧开始；补回被抹掉的字样和签名，量出 Kling 的 1–2 帧延迟后对齐原片，配 MV 原声，成片 0:23.0 | Kling 4.0 Video Edit（Figma Weave） | Claude |
 
 工作模式基本固定为：**Gemini Notebook 生成解说骨架 → Claude 插入一手证据、核对事实、合成成片**。完整清单（每条视频的规格、大小、角色）见 [projects/README.md](projects/README.md)。
 
@@ -33,6 +35,7 @@
 | [本地语音识别与时间码](playbooks/local-asr-timestamps.md) | 中文旁白、英文词级时间码；没有 ASR 时从硬字幕读时间轴 |
 | [竖屏 9:16 构图](playbooks/vertical-9x16-composition.md) | 完整画面 + 模糊填充 / 铺满裁切 / 相框嵌入 |
 | [大文件与传输限制](playbooks/large-files-and-transfer-limits.md) | 源片太大、成片写不回、GitHub 100 MB 限制、写回文件的坑 |
+| [AI 视频编辑](playbooks/ai-video-edit.md) | 只改一个属性、保住原片时间轴：选通道和报价、参考图、补回字样和签名、量帧延迟 |
 | [提示词模式](playbooks/prompt-patterns.md) | 视频任务提示词该写什么，哪些漏写会返工 |
 
 学习时间线和能力地图：[docs/learning-log.md](docs/learning-log.md)
