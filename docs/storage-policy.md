@@ -64,7 +64,8 @@ git lfs pull --include "projects/2026-10-19-01-*"                   # 之后按�
 | NEON | 卡通版片段 | Higgsfield 创作者作品（文件名标注 `#higgsfieldcreator … Made @higgsfield.ai`） | `🩵 Comment [neon] 🩵 … Made @higgsfield.ai.mp4` / 3.1 MB |
 | NEON | 官方 MV | A2O LITE《NEON》Official Video | `A2O LITE 'NEON' Official Video.mkv` / 201 MB |
 | NEON ×3 | 舞台版片段 | 舞台表演片段，画面带「WORLD PREMIERE」字样，具体节目未核实 | `23 secondes A2O_20261022.mp4` / 5.1 MB |
+| 剑来 · 陈平安 | 剧集预告 | 《剑来》最新预告（吴磊主演），腾讯视频出品，带中英硬字幕和「腾讯视频」水印 | `吴磊《剑来》最新预告.mp4` / 78.7 MB |
 | NEON 双马尾 | 卡通版片段、官方 MV | 同 NEON。卡通版有头发的镜头经 Kling 改了发型，其余镜头原样使用；MV 只用了音轨 | 同上 |
 | AI 意识 | 访谈整集 | *The Joe Rogan Experience* #2541 · Thomas Campbell，[YouTube v2oBLSDCZaY](https://www.youtube.com/watch?v=v2oBLSDCZaY) | `Joe Rogan Experience #2541 - Thomas Campbell.mp4` / 1.16 GB |
 
-成片里包含这些素材的片段（NEON 和 NEON ×3 的 MV、卡通、舞台画面，NEON 双马尾的卡通画面和 MV 音轨，两条访谈实证版里的访谈原声）。NEON 双马尾的 `materials/kling/` 是 Kling 在卡通版画面上改出来的，同样是衍生作品。本库是公开仓库，素材版权归原作者所有，这里只作个人学习记录。
+成片里包含这些素材的片段（NEON 和 NEON ×3 的 MV、卡通、舞台画面，NEON 双马尾的卡通画面和 MV 音轨，两条访谈实证版里的访谈原声，剑来 · 陈平安的预告画面和原声）。NEON 双马尾的 `materials/kling/` 是 Kling 在卡通版画面上改出来的，同样是衍生作品。本库是公开仓库，素材版权归原作者所有，这里只作个人学习记录。
