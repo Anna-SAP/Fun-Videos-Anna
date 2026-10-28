@@ -15,7 +15,7 @@
 |---|---|---|---|---|
 | <img src="thumbs/jianlai_wulei-highlight_poster.jpg" width="160"> | [`media/jianlai_wulei-highlight.mp4`](media/jianlai_wulei-highlight.mp4)<br>原名：剑来_吴磊高光_9x16.mp4 | 0:31.6 | 1080×1920 · 25 fps · H.264 CRF 20（上限 14 Mbps）· AAC 192 kbps · −14.1 LUFS / −2.8 dBTP | 54.5 MB |
 
-逐帧预览：[成片](thumbs/jianlai_wulei-highlight_sheet.jpg)
+逐帧预览：[成片](thumbs/jianlai_wulei-highlight_sheet.jpg) · [取景示意](thumbs/jianlai_wulei-highlight_framing.jpg)（原片画面上的 9:16 取景框）
 
 **一句话：** 3 分 14 秒的预告只留陈平安（吴磊）的单人镜头，用他自己的独白「去路不由己，但我还是想，为自己，争一争」立住性格，再接预告高潮段的配乐按重拍切，最后以浴血特写、一拍静默和「剑来」标题收尾。
 

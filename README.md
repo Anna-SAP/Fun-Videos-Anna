@@ -11,6 +11,7 @@
 <td align="center"><a href="projects/2026-10-21-02-ai-consciousness-evidence-cut/"><img src="projects/2026-10-21-02-ai-consciousness-evidence-cut/thumbs/ai-consciousness_evidence-cut_poster.jpg" width="150"></a><br><sub>AI 意识 · 访谈实证版</sub></td>
 <td align="center"><a href="projects/2026-10-22-01-neon-three-universes/"><img src="projects/2026-10-22-01-neon-three-universes/thumbs/neon_three-universes_poster.jpg" width="150"></a><br><sub>NEON ×3 · 三个宇宙</sub></td>
 <td align="center"><a href="projects/2026-10-24-01-neon-twin-tails/"><img src="projects/2026-10-24-01-neon-twin-tails/thumbs/neon_twin-tails_poster.jpg" width="150"></a><br><sub>NEON 双马尾 · AI 换发型</sub></td>
+<td align="center"><a href="projects/2026-10-29-01-jianlai-wulei-highlight/"><img src="projects/2026-10-29-01-jianlai-wulei-highlight/thumbs/jianlai_wulei-highlight_poster.jpg" width="150"></a><br><sub>剑来 · 陈平安 · 吴磊高光</sub></td>
 </tr>
 </table>
 
@@ -23,6 +24,7 @@
 | 2026-10-21 | [《AI有意识吗》访谈实证版](projects/2026-10-21-02-ai-consciousness-evidence-cut/) | 在科普短片的 9 个节点插入 JRE #2541 访谈原声，配双语字幕和解析卡，成片 5:41 | Gemini Notebook + Clipchamp | Claude |
 | 2026-10-22 | [NEON ×3：三个宇宙](projects/2026-10-22-01-neon-three-universes/) | AI 卡通版、官方 MV、舞台版三路音频对齐到同一个主时钟，按拍点网格在三分屏和全屏之间切换，成片 0:24.6 | —（第三方素材） | Claude |
 | 2026-10-24 | [NEON 双马尾：给 AI 卡通版娃娃换发型](projects/2026-10-24-01-neon-twin-tails/) | 用 Kling 4.0 Video Edit 只改有头发的镜头，参考图让双马尾从第一帧开始；补回被抹掉的字样和签名，量出 Kling 的 1–2 帧延迟后对齐原片，配 MV 原声，成片 0:23.0 | Kling 4.0 Video Edit（Figma Weave） | Claude |
+| 2026-10-29 | [剑来 · 陈平安：吴磊单人高光竖屏混剪](projects/2026-10-29-01-jianlai-wulei-highlight/) | 3:14 的剧集预告只留吴磊的单人镜头，用他本人的四句独白立人设；高潮段按实测 101.9 BPM 的重拍一拍一刀；9:16 窗口按脸取景、避开硬字幕，去水印，逐帧叠闪白、冲击缩放、RGB 错位、火星粒子和逐字字幕，成片 0:31.6 | —（第三方素材） | Claude |
 
 工作模式基本固定为：**Gemini Notebook 生成解说骨架 → Claude 插入一手证据、核对事实、合成成片**。完整清单（每条视频的规格、大小、角色）见 [projects/README.md](projects/README.md)。
 
