@@ -665,6 +665,7 @@ def main():
     ap.add_argument('--fast', action='store_true')
     ap.add_argument('--work', default=None)
     ap.add_argument('--frames', default=None, help='comma-separated output times to dump as JPEG only')
+    ap.add_argument('--maxrate', default='14M', help='video bitrate cap (bufsize is twice this)')
     args = ap.parse_args()
     work = args.work or os.path.dirname(os.path.abspath(args.out))
     os.makedirs(work, exist_ok=True)
@@ -697,7 +698,7 @@ def main():
            '-af', ln,
            # the film grain is new noise every frame: cap the rate or it runs to 30 Mbps
            '-c:v', 'libx264', '-preset', 'veryfast' if args.fast else 'slow', '-crf', '20',
-           '-maxrate', '14M', '-bufsize', '28M',
+           '-maxrate', args.maxrate, '-bufsize', f'{2 * float(args.maxrate.rstrip("M")):g}M',
            '-profile:v', 'high', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000',
            '-movflags', '+faststart', '-shortest', args.out]
     p = subprocess.Popen(enc, stdin=subprocess.PIPE)

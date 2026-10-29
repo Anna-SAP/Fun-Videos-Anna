@@ -6,7 +6,7 @@
 | 类型 | 预告片 → 9:16 人物卡点混剪 |
 | 工具 | Claude Code（本机）+ ffmpeg、numpy/scipy、Pillow |
 | 输入 | 《剑来》最新预告（腾讯视频，3:14），第三方素材，不入库 |
-| 产出 | 1 条成片 |
+| 产出 | 1 条成片 + 1 条 60 秒[加长版](variants/60s/) |
 | 对话 | Claude 桌面版 Code 会话 |
 
 ## 成片
@@ -88,3 +88,7 @@ python scripts/render_jianlai_wulei.py "吴磊《剑来》最新预告.mp4" x.mp
 - 发布前在抖音 / 视频号的真实界面上看一遍字幕和底部按钮的位置。
 - 要更清晰的竖屏，可以找 4K 源，或者试 AI 超分。
 - 片头钩子可以做成两个版本（快闪 / 直接台词开场），看哪个完播率高。
+
+## 60 秒加长版
+
+后来又做了一条 60 秒的：[variants/60s/](variants/60s/)。规则不变，前面加了他的另一段独白「我原以为……可这方天地，当真如我所见」，配屋檐、火光、狗、烧窑、山道、斗笠这些安静镜头；高潮段配乐多用 7 秒。渲染脚本 [`render_jianlai_wulei_60s.py`](scripts/render_jianlai_wulei_60s.py) 复用本版的渲染器，只换剪辑表，另加了叠化和安静段的字幕样式；[`check_shot_ranges.py`](scripts/check_shot_ranges.py) 检查每个镜头用到的源帧没有越过原片的切点。
