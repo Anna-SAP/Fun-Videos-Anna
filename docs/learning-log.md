@@ -12,6 +12,7 @@
 | 2026-10-22 | [NEON ×3 · 三个宇宙](../projects/2026-10-22-01-neon-three-universes/) | 第一次在本机 Claude Code 里完成整条流程；三路素材闭环对齐；拟合拍点网格、按小节编排切点；Python 逐帧合成动态版式（三分屏 ↔ 全屏缓动、霓虹扫线、扫描线变身）；暗像素跟拍 | 素材共用一段音乐时，先建一个主时钟，再在上面自由编排；结构跟着歌的段落走；全屏段要逐帧检查取景 |
 | 2026-10-24 | [NEON 双马尾](../projects/2026-10-24-01-neon-twin-tails/) | 第一次用 AI 视频编辑模型（Kling 4.0 Video Edit，经 Figma Weave 调用）；从选通道、换账号、升级套餐，到每次运行前先报价；用参考图让改动从第一帧开始；从原片像素补回被抹掉的字样和签名；用不受编辑影响区域的像素差量出 1–2 帧延迟 | 改原片比重新生成更容易保住同步；AI 编辑只在大动作时改发型，要给参考图；会抹掉文字、推镜会偏；舞蹈片段测延迟不能用运动能量 |
 | 2026-10-29 | [剑来 · 陈平安](../projects/2026-10-29-01-jianlai-wulei-highlight/) | 第一次从长预告里只挑一个人的镜头：看拼图逐镜头认人（`scdet` 漏掉了叠化和暗场）；从硬字幕读台词时间、声谱图确认人声；频谱通量 + 自相关量出 101.9 BPM 的重拍网格；按脸取景的 9:16 窗口避开硬字幕，解码时 `delogo` 去水印；逐帧叠闪白、冲击缩放、RGB 错位、切片错位、径向模糊、火星粒子和逐字字幕；合成音效，两遍 `loudnorm` 后再限幅 | 用角色自己的台词立人设，比堆画面更能说清性格；认不出是谁的镜头宁可不用；水印位置要放大量，不要估；加了胶片颗粒就要限码率 |
+| 2026-11-10 | [The Moment You Saw Me](../projects/2026-11-10-01-the-moment-you-saw-me/) | 第一次从一首歌出发做 MV，也是第一次整支用 AI 生成画面：量 BPM、第一拍、段落和响度，发现后半首是前半首的原样重复、副歌前有 0.44 秒静默；gpt-image-2 出 34 张关键帧（一张参考像管人物一致），Depth Anything V2 在本机算景深做视差运镜；雨是三层粒子，挂在一条会变慢、会停的钟上；原曲音频流原样复制，再用包 MD5 和互相关校验。同一天做了歌词版：whisper-1 词级时间取中位数，句首对着频谱图改；歌词是手指写在起雾玻璃上的字，用遮罩擦雾 | 先量再想：两个核心决定（一个下午讲两遍、雨停在半空）都是量出来的；图里不画雨，雨才能变慢和停住；少露脸既是叙事也省掉人物一致性的麻烦；ffmpeg 报的 `start` 不等于要补的偏移，要用互相关确认；给歌词定一条物理规则，比挑字体和动效有用 |
 | 2026-10-21 | 建立本知识库 | Git LFS、manifest 驱动的本机上传脚本 | 云端连不上 LFS 存储，视频从本机推；第三方素材只登记不入库；一个作品 = 一条成片 + 它的素材 |
 
 ## 能力地图
@@ -22,11 +23,17 @@
 | 在线剪辑拼接（Clipchamp） | 会用 | AI 意识（素材） |
 | 证据插入式剪辑 | 做过两次（[playbook](../playbooks/evidence-insert-editing.md)） | 贝叶斯、AI 意识 |
 | ffmpeg 滤镜图：缩放、裁切、模糊填充、vstack、tpad、adelay、xfade、drawbox、delogo、ebur128 | 能写 | 全部 |
-| 音频互相关对齐 | 能复用（[playbook](../playbooks/audio-sync-cross-correlation.md) + [工具](../tools/av/find_offset.py)） | NEON、AI 意识、NEON ×3（三路闭环）、NEON 双马尾（复核） |
+| 音频互相关对齐 | 能复用（[playbook](../playbooks/audio-sync-cross-correlation.md) + [工具](../tools/av/find_offset.py)） | NEON、AI 意识、NEON ×3（三路闭环）、NEON 双马尾（复核）、The Moment（校验成片音轨） |
 | AI 视频编辑（Kling 4.0 Video Edit，Figma Weave） | 做过一次（[playbook](../playbooks/ai-video-edit.md)） | NEON 双马尾 |
 | 画面逐帧对齐（编辑前后，下方区域像素差） | 做过一次（脚本里的 `frame_lag`） | NEON 双马尾 |
 | 从原片补回叠加元素（灰度闭运算提取笔画） | 做过一次（脚本里的 `build_overlay`） | NEON 双马尾 |
-| 拍点检测与卡拍剪辑 | 做过两次（[playbook](../playbooks/audio-sync-cross-correlation.md#拍点网格让切点卡在节拍上)） | NEON ×3、剑来 · 陈平安（自相关求重拍，一拍一刀） |
+| 拍点检测与卡拍剪辑 | 做过三次（[playbook](../playbooks/audio-sync-cross-correlation.md#拍点网格让切点卡在节拍上)） | NEON ×3、剑来 · 陈平安（自相关求重拍，一拍一刀）、The Moment（72 BPM，每小节 80 帧的整数网格） |
+| 歌曲结构分析（段落、原样重复、静默、响度起伏） | 做过一次（`analyze_audio.py`、`analyze_structure.py`） | The Moment |
+| AI 关键帧（gpt-image-2，参考像保持人物一致，否定句压住广告感） | 做过一次（`keyframes.py`） | The Moment |
+| 景深视差运镜（Depth Anything V2 Small，本机 CPU） | 做过一次（`depth.py`、`render.py`） | The Moment |
+| 程序化粒子挂在变速时钟上（雨、水珠、金色闪烁） | 做过一次（`timeline.py` 的 `phi(t)`、`render.py` 的 `Rain`） | The Moment |
+| 逐词歌词对齐（API 词级时间 + 频谱图修正） | 做过一次（`align_lyrics.py`） | The Moment 歌词版 |
+| 歌词作为画面主体（遮罩擦雾、极性翻转、距离变换扩开） | 做过一次（`glass.py`） | The Moment 歌词版 |
 | 动态版式与主体跟随裁切（Pillow + numpy 逐帧合成） | 做过两次（[playbook](../playbooks/vertical-9x16-composition.md#动态版式三分屏--全屏neon-3)） | NEON ×3、剑来 · 陈平安（按脸取景、推拉、甩镜） |
 | 短视频特效与逐字字幕（闪白、冲击缩放、RGB 错位、径向模糊、粒子） | 做过一次（脚本里的 `HITS`、`CAPTIONS`） | 剑来 · 陈平安 |
 | 合成音效（冲击、风声、上扬音、心跳）+ 两遍 `loudnorm` + 限幅 | 做过一次（脚本里的音频部分） | 剑来 · 陈平安 |
@@ -42,5 +49,6 @@
 - NEON ×3：出一个不带文字的纯净版；把版式引擎抽成通用工具
 - NEON 双马尾：开场特写按“从头顶到腰”重做一次取景；1080p 和 720p 画质对比；把帧对齐和补回叠加元素抽成通用工具；试一次 Kling Motion Control，直接用 MV 的真人动作驱动双马尾娃娃，和这次的编辑法对比
 - 剑来 · 陈平安：发布前在抖音 / 视频号的真实界面上检查字幕和底部按钮；找 4K 源或试 AI 超分，改善放大后的画质；片头钩子做两个版本（快闪 / 直接台词开场）比完播率；把特效和字幕模块抽成通用工具
+- The Moment：给闭眼特写、逆光抬头、她抬起脸三个镜头换成真视频；歌词版的雾字在浅色衣服上对比偏弱，试试按底色自动加深；把雨粒子和玻璃层抽成通用模块
 - 两条访谈实证版统一用 -16 LUFS；在提示词里先定总时长和证据段数
 - 补齐 Gemini Notebook 的输入资料和指令，比较同一份资料用不同指令生成的效果

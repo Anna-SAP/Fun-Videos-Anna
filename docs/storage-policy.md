@@ -9,7 +9,7 @@
 | 缩略图、逐帧预览（jpg，几十 KB） | ✅ 普通 Git | `projects/<作品>/thumbs/` |
 | 提示词、制作步骤、复盘、剪辑清单、旁白文稿 | ✅ 普通 Git（Markdown） | `projects/<作品>/` |
 | 脚本（.py / .sh / .bat / .ps1） | ✅ 普通 Git | `projects/<作品>/scripts/`，通用的放 `tools/` |
-| **第三方原始素材**（访谈整集、访谈录屏、官方 MV、别人的作品） | ❌ 不入库：在作品 README 和下面的登记表里记来源、文件名和体积 | — |
+| **第三方原始素材**（访谈整集、访谈录屏、官方 MV、歌曲原曲和歌词文件、别人的作品） | ❌ 不入库：在作品 README 和下面的登记表里记来源、文件名和体积 | — |
 | 中间产物（分段、PCM、渲染缓存、模型文件） | ❌ 不入库（见 [.gitignore](../.gitignore)） | — |
 
 第三方原始素材不入库有两个原因：一是版权不属于自己，二是体积大（JRE 整集 1.16 GB、MV 201 MB）。需要复现时，按项目 README 里记的来源重新获取。
@@ -66,6 +66,7 @@ git lfs pull --include "projects/2026-10-19-01-*"                   # 之后按�
 | NEON ×3 | 舞台版片段 | 舞台表演片段，画面带「WORLD PREMIERE」字样，具体节目未核实 | `23 secondes A2O_20261022.mp4` / 5.1 MB |
 | 剑来 · 陈平安 | 剧集预告 | 《剑来》最新预告（吴磊主演），腾讯视频出品，带中英硬字幕和「腾讯视频」水印 | `吴磊《剑来》最新预告.mp4` / 78.7 MB |
 | NEON 双马尾 | 卡通版片段、官方 MV | 同 NEON。卡通版有头发的镜头经 Kling 改了发型，其余镜头原样使用；MV 只用了音轨 | 同上 |
+| The Moment | 歌曲原曲、歌词文件 | 《今天是太阳雨》主题曲 *The Moment You Saw Me*。歌词文件带署名（作词 / 作曲 Ann515，编曲 Y-Duet/Sung，OP/SP 阳乐二正）和一行权利声明「未经许可,不得翻唱或使用」 | `TheMomentYouSawMe.m4a` / 2.1 MB；`TheMomentYouSawMe_lyrics.txt` / 2 KB |
 | AI 意识 | 访谈整集 | *The Joe Rogan Experience* #2541 · Thomas Campbell，[YouTube v2oBLSDCZaY](https://www.youtube.com/watch?v=v2oBLSDCZaY) | `Joe Rogan Experience #2541 - Thomas Campbell.mp4` / 1.16 GB |
 
-成片里包含这些素材的片段（NEON 和 NEON ×3 的 MV、卡通、舞台画面，NEON 双马尾的卡通画面和 MV 音轨，两条访谈实证版里的访谈原声，剑来 · 陈平安的预告画面和原声）。NEON 双马尾的 `materials/kling/` 是 Kling 在卡通版画面上改出来的，同样是衍生作品。本库是公开仓库，素材版权归原作者所有，这里只作个人学习记录。
+成片里包含这些素材的片段（NEON 和 NEON ×3 的 MV、卡通、舞台画面，NEON 双马尾的卡通画面和 MV 音轨，两条访谈实证版里的访谈原声，剑来 · 陈平安的预告画面和原声；The Moment 的两版用整首原曲做音轨，歌词版的画面里有全部歌词）。NEON 双马尾的 `materials/kling/` 是 Kling 在卡通版画面上改出来的，同样是衍生作品。本库是公开仓库，素材版权归原作者所有，这里只作个人学习记录。

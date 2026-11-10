@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fun Videos · Anna — 用 AI 做科普短视频</title>
-  <meta name="description" content="六支用 AI 做的短视频，以及它们的关键制作过程：Gemini Notebook 生成解说骨架，Claude 插入访谈原声作为证据、核对事实、合成成片。">
+  <meta name="description" content="七支用 AI 做的短视频，以及它们的关键制作过程：从 Gemini Notebook 骨架加访谈证据的科普片，到先把一首歌量清楚、再用 AI 关键帧做成的 MV。">
   <meta name="theme-color" content="#FAF8F4">
   <meta property="og:title" content="Fun Videos · Anna">
-  <meta property="og:description" content="六支用 AI 做的短视频，以及它们是怎么做出来的。">
+  <meta property="og:description" content="七支用 AI 做的短视频，以及它们是怎么做出来的。">
   <meta property="og:image" content="assets/posters/bayes.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23D9572A'/%3E%3Cpath d='M12.5 9.5v13l10-6.5z' fill='%23fff'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/style.css">
@@ -37,8 +37,8 @@
     <section class="hero" id="works" aria-labelledby="works-title">
       <div class="hero__intro">
         <p class="eyebrow">AI 科普短视频 · 学习记录</p>
-        <h1 id="works-title">六支短片，和它们的制作过程。</h1>
-        <p class="hero__lede">解说骨架由 Gemini Notebook 生成；Claude 找来访谈原声作为证据、核对事实，再合成为成片。</p>
+        <h1 id="works-title">七支短片，和它们的制作过程。</h1>
+        <p class="hero__lede">解说骨架由 Gemini Notebook 生成；Claude 找来访谈原声作为证据、核对事实，再合成为成片。最新一支换了做法：先把一首歌量清楚，再用 AI 关键帧和程序画的雨做成 MV。</p>
         <a class="hero__more" href="#process">看看是怎么做的<span aria-hidden="true"> ↓</span></a>
       </div>
 
@@ -158,6 +158,30 @@
             <p class="work__idx">06 · 2026-10-29</p>
             <h2 class="work__title">剑来 · 陈平安</h2>
             <p class="work__sub">吴磊单人高光 · 卡点混剪</p>
+          </div>
+        </article>
+        <article class="work" style="--i:6">
+          <div class="player" id="hero-moment" data-player>
+            <video preload="none" playsinline poster="assets/posters/moment.jpg"
+                   src="projects/2026-11-10-01-the-moment-you-saw-me/variants/share/the-moment-you-saw-me_share.mp4"
+                   aria-label="The Moment You Saw Me：同一场雨讲两遍"></video>
+            <button class="player__cover" type="button" aria-label="播放 The Moment You Saw Me">
+              <span class="player__btn" aria-hidden="true"></span>
+              <span class="player__time" data-time>3:03</span>
+            </button>
+          </div>
+          <div class="work__meta">
+            <p class="work__idx">07 · 2026-11-10</p>
+            <h2 class="work__title" lang="en">The Moment You Saw Me</h2>
+            <p class="work__sub">歌曲 MV · 同一场雨讲两遍</p>
+            <div class="seg" role="group" aria-label="选择版本">
+              <button type="button" class="seg__btn" aria-pressed="true" data-for="hero-moment"
+                      data-src="projects/2026-11-10-01-the-moment-you-saw-me/variants/share/the-moment-you-saw-me_share.mp4"
+                      data-poster="assets/posters/moment.jpg" data-time="3:03">原版</button>
+              <button type="button" class="seg__btn" aria-pressed="false" data-for="hero-moment"
+                      data-src="projects/2026-11-10-01-the-moment-you-saw-me/variants/lyrics/the-moment-you-saw-me_lyrics_share.mp4"
+                      data-poster="assets/posters/moment-lyrics.jpg" data-time="3:03">歌词版</button>
+            </div>
           </div>
         </article>
       </div>
@@ -729,6 +753,187 @@
             </p>
           </div>
         </article>
+        <!-- 07 The Moment You Saw Me -->
+        <article class="case" id="case-moment" aria-labelledby="case-moment-title">
+          <div class="case__media">
+            <div class="viewer">
+              <div class="seg seg--block" role="group" aria-label="切换镜头示意与成片">
+                <button type="button" class="seg__btn" aria-pressed="true" data-for="case-moment-player" data-still
+                        data-caption="一个镜头怎么来的：AI 只出一张不带雨的图，景深图用来分层运镜，雨是渲染时画上去的">镜头示意</button>
+                <button type="button" class="seg__btn" aria-pressed="false" data-for="case-moment-player"
+                        data-src="projects/2026-11-10-01-the-moment-you-saw-me/variants/share/the-moment-you-saw-me_share.mp4"
+                        data-poster="assets/posters/moment.jpg" data-time="3:03"
+                        data-caption="成片：34 个镜头，音轨是原曲音频流的原样复制，1080×1920">成片 3:03</button>
+              </div>
+              <div class="player player--case is-still" id="case-moment-player" data-player>
+                <video preload="none" playsinline poster="assets/posters/moment.jpg"
+                       src="projects/2026-11-10-01-the-moment-you-saw-me/variants/share/the-moment-you-saw-me_share.mp4"
+                       aria-label="The Moment You Saw Me 成片"></video>
+                <button class="player__cover" type="button" aria-label="播放">
+                  <span class="player__btn" aria-hidden="true"></span>
+                  <span class="player__time" data-time>3:03</span>
+                </button>
+                <button type="button" class="player__still" data-lightbox data-src="assets/posters/moment-layers.jpg"
+                        aria-label="放大镜头示意图">
+                  <img src="assets/posters/moment-layers.jpg"
+                       alt="一个镜头的四步：AI 生成的关键帧里没有雨；景深图近处白远处黑；伴奏停掉的 0.44 秒里雨停成悬在半空的水珠；下一拍雨恢复下落并被夕阳照成金色" width="720" height="1280" loading="lazy">
+                </button>
+              </div>
+              <p class="viewer__cap" data-viewer-cap>一个镜头怎么来的：AI 只出一张不带雨的图，景深图用来分层运镜，雨是渲染时画上去的</p>
+            </div>
+          </div>
+
+          <div class="case__body">
+            <p class="case__kicker"><span>07</span>2026-11-10 · 关键帧 gpt-image-2 · 景深 Depth Anything V2 · 合成 Claude</p>
+            <h3 class="case__title" id="case-moment-title"><span lang="en">The Moment You Saw Me</span>：同一场雨讲两遍</h3>
+            <p class="case__lead">一首 3 分 03 秒的安静英文歌，要求是先分析再动手，不套“安静唯美”的模板。量下来，后半首是前半首一个采样不差的重复，所以片子把同一个雨天讲了两遍：先是她藏着的，再是他看见的。副歌前伴奏停掉的 0.44 秒里，雨停在半空；下一拍太阳出来，雨没有停。</p>
+
+            <dl class="facts">
+              <div><dt>后半首原样重复前半首，间隔</dt><dd>80.000<small>秒</small></dd></div>
+              <div><dt>副歌前伴奏整体停掉</dt><dd>0.44<small>秒</small></dd></div>
+              <div><dt>AI 关键帧，没有用视频模型</dt><dd>34<small>张</small></dd></div>
+            </dl>
+
+            <ol class="steps">
+              <li><h4>先把歌量清楚</h4><p>72.00 BPM，第一拍在 3.095 秒。换到 24 fps 正好每拍 20 帧、每小节 80 帧，剪辑点可以直接写成“第几小节第几拍”。全曲响度起伏只有约 4 dB，唯一的事件是 55.97–56.41 秒伴奏整体停掉。</p></li>
+              <li><h4>让结构决定叙事</h4><p>第 29–52 小节和第 5–28 小节的波形相关 0.96，是同一段录音。音乐原样重复，画面就不重复：第二遍换到他的位置看同样的日子，两次副歌是同一个瞬间的两面。纸杯第一遍来路不明，第二遍有了主人。</p></li>
+              <li><h4>关键帧加景深视差</h4><p>34 张 gpt-image-2 关键帧，露脸的镜头都带同一张参考像。Depth Anything 在本机算出景深图，按远近分层做推拉和横移。第一遍始终不给她完整的脸，第二次副歌才正面看清，这既是意思，也省掉大半人物一致性的麻烦。</p></li>
+              <li><h4>雨不画在图里</h4><p>提示词里写明不要雨丝。雨由渲染器按三层景深的粒子画，挂在一条变速的钟上：预副歌三成速度，静默时为零并变成水珠，副歌第一拍恢复、换成金色。镜头运动也挂在这条钟上。</p></li>
+              <li><h4>音轨不动，再校验</h4><p>原曲已经很响（−9.1 LUFS），直接复制音频流，不调音量、不重编码。成片音频包的 MD5 与原文件一致；四个时间点互相关，偏移都是 0.0 ms；23 个硬切全部落在节拍网格上。</p></li>
+            </ol>
+
+            <aside class="note">
+              <p class="note__tag">注意</p>
+              <p>ffmpeg 报原文件 <code>start: 0.0595</code>，那只是编码器的预留采样，容器已经跳过了。第一版照这个数把音轨挪了 59.5 ms，声音早了 1.4 帧，是互相关校验发现的。</p>
+            </aside>
+
+            <div class="retro">
+              <div>
+                <h4 class="retro__h retro__h--good">做得好</h4>
+                <ul>
+                  <li>原样重复和 0.44 秒静默是量出来的，直接成了叙事和高潮，不是事后贴上去的。</li>
+                  <li>练好的笑和真的笑都只拍鼻梁以下，隔了两分钟呼应。</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="retro__h retro__h--next">下次改进</h4>
+                <ul>
+                  <li>人物不会动，动作都定格在一张图里。给闭眼特写、逆光抬头、她抬起脸这三个镜头换成真视频。</li>
+                  <li>Claude 听不到声音：节拍和段落是量的，音色和演唱的情绪只能从频谱推断。</li>
+                </ul>
+              </div>
+            </div>
+
+            <figure class="sheet">
+              <button type="button" class="sheet__btn" data-lightbox
+                      data-src="projects/2026-11-10-01-the-moment-you-saw-me/thumbs/the-moment-you-saw-me_sheet.jpg"
+                      aria-label="放大成片逐帧预览">
+                <img src="projects/2026-11-10-01-the-moment-you-saw-me/thumbs/the-moment-you-saw-me_sheet.jpg"
+                     alt="The Moment You Saw Me 成片逐帧预览：前半是冷色的雨天，副歌转成逆光的金色太阳雨，第二遍换到他的视角，结尾是清晨的窗" width="2592" height="1536" loading="lazy">
+              </button>
+              <figcaption>成片逐帧预览，每 4 秒一帧：冷色的雨天和金色的太阳雨，各出现两遍。歌曲是《今天是太阳雨》主题曲，版权归原作者所有</figcaption>
+            </figure>
+
+            <p class="links">
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/tree/main/projects/2026-11-10-01-the-moment-you-saw-me" target="_blank" rel="noopener">完整作品卡</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-10-01-the-moment-you-saw-me/storyboard.md" target="_blank" rel="noopener">歌曲分析和分镜</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-10-01-the-moment-you-saw-me/prompt.md" target="_blank" rel="noopener">提示词</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-10-01-the-moment-you-saw-me/scripts/render.py" target="_blank" rel="noopener">渲染脚本</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- 07 歌词版 -->
+        <article class="case" id="case-moment-lyrics" aria-labelledby="case-moment-lyrics-title">
+          <div class="case__media">
+            <div class="viewer">
+              <div class="seg seg--block" role="group" aria-label="切换示意图、原版与歌词版">
+                <button type="button" class="seg__btn" aria-pressed="true" data-for="case-moment-lyrics-player" data-still
+                        data-caption="字的四种状态：写在雾上、翻成雾字、化成水痕、向外扩开">四种状态</button>
+                <button type="button" class="seg__btn" aria-pressed="false" data-for="case-moment-lyrics-player"
+                        data-src="projects/2026-11-10-01-the-moment-you-saw-me/variants/share/the-moment-you-saw-me_share.mp4"
+                        data-poster="assets/posters/moment.jpg" data-time="3:03"
+                        data-caption="原版：没有歌词，镜头和剪辑点与歌词版完全相同">原版</button>
+                <button type="button" class="seg__btn" aria-pressed="false" data-for="case-moment-lyrics-player"
+                        data-src="projects/2026-11-10-01-the-moment-you-saw-me/variants/lyrics/the-moment-you-saw-me_lyrics_share.mp4"
+                        data-poster="assets/posters/moment-lyrics.jpg" data-time="3:03"
+                        data-caption="歌词版：镜头前多了一块起雾的玻璃，歌词是手指写在雾上的">歌词版</button>
+              </div>
+              <div class="player player--case is-still" id="case-moment-lyrics-player" data-player>
+                <video preload="none" playsinline poster="assets/posters/moment-lyrics.jpg"
+                       src="projects/2026-11-10-01-the-moment-you-saw-me/variants/lyrics/the-moment-you-saw-me_lyrics_share.mp4"
+                       aria-label="The Moment You Saw Me 原版与歌词版"></video>
+                <button class="player__cover" type="button" aria-label="播放">
+                  <span class="player__btn" aria-hidden="true"></span>
+                  <span class="player__time" data-time>3:03</span>
+                </button>
+                <button type="button" class="player__still" data-lightbox data-src="assets/posters/moment-lyrics-states.jpg"
+                        aria-label="放大字的四种状态示意图">
+                  <img src="assets/posters/moment-lyrics-states.jpg"
+                       alt="歌词的四种状态：第一遍写在雾上，只有笔画里面清楚；第一次副歌玻璃被擦开，字翻成留在玻璃上的雾；第二遍同样的字浮回来并化成水痕；第二次副歌歌名最后两个词的笔画向外扩开，露出她的脸" width="720" height="1280" loading="lazy">
+                </button>
+              </div>
+              <p class="viewer__cap" data-viewer-cap>字的四种状态：写在雾上、翻成雾字、化成水痕、向外扩开</p>
+            </div>
+          </div>
+
+          <div class="case__body">
+            <p class="case__kicker"><span>07 · 歌词版</span>2026-11-10 · 逐词对齐 whisper-1 + 频谱图 · 合成 Claude</p>
+            <h3 class="case__title" id="case-moment-lyrics-title">歌词版：写在起雾玻璃上的字</h3>
+            <p class="case__lead">第二版的要求是歌词做画面的主体，不能是底部字幕。只定了一条规则：镜头前有一块起雾的玻璃，歌词是手指写在雾上的。手指划过的地方雾被擦掉，整个画面只有笔画里面是清楚的，要看清她只能透过这些字。镜头和剪辑点与原版完全相同。</p>
+
+            <dl class="facts">
+              <div><dt>每个词的独立时间估计，取中位数</dt><dd>6<small>次</small></dd></div>
+              <div><dt>对着频谱图手工改起点的词</dt><dd>15<small>个</small></dd></div>
+              <div><dt>新生成的图片（只多了转写费）</dt><dd>0<small>张</small></dd></div>
+            </dl>
+
+            <ol class="steps">
+              <li><h4>一条规则管到底</h4><p>字不是盖在画面上的说明，而是画面本身的开口。这条规则来自歌词的意思：藏着的那一面被看见。每个词是一张遮罩，把雾擦掉；滴下来的水挂在原版那条变速的钟上，预副歌变慢，静默时停住。</p></li>
+              <li><h4>逐词对时间</h4><p>录音后半段是前半段的原样重复，所以六段人声各转写两次，再加整首一次，每个词有 6 个估计，取中位数。识别模型把句前的空白算给句首的词，句首偏早 0.3–1.4 秒，对着人声频段的频谱图一个个改。</p></li>
+              <li><h4>两遍歌词一样，字的命运不同</h4><p>第一遍写了就被雾盖回去。第一次副歌她用袖子把玻璃擦开，字原地翻成留在玻璃上的雾。第二遍同样的字在同样的位置浮回来，像真窗户再起雾时旧指痕会显出来，这次化成水痕流下去。</p></li>
+              <li><h4>跟着演唱写</h4><p>写字从词的起点前 0.07 秒开始。预副歌两个长音各是一个大字，写的时间和那个音一样长。歌名最后两个词写进伴奏停掉的半秒里；第二次副歌，它们的笔画向外扩开，把整块玻璃的雾带走。</p></li>
+            </ol>
+
+            <aside class="note">
+              <p class="note__tag">注意</p>
+              <p>歌词文件带词曲署名和一行权利声明。歌词文字没有抄进脚本和文档：16 句在代码里叫 E1–E16，词按位置引用，渲染时才从本机的歌词文件读；署名放在片尾。歌词文件和原曲音频都不入库。</p>
+            </aside>
+
+            <div class="retro">
+              <div>
+                <h4 class="retro__h retro__h--good">做得好</h4>
+                <ul>
+                  <li>规则接上了原版的窗、雨和透明伞，没有另起一套视觉。</li>
+                  <li>没有新生成图片：玻璃层插在镜头和胶片处理之间，颗粒和暗角盖在玻璃上面。</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="retro__h retro__h--next">下次改进</h4>
+                <ul>
+                  <li>第一稿雾太透、字太小，还加了浮雕边，像压印字。真的起雾玻璃是雾发白发平，笔画里才清楚。</li>
+                  <li>浅色画面上字会消失，要给笔画加一圈暗边；副歌的雾字压在浅色衣服上对比仍然偏弱。</li>
+                </ul>
+              </div>
+            </div>
+
+            <figure class="sheet">
+              <button type="button" class="sheet__btn" data-lightbox
+                      data-src="projects/2026-11-10-01-the-moment-you-saw-me/thumbs/the-moment-you-saw-me_lyrics_sheet.jpg"
+                      aria-label="放大歌词版逐帧预览">
+                <img src="projects/2026-11-10-01-the-moment-you-saw-me/thumbs/the-moment-you-saw-me_lyrics_sheet.jpg"
+                     alt="歌词版逐帧预览：主歌是浓雾上的手写字，副歌玻璃擦开后变成清晰画面上的雾字，第二遍的字带着水痕，结尾清晨的窗玻璃上留着旧指痕" width="2592" height="1536" loading="lazy">
+              </button>
+              <figcaption>歌词版逐帧预览，每 4 秒一帧：主歌是雾上的字，副歌是清晰画面上的雾字</figcaption>
+            </figure>
+
+            <p class="links">
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-10-01-the-moment-you-saw-me/lyrics-version.md" target="_blank" rel="noopener">歌词版设计</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-10-01-the-moment-you-saw-me/scripts/glass.py" target="_blank" rel="noopener">玻璃层脚本</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-10-01-the-moment-you-saw-me/scripts/align_lyrics.py" target="_blank" rel="noopener">逐词对齐脚本</a>
+            </p>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -763,7 +968,7 @@
   <footer class="footer">
     <div class="wrap footer__inner">
       <p class="footer__brand">Fun Videos · Anna</p>
-      <p class="footer__note">个人学习记录。部分成片含有第三方素材的片段（访谈原声、官方 MV、其他创作者的作品），版权归原作者所有。</p>
+      <p class="footer__note">个人学习记录。部分成片含有第三方素材（访谈原声、官方 MV、剧集预告、歌曲原曲、其他创作者的作品），版权归原作者所有。</p>
       <p class="footer__links">
         <a href="https://github.com/Anna-SAP/Fun-Videos-Anna" target="_blank" rel="noopener">GitHub 仓库</a>
         <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/docs/learning-log.md" target="_blank" rel="noopener">学习轨迹</a>
