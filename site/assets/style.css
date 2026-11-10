@@ -159,9 +159,11 @@ code {
 
 .reel {
   display: grid;
-  /* one row, all players the same height: a 9:16 player is 81 units wide where a 16:9 one is 256 */
-  grid-template-columns: repeat(4, minmax(0, 81fr)) minmax(0, 256fr) minmax(0, 81fr);
+  /* rows of four 9:16 players and one 16:9 player, all the same height: a 9:16 player is 81 units
+     wide where a 16:9 one is 256. Later works wrap onto the next row under the same columns. */
+  grid-template-columns: repeat(4, minmax(0, 81fr)) minmax(0, 256fr);
   gap: clamp(14px, 1.8vw, 28px);
+  row-gap: clamp(32px, 3.6vw, 48px);
   align-items: start;
 }
 
