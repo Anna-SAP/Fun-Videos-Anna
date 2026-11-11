@@ -238,7 +238,8 @@ def lerp2(pair, k):
     return pair[0] + (pair[1] - pair[0]) * min(max(k, 0.0), 1.0)
 
 
-def layer(sh, t):
+def layer(sh, t, want_depth=False):
+    """One shot at one moment, before the film finish. With want_depth, also its depth map in the same frame."""
     kf = sh.kf
     # the camera runs on the warped clock too, so it also holds its breath in the gap
     tw = sh.t0 + (phi(t) - phi(sh.t0)) * (sh.t1 - sh.t0) / max(phi(sh.t1) - phi(sh.t0), 1e-6) if t <= sh.t1 else t
@@ -300,6 +301,8 @@ def layer(sh, t):
         if dt >= 0:
             a = math.exp(-dt / 1.05) * smooth(dt / .09)
             f = f * (1 + .5 * a) + a * np.array([.035, .075, .12], np.float32)
+    if want_depth:
+        return f, cv2.remap(depth(kf), U, V, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
     return f
 
 
