@@ -181,6 +181,9 @@
               <button type="button" class="seg__btn" aria-pressed="false" data-for="hero-moment"
                       data-src="projects/2026-11-10-01-the-moment-you-saw-me/variants/lyrics/the-moment-you-saw-me_lyrics_share.mp4"
                       data-poster="assets/posters/moment-lyrics.jpg" data-time="3:03">歌词版</button>
+              <button type="button" class="seg__btn" aria-pressed="false" data-for="hero-moment"
+                      data-src="projects/2026-11-10-01-the-moment-you-saw-me/variants/light/the-moment-you-saw-me_light_share.mp4"
+                      data-poster="assets/posters/moment-light.jpg" data-time="3:03">光影版</button>
             </div>
           </div>
         </article>
@@ -931,6 +934,93 @@
               <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-10-01-the-moment-you-saw-me/lyrics-version.md" target="_blank" rel="noopener">歌词版设计</a>
               <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-10-01-the-moment-you-saw-me/scripts/glass.py" target="_blank" rel="noopener">玻璃层脚本</a>
               <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-10-01-the-moment-you-saw-me/scripts/align_lyrics.py" target="_blank" rel="noopener">逐词对齐脚本</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- 07 光影版 -->
+        <article class="case" id="case-moment-light" aria-labelledby="case-moment-light-title">
+          <div class="case__media">
+            <div class="viewer">
+              <div class="seg seg--block" role="group" aria-label="切换示意图、歌词版与光影版">
+                <button type="button" class="seg__btn" aria-pressed="true" data-for="case-moment-light-player" data-still
+                        data-caption="字的四种状态：光里的影子、熄灯后的第一块光、金色的光字、被照亮的玻璃">四种状态</button>
+                <button type="button" class="seg__btn" aria-pressed="false" data-for="case-moment-light-player"
+                        data-src="projects/2026-11-10-01-the-moment-you-saw-me/variants/lyrics/the-moment-you-saw-me_lyrics_share.mp4"
+                        data-poster="assets/posters/moment-lyrics.jpg" data-time="3:03"
+                        data-caption="歌词版：字在镜头前的玻璃上">歌词版</button>
+                <button type="button" class="seg__btn" aria-pressed="false" data-for="case-moment-light-player"
+                        data-src="projects/2026-11-10-01-the-moment-you-saw-me/variants/light/the-moment-you-saw-me_light_share.mp4"
+                        data-poster="assets/posters/moment-light.jpg" data-time="3:03"
+                        data-caption="光影版：字是一扇窗投进场景里的光和影">光影版</button>
+              </div>
+              <div class="player player--case is-still" id="case-moment-light-player" data-player>
+                <video preload="none" playsinline poster="assets/posters/moment-light.jpg"
+                       src="projects/2026-11-10-01-the-moment-you-saw-me/variants/light/the-moment-you-saw-me_light_share.mp4"
+                       aria-label="The Moment You Saw Me 歌词版与光影版"></video>
+                <button class="player__cover" type="button" aria-label="播放">
+                  <span class="player__btn" aria-hidden="true"></span>
+                  <span class="player__time" data-time>3:03</span>
+                </button>
+                <button type="button" class="player__still" data-lightbox data-src="assets/posters/moment-light-states.jpg"
+                        aria-label="放大字的四种状态示意图">
+                  <img src="assets/posters/moment-light-states.jpg"
+                       alt="歌词的四种状态：第一遍是落在台阶前地面上的一块窗光，字是光里的影子；静默的半秒窗光熄掉，两个词以光的样子落在她脸旁；副歌每个词是树影里一块金色的光；第二遍桌面上的窗光里，唱到的词从影子变成被照亮的玻璃" width="720" height="1280" loading="lazy">
+                </button>
+              </div>
+              <p class="viewer__cap" data-viewer-cap>字的四种状态：光里的影子、熄灯后的第一块光、金色的光字、被照亮的玻璃</p>
+            </div>
+          </div>
+
+          <div class="case__body">
+            <p class="case__kicker"><span>07 · 光影版</span>2026-11-11 · 景深投影 OpenCV · 合成 Claude</p>
+            <h3 class="case__title" id="case-moment-light-title">光影版：一扇看不见的窗投下的字</h3>
+            <p class="case__lead">歌词版之后，又为歌词想了五种呈现方式，各做一帧概念图，选了这一种。规则是：有一扇始终看不到的窗，它的光落进每个场景里，歌词是窗上的字。我们看不到字本身，只看到它对光做了什么。镜头、剪辑点和音轨与原版完全相同。</p>
+
+            <dl class="facts">
+              <div><dt>逐句出预览、调落点的轮数</dt><dd>6<small>轮</small></dd></div>
+              <div><dt>新生成的图片，也没有新费用</dt><dd>0<small>张</small></dd></div>
+              <div><dt>10 个进程渲染全片</dt><dd>22<small>分钟</small></dd></div>
+            </dl>
+
+            <ol class="steps">
+              <li><h4>光要落在东西上</h4><p>每句歌词是一张图案：亮的窗格、窗棂、水珠、往下流的雨痕和字。每帧按这个镜头的景深图把它投进画面，所以光块会顺着台阶一级一级折下去，绕过咖啡杯，裹住肩膀。玻璃版的字在镜头前面，这一版的字在场景里。</p></li>
+              <li><h4>两遍歌词一样，字的状态不同</h4><p>第一遍字是光里的影子，跟着演唱写出来，唱完被窗上的雨冲掉。第二遍整句影子先等在那里，唱到哪个词，哪个词就变成透光的玻璃，带一圈铅条一样的暗边。</p></li>
+              <li><h4>静默的半秒，光熄掉</h4><p>伴奏停掉时窗光也熄掉，清唱的两个词是全片第一次以光的样子出现。副歌里没有窗了，每个词是一块金色的光，雨只有穿过字时才被照亮。第二次副歌，那两个词的光扩开铺满画面。</p></li>
+              <li><h4>逐句选落点</h4><p>影子要落在中等亮度或亮的面上，光字要落在暗的面上，两种状态的选位规则是反的。有人站在光里时，一个词会被人的轮廓切成几段，这种镜头要把光的弯折程度单独调小。</p></li>
+            </ol>
+
+            <div class="retro">
+              <div>
+                <h4 class="retro__h retro__h--good">做得好</h4>
+                <ul>
+                  <li>规则接上了片子本身：第一个镜头她就坐在一扇带窗棂的窗前，最后一个镜头是同一扇窗的清晨。</li>
+                  <li>相邻几句共用一块光，前一句被冲掉，后一句写在原处，比两块光交叠干净。</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="retro__h retro__h--next">下次改进</h4>
+                <ul>
+                  <li>第一稿的光块又白又方，像贴了一张纸。光要不均匀、带窗棂和水珠，亮处少加，才像窗光。</li>
+                  <li>暗场景里的光块偏灰；电梯和背影两个镜头，字盖在人身上，挡住了一部分画面。</li>
+                </ul>
+              </div>
+            </div>
+
+            <figure class="sheet">
+              <button type="button" class="sheet__btn" data-lightbox
+                      data-src="projects/2026-11-10-01-the-moment-you-saw-me/thumbs/the-moment-you-saw-me_light_sheet.jpg"
+                      aria-label="放大光影版逐帧预览">
+                <img src="projects/2026-11-10-01-the-moment-you-saw-me/thumbs/the-moment-you-saw-me_light_sheet.jpg"
+                     alt="光影版逐帧预览：主歌是落在门、墙、桌面和地面上的冷色窗光，字是光里的影子；副歌是金色的光字；第二遍的字被逐个照亮；结尾清晨的阳光把歌名那一句留在床上" width="2160" height="1280" loading="lazy">
+              </button>
+              <figcaption>光影版逐帧预览，每 4 秒一帧：主歌是窗光里的影子，副歌是金色的光字</figcaption>
+            </figure>
+
+            <p class="links">
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-10-01-the-moment-you-saw-me/light-version.md" target="_blank" rel="noopener">光影版设计</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-10-01-the-moment-you-saw-me/scripts/light.py" target="_blank" rel="noopener">光影层脚本</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-10-01-the-moment-you-saw-me/scripts/render_light.py" target="_blank" rel="noopener">渲染脚本</a>
             </p>
           </div>
         </article>

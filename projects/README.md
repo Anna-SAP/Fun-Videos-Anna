@@ -38,8 +38,9 @@ scripts/       这个作品用到的脚本（可选）
 | | 加长版 | `variants/60s/jianlai_wulei-highlight_60s.mp4` | 1:00.0 | 1080×1920 | 73.3 MB | Claude |
 | [The Moment](2026-11-10-01-the-moment-you-saw-me/) | **成片**（分享版） | `variants/share/the-moment-you-saw-me_share.mp4` | 3:03.0 | 1080×1920 | 39.6 MB | gpt-image-2 + Claude |
 | | 歌词版（分享版） | `variants/lyrics/the-moment-you-saw-me_lyrics_share.mp4` | 3:03.0 | 1080×1920 | 39.6 MB | gpt-image-2 + Claude |
+| | 光影版（分享版） | `variants/light/the-moment-you-saw-me_light_share.mp4` | 3:03.0 | 1080×1920 | 39.1 MB | gpt-image-2 + Claude |
 
-The Moment 的两条原画质版（7.0 Mbps，各约 163 MB）留在本机，没有入库；入库的是从分镜文件单独编码的 1.6 Mbps 分享版。
+The Moment 的三条原画质版（7.0 Mbps，各约 163 MB）留在本机，没有入库；入库的是从分镜文件单独编码的 1.6 Mbps 分享版。
 
 ## 素材和成片的关系
 
