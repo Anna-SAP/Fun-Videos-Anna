@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fun Videos · Anna — 用 AI 做科普短视频</title>
-  <meta name="description" content="七支用 AI 做的短视频，以及它们的关键制作过程：从 Gemini Notebook 骨架加访谈证据的科普片，到先把一首歌量清楚、再用 AI 关键帧做成的 MV。">
+  <meta name="description" content="八支用 AI 做的短视频，以及它们的关键制作过程：从 Gemini Notebook 骨架加访谈证据的科普片，到先把一首歌量清楚、再做成的 MV 和歌词 MV。">
   <meta name="theme-color" content="#FAF8F4">
   <meta property="og:title" content="Fun Videos · Anna">
-  <meta property="og:description" content="七支用 AI 做的短视频，以及它们是怎么做出来的。">
+  <meta property="og:description" content="八支用 AI 做的短视频，以及它们是怎么做出来的。">
   <meta property="og:image" content="assets/posters/bayes.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23D9572A'/%3E%3Cpath d='M12.5 9.5v13l10-6.5z' fill='%23fff'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/style.css">
@@ -37,8 +37,8 @@
     <section class="hero" id="works" aria-labelledby="works-title">
       <div class="hero__intro">
         <p class="eyebrow">AI 科普短视频 · 学习记录</p>
-        <h1 id="works-title">七支短片，和它们的制作过程。</h1>
-        <p class="hero__lede">解说骨架由 Gemini Notebook 生成；Claude 找来访谈原声作为证据、核对事实，再合成为成片。最新一支换了做法：先把一首歌量清楚，再用 AI 关键帧和程序画的雨做成 MV。</p>
+        <h1 id="works-title">八支短片，和它们的制作过程。</h1>
+        <p class="hero__lede">解说骨架由 Gemini Notebook 生成；Claude 找来访谈原声作为证据、核对事实，再合成为成片。后两支从一首歌出发：先把歌量清楚，再做成 MV；最新一支是歌词 MV，画面全部由程序计算，字是滴进夜水里的墨。</p>
         <a class="hero__more" href="#process">看看是怎么做的<span aria-hidden="true"> ↓</span></a>
       </div>
 
@@ -185,6 +185,22 @@
                       data-src="projects/2026-11-10-01-the-moment-you-saw-me/variants/light/the-moment-you-saw-me_light_share.mp4"
                       data-poster="assets/posters/moment-light.jpg" data-time="3:03">光影版</button>
             </div>
+          </div>
+        </article>
+        <article class="work" style="--i:7">
+          <div class="player" id="hero-hold" data-player>
+            <video preload="none" playsinline poster="assets/posters/hold-me-slowly.jpg"
+                   src="projects/2026-11-12-01-hold-me-slowly/media/hold-me-slowly.mp4"
+                   aria-label="Hold Me Slowly：写在夜水里的字"></video>
+            <button class="player__cover" type="button" aria-label="播放 Hold Me Slowly">
+              <span class="player__btn" aria-hidden="true"></span>
+              <span class="player__time" data-time>1:06</span>
+            </button>
+          </div>
+          <div class="work__meta">
+            <p class="work__idx">08 · 2026-11-12</p>
+            <h2 class="work__title" lang="en">Hold Me Slowly</h2>
+            <p class="work__sub">歌词 MV · 写在夜水里的字</p>
           </div>
         </article>
       </div>
@@ -1021,6 +1037,94 @@
               <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-10-01-the-moment-you-saw-me/light-version.md" target="_blank" rel="noopener">光影版设计</a>
               <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-10-01-the-moment-you-saw-me/scripts/light.py" target="_blank" rel="noopener">光影层脚本</a>
               <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-10-01-the-moment-you-saw-me/scripts/render_light.py" target="_blank" rel="noopener">渲染脚本</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- 08 Hold Me Slowly -->
+        <article class="case" id="case-hold" aria-labelledby="case-hold-title">
+          <div class="case__media">
+            <div class="viewer">
+              <div class="seg seg--block" role="group" aria-label="切换示意图与成片">
+                <button type="button" class="seg__btn" aria-pressed="true" data-for="case-hold-player" data-still
+                        data-caption="字的四种状态：写、放开、被光找到、被抱住">四种状态</button>
+                <button type="button" class="seg__btn" aria-pressed="false" data-for="case-hold-player"
+                        data-src="projects/2026-11-12-01-hold-me-slowly/media/hold-me-slowly.mp4"
+                        data-poster="assets/posters/hold-me-slowly.jpg" data-time="1:06"
+                        data-caption="成片：字是滴进夜水里的发光的墨，副歌里被留在光环中心">成片</button>
+              </div>
+              <div class="player player--case is-still" id="case-hold-player" data-player>
+                <video preload="none" playsinline poster="assets/posters/hold-me-slowly.jpg"
+                       src="projects/2026-11-12-01-hold-me-slowly/media/hold-me-slowly.mp4"
+                       aria-label="Hold Me Slowly 歌词 MV"></video>
+                <button class="player__cover" type="button" aria-label="播放">
+                  <span class="player__btn" aria-hidden="true"></span>
+                  <span class="player__time" data-time>1:06</span>
+                </button>
+                <button type="button" class="player__still" data-lightbox data-src="assets/posters/hold-me-slowly-states.jpg"
+                        aria-label="放大字的四种状态示意图">
+                  <img src="assets/posters/hold-me-slowly-states.jpg"
+                       alt="歌词的四种状态：冷银色的字跟着演唱一笔一笔写进深水；唱完的一句松开、散成烟，下一句写在下面；两个几乎不发光的字只在右下角暖光照到的地方看得见；副歌里两句 hold me slowly 被留在一个冷暖两色的光环中心" width="720" height="1280" loading="lazy">
+                </button>
+              </div>
+              <p class="viewer__cap" data-viewer-cap>字的四种状态：写、放开、被光找到、被抱住</p>
+            </div>
+          </div>
+
+          <div class="case__body">
+            <p class="case__kicker"><span>08 · 歌词 MV</span>2026-11-12 · 本机 Whisper ×5 + 人声分离 · 画面程序计算 · 合成 Claude</p>
+            <h3 class="case__title" id="case-hold-title"><span lang="en">Hold Me Slowly</span>：写在夜水里的字</h3>
+            <p class="case__lead">一首 66 秒的慢歌，只附了一份某个工具识别的 SRT。歌在唱"松开"：弯着的背、握紧的心、肩上的伤、眼里的雨。所以字是滴进夜里深水的发光的墨，唱的时候是紧的、清楚的，唱完就松开、散成烟。到副歌，规则翻转：字被留住，冷暖两股墨被涡旋拉成一个光环。这一支没有用任何图片或视频生成模型，每一帧都是程序算出来的。</p>
+
+            <dl class="facts">
+              <div><dt>交叉听写、给候选词打分的本机模型</dt><dd>5<small>个</small></dd></div>
+              <div><dt>对着人声频谱图手工定起点的词</dt><dd>61<small>个</small></dd></div>
+              <div><dt>生成模型费用</dt><dd>0<small>元</small></dd></div>
+            </dl>
+
+            <ol class="steps">
+              <li><h4>先验歌词</h4><p>原混音上，五个模型把同一个词听成 time、tongue、kind；把人声分离出来以后，五个模型全部听成 kind，和 SRT 一致。另外三处分歧用"给候选打分"的办法定，再看频谱：短元音接鼻音是 bent，不是 blind。结论是 SRT 的字全对，时间不对：最后一句晚了 0.7 秒才开始唱。</p></li>
+              <li><h4>字是墨</h4><p>180×320 网格的流体推着一张全分辨率的墨场。每个字带一张"静止遮罩"：唱的时候这块水不动，字跟着演唱一笔一笔写出来；唱完遮罩松开，字被水流带走、上浮、晕开。浮力随墨一起走，所以 old goodbyes 会沉下去，hurt 从画面底部流走。</p></li>
+              <li><h4>光找到藏起来的字</h4><p>"you"第一次出现时，右下角亮起一盏暖光。hidden kind 两个字的墨几乎不发光，只有暖光照到时才看得见。低频在 "you said" 的第一个字进来，暖光在这一拍亮起，之后透过墨打出光束。</p></li>
+              <li><h4>副歌把字抱住</h4><p>最后一滴雨落在 eyes 上，水面静下来。暖光移到正中，冷银、琥珀、玫瑰色三股墨被涡旋拉成光环；hold me slowly 被留在环里，放开的字融进环，环随之一亮。breathe 那一下，整个画面呼吸一次。</p></li>
+            </ol>
+
+            <aside class="note">
+              <p class="note__tag">注意</p>
+              <p>歌曲的作者和权利归属未知，原曲音频和 SRT 不入库；成片的音轨是原曲 MP3 流原样复制（包 MD5 一致，四点偏移 0.00 ms）。逐词时间里有 8 个句中的词是按音节数推算的；中文译文是自己写的。</p>
+            </aside>
+
+            <div class="retro">
+              <div>
+                <h4 class="retro__h retro__h--good">做得好</h4>
+                <ul>
+                  <li>一条规则管到底：字的出现、停留、消失都由"墨在水里松开"这一个过程决定，不用另外设计动画。</li>
+                  <li>没有出图通道也做完了：画面、识别、对齐全部在本机，没有任何费用。</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="retro__h retro__h--next">下次改进</h4>
+                <ul>
+                  <li>暖光第一版又大又亮，整个副歌发灰；要做成光源，而不是铺满画面。</li>
+                  <li>涡旋会把放开的旧字转离原位，残影压在新句上；光环和字最后分成了两层墨。</li>
+                </ul>
+              </div>
+            </div>
+
+            <figure class="sheet">
+              <button type="button" class="sheet__btn" data-lightbox
+                      data-src="projects/2026-11-12-01-hold-me-slowly/thumbs/hold-me-slowly_sheet.jpg"
+                      aria-label="放大逐帧预览">
+                <img src="projects/2026-11-12-01-hold-me-slowly/thumbs/hold-me-slowly_sheet.jpg"
+                     alt="逐帧预览：前奏的深水和雨纹、歌名被写进水里；主歌冷银色的字上下交替出现又散成烟，右下角亮起暖光；预副歌是暖色的字；副歌里冷暖两色的光环围着 hold me slowly" width="2376" height="1152" loading="lazy">
+              </button>
+              <figcaption>逐帧预览，每 2 秒一帧：冷色的主歌、暖光的预副歌、光环里的副歌</figcaption>
+            </figure>
+
+            <p class="links">
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-12-01-hold-me-slowly/storyboard.md" target="_blank" rel="noopener">歌曲分析与设计</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-12-01-hold-me-slowly/scripts/inkwater.py" target="_blank" rel="noopener">流体与墨</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-12-01-hold-me-slowly/scripts/score.py" target="_blank" rel="noopener">逐句设计</a>
             </p>
           </div>
         </article>

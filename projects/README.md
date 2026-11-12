@@ -1,6 +1,6 @@
 # 作品索引
 
-目录命名：`YYYY-MM-DD-NN-slug`。按日期排序，`NN` 是当天的序号，`slug` 用小写英文。文档里互相引用时用短名：**贝叶斯**、**NEON**、**AI 意识**、**NEON ×3**、**NEON 双马尾**、**剑来 · 陈平安**、**The Moment**。
+目录命名：`YYYY-MM-DD-NN-slug`。按日期排序，`NN` 是当天的序号，`slug` 用小写英文。文档里互相引用时用短名：**贝叶斯**、**NEON**、**AI 意识**、**NEON ×3**、**NEON 双马尾**、**剑来 · 陈平安**、**The Moment**、**Hold Me Slowly**。
 
 每个作品目录的结构都一样：
 
@@ -39,6 +39,7 @@ scripts/       这个作品用到的脚本（可选）
 | [The Moment](2026-11-10-01-the-moment-you-saw-me/) | **成片**（分享版） | `variants/share/the-moment-you-saw-me_share.mp4` | 3:03.0 | 1080×1920 | 39.6 MB | gpt-image-2 + Claude |
 | | 歌词版（分享版） | `variants/lyrics/the-moment-you-saw-me_lyrics_share.mp4` | 3:03.0 | 1080×1920 | 39.6 MB | gpt-image-2 + Claude |
 | | 光影版（分享版） | `variants/light/the-moment-you-saw-me_light_share.mp4` | 3:03.0 | 1080×1920 | 39.1 MB | gpt-image-2 + Claude |
+| [Hold Me Slowly](2026-11-12-01-hold-me-slowly/) | **成片** | `media/hold-me-slowly.mp4` | 1:05.9 | 1080×1920 | 59.3 MB | Claude（程序生成画面） |
 
 The Moment 的三条原画质版（7.0 Mbps，各约 163 MB）留在本机，没有入库；入库的是从分镜文件单独编码的 1.6 Mbps 分享版。
 
@@ -76,11 +77,11 @@ AI 意识  Gemini Notebook 方案三 ─┐
 - **对齐 / 同步**：NEON、NEON ×3（三路闭环 + 拍点网格）、AI 意识（素材拼接分析、分段校准）、NEON 双马尾（AI 编辑后的画面逐帧对齐原片）、The Moment（成片音轨对原曲互相关，查出 59.5 ms 的错位）
 - **AI 视频生成 / 编辑**：NEON 双马尾（Kling 4.0 Video Edit 改发型，参考图，补回字样和签名）
 - **AI 关键帧 + 景深视差**：The Moment（34 张 gpt-image-2 关键帧，一张参考像管人物一致，Depth Anything V2 分层运镜，雨和光由程序画）
-- **从歌曲出发的 MV**：The Moment（先量 BPM、段落、原样重复和静默，再让结构决定叙事）
+- **从歌曲出发的 MV**：The Moment（先量 BPM、段落、原样重复和静默，再让结构决定叙事）、Hold Me Slowly（歌词 MV，画面全部程序生成）
 - **拍点 / 卡点剪辑**：NEON ×3（130 BPM 网格，按小节编排）、剑来 · 陈平安（101.9 BPM 重拍网格，一拍一刀，最后四分之一拍快闪）、The Moment（72 BPM，24 fps 下每小节正好 80 帧，硬切都在小节线上）
 - **竖屏构图**：NEON（分屏）、NEON ×3（三分屏 ↔ 全屏动态版式、主体跟随裁切）、贝叶斯 / AI 意识（相框嵌入）、剑来 · 陈平安（按脸取景，窗口避开硬字幕，甩镜）
-- **特效与动态字幕**：NEON ×3（霓虹扫线、扫描线变身）、剑来 · 陈平安（闪白、冲击缩放、RGB 错位、径向模糊、火星粒子、逐字落下的字幕）、The Moment（挂在变速时钟上的雨粒子；歌词版的起雾玻璃和手写歌词）
+- **特效与动态字幕**：NEON ×3（霓虹扫线、扫描线变身）、剑来 · 陈平安（闪白、冲击缩放、RGB 错位、径向模糊、火星粒子、逐字落下的字幕）、The Moment（挂在变速时钟上的雨粒子；歌词版的起雾玻璃和手写歌词）、Hold Me Slowly（2D 流体里的发光墨字、水面雨纹、光束、副歌的光环）
 - **人物混剪 / 选镜头**：剑来 · 陈平安（逐镜头认人，只用一个角色的镜头和台词）
-- **语音识别 / 字幕**：AI 意识（ASR）、贝叶斯（硬字幕像素差分）、剑来 · 陈平安（硬字幕读台词时间，声谱图确认人声起止）、The Moment（whisper-1 词级时间取中位数，句首对着频谱图手工改）
+- **语音识别 / 字幕**：AI 意识（ASR）、贝叶斯（硬字幕像素差分）、剑来 · 陈平安（硬字幕读台词时间，声谱图确认人声起止）、The Moment（whisper-1 词级时间取中位数，句首对着频谱图手工改）、Hold Me Slowly（人声分离 + 5 个本机 Whisper 模型交叉听写、候选打分、强制对齐，校对一份识别出来的 SRT）
 - **事实核对 / 纠错**：AI 意识（原话与骨架不符）、贝叶斯（先验 ≠ 偏见）
 - **同题多版本对比**：贝叶斯（2:08 vs 1:04）、NEON（fit vs crop）、NEON ×3（同一段音乐的三个版本）、NEON 双马尾（原版 vs 双马尾，逐镜头对照）、剑来 · 陈平安（31.6 秒 vs 60 秒加长版）、The Moment（原版 vs 歌词版，镜头和剪辑点相同）
