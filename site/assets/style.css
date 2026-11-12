@@ -493,6 +493,13 @@ code {
   }
 }
 
+/* A 16:9 work that follows three 9:16 works on a row shares the last two columns,
+   kept as tall as the 9:16 players (the 256fr column out of 81fr + 256fr) */
+.work--wide.work--tail { grid-column: span 2; --pw: calc(100% * 256 / 337); align-items: flex-end; }
+@media (min-width: 701px) and (max-width: 1100px) {
+  .work--wide.work--tail { grid-column: span 2; --pw: 100%; align-items: center; }
+}
+
 @media (max-width: 900px) {
   .case { grid-template-columns: 1fr; }
   .viewer { align-items: center; }
@@ -526,6 +533,7 @@ code {
   .reel::-webkit-scrollbar { display: none; }
   .work { --pw: 100%; flex: 0 0 74%; scroll-snap-align: start; align-items: stretch; }
   .work--wide { flex-basis: 100%; }
+  .work--wide.work--tail { --pw: 100%; }
 
   .facts dd { font-size: 24px; }
   .facts > div + div { padding-left: 12px; }

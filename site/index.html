@@ -37,8 +37,8 @@
     <section class="hero" id="works" aria-labelledby="works-title">
       <div class="hero__intro">
         <p class="eyebrow">AI 科普短视频 · 学习记录</p>
-        <h1 id="works-title">八支短片，和它们的制作过程。</h1>
-        <p class="hero__lede">解说骨架由 Gemini Notebook 生成；Claude 找来访谈原声作为证据、核对事实，再合成为成片。后两支从一首歌出发：先把歌量清楚，再做成 MV；最新一支是歌词 MV，画面全部由程序计算，字是滴进夜水里的墨。</p>
+        <h1 id="works-title">九支短片，和它们的制作过程。</h1>
+        <p class="hero__lede">解说骨架由 Gemini Notebook 生成；Claude 找来访谈原声作为证据、核对事实，再合成为成片。后两支从一首歌出发：先把歌量清楚，再做成 MV；第八支是歌词 MV，画面全部由程序计算，字是滴进夜水里的墨；最新一支给别人剪的三段 MV 混剪重做转场。</p>
         <a class="hero__more" href="#process">看看是怎么做的<span aria-hidden="true"> ↓</span></a>
       </div>
 
@@ -201,6 +201,22 @@
             <p class="work__idx">08 · 2026-11-12</p>
             <h2 class="work__title" lang="en">Hold Me Slowly</h2>
             <p class="work__sub">歌词 MV · 写在夜水里的字</p>
+          </div>
+        </article>
+        <article class="work work--wide work--tail" style="--i:8">
+          <div class="player player--wide" id="hero-winwin" data-player>
+            <video preload="none" playsinline poster="assets/posters/winwin-mix.jpg"
+                   src="projects/2026-11-13-01-winwin-mix-transitions/media/winwin-mix_smooth.mp4"
+                   aria-label="WinWin 混剪：重做转场"></video>
+            <button class="player__cover" type="button" aria-label="播放 WinWin 混剪">
+              <span class="player__btn" aria-hidden="true"></span>
+              <span class="player__time" data-time>1:09</span>
+            </button>
+          </div>
+          <div class="work__meta">
+            <p class="work__idx">09 · 2026-11-13</p>
+            <h2 class="work__title" lang="en">WinWin</h2>
+            <p class="work__sub">三段 MV 混剪 · 重做转场</p>
           </div>
         </article>
       </div>
@@ -1125,6 +1141,94 @@
               <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-12-01-hold-me-slowly/storyboard.md" target="_blank" rel="noopener">歌曲分析与设计</a>
               <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-12-01-hold-me-slowly/scripts/inkwater.py" target="_blank" rel="noopener">流体与墨</a>
               <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-12-01-hold-me-slowly/scripts/score.py" target="_blank" rel="noopener">逐句设计</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- 09 WinWin 混剪 -->
+        <article class="case case--wide" id="case-winwin" aria-labelledby="case-winwin-title">
+          <div class="case__media">
+            <div class="viewer">
+              <div class="seg seg--block" role="group" aria-label="切换前后对照与成片">
+                <button type="button" class="seg__btn" aria-pressed="true" data-for="case-winwin-player" data-still
+                        data-caption="三个接口的前后对照：每组上排原片、下排重剪">前后对照</button>
+                <button type="button" class="seg__btn" aria-pressed="false" data-for="case-winwin-player"
+                        data-src="projects/2026-11-13-01-winwin-mix-transitions/media/winwin-mix_smooth.mp4"
+                        data-poster="assets/posters/winwin-mix.jpg" data-time="1:09"
+                        data-caption="成片：遮幅跟着音乐开合，三个接口分别用甩镜、回声残影、雾化成烟接过去">成片 1:09</button>
+              </div>
+              <div class="player player--wide player--case is-still" id="case-winwin-player" data-player>
+                <video preload="none" playsinline poster="assets/posters/winwin-mix.jpg"
+                       src="projects/2026-11-13-01-winwin-mix-transitions/media/winwin-mix_smooth.mp4"
+                       aria-label="WinWin 混剪重剪版"></video>
+                <button class="player__cover" type="button" aria-label="播放">
+                  <span class="player__btn" aria-hidden="true"></span>
+                  <span class="player__time" data-time>1:09</span>
+                </button>
+                <button type="button" class="player__still" data-lightbox data-src="assets/posters/winwin-mix-vs.jpg"
+                        aria-label="放大前后对照图">
+                  <img src="assets/posters/winwin-mix-vs.jpg"
+                       alt="三个接口的前后对照：原片里白 T 恤镜头直接跳到红色停车场、红色舞蹈直接跳到白边的黑色坡道、粉色亮雾直接跳到暗色烟雾厅堂；重剪里分别是带运动模糊的横向甩镜、舞者的红色残影沉进黑色空间、粉雾慢慢变暗并溶解成烟" width="1280" height="720" loading="lazy">
+                </button>
+              </div>
+              <p class="viewer__cap" data-viewer-cap>三个接口的前后对照：每组上排原片、下排重剪</p>
+            </div>
+          </div>
+
+          <div class="case__body">
+            <p class="case__kicker"><span>09 · 转场重剪</span>2026-11-13 · 第三方混剪 · 分析与合成 Claude</p>
+            <h3 class="case__title" id="case-winwin-title"><span lang="en">WinWin</span> 混剪：重做转场</h3>
+            <p class="case__lead">一段别人剪的 69 秒混剪，“段落之间很生硬”。逐帧量下来，它其实是三支 MV 首尾相接：接口处画幅从 2.35:1 跳到满屏、再跳到上下白边的超宽银幕，亮度一帧从 202 掉到 54，换歌时速度和调性一起变，第一、二首的调性还相差三全音。所以不在每个接口套同一个溶解，而是让一个黑色画框跟着音乐“呼吸”，三个接口分别用动作、回声和空气接过去，声音和画面一起转。</p>
+
+            <dl class="facts">
+              <div><dt>接口处最大逐帧跳变（原片 → 重剪）</dt><dd>148→9</dd></div>
+              <div><dt>三段响度差</dt><dd>4.4→1.1<small>LU</small></dd></div>
+              <div><dt>两首歌起音对齐的溶解</dt><dd>25<small>帧</small></dd></div>
+            </dl>
+
+            <ol class="steps">
+              <li><h4>先找接口</h4><p>逐帧算颜色直方图距离和像素差，量每一帧上下黑边的位置，再听：频谱新奇度、起音自相关求速度、色度图求调性。三首歌约 103、97.5、77 BPM；第二、三首是关系大小调（升 F 小调 / A 大调）。第三段后面那几下闪白，底下有一条长音垫贯穿不断，是 MV 自己的剪辑，没有动。</p></li>
+              <li><h4>① 甩镜推入，落拍撑满</h4><p>白 T 恤镜头带着运动模糊向左推出，停车场从右边推进来：停车场开头本来就是一个向右的甩镜。画框先保持 2.35:1，等 6.17 秒音乐真正落下，遮幅在 6 帧内撑满全画幅，同时一次冲击缩放；之前那一下强音的混响甩尾填进停顿。</p></li>
+              <li><h4>② 回声残影，低音交接</h4><p>两首歌调性冲突，不让它们的和声重叠：第一首停在接口上，最后一个八分音符乒乓回声 5 次、越来越薄；画面上舞者变成红色残影，在第二段黑色空间里放大、散开。第二首歌高通进来，低音留到它的第一个重拍才回来，白色坡道也在这一拍完全亮起；遮幅同时收成超宽银幕，白边改黑。</p></li>
+              <li><h4>③ 雾化成烟</h4><p>粉雾提前 1.8 秒慢慢变冷变暗，烟雾按亮度从雾里浮出来：暗部先到、亮部最后到，镜头一路往里推，遮幅缓缓打开回 2.35:1。重叠选 25 帧，是因为这样第三首歌的起音正好落在第二首歌的八分音符上；第二首歌退场时留下一段混响，像雾一样散开。</p></li>
+            </ol>
+
+            <aside class="note">
+              <p class="note__tag">注意</p>
+              <p>原片是专人剪辑的混剪，三支 MV 的出处没有逐一核实，原片不入库；第三段的 SM 台标原样保留。每一段内部的音画关系一帧没动，第三段整体提前 25 帧，用互相关核过。回声、风声和混响的电平按测量定，听感请以耳朵为准。</p>
+            </aside>
+
+            <div class="retro">
+              <div>
+                <h4 class="retro__h retro__h--good">做得好</h4>
+                <ul>
+                  <li>先查清每个接口为什么生硬，再按画面内容和音乐性质选手法，三个接口各不相同。</li>
+                  <li>一个会呼吸的画框贯穿全片：睁眼开场、落拍撑满、收成超宽、闭眼收尾，声音的滤波和它同步开合。</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="retro__h retro__h--next">下次改进</h4>
+                <ul>
+                  <li>画框打开时，旧画面要先延伸进边框，否则会露出一条暗带。</li>
+                  <li>出一版全片固定 2.35:1 的对照；把这几种转场抽成通用模块。</li>
+                </ul>
+              </div>
+            </div>
+
+            <figure class="sheet">
+              <button type="button" class="sheet__btn" data-lightbox
+                      data-src="projects/2026-11-13-01-winwin-mix-transitions/thumbs/winwin-mix_sheet.jpg"
+                      aria-label="放大逐帧预览">
+                <img src="projects/2026-11-13-01-winwin-mix-transitions/thumbs/winwin-mix_sheet.jpg"
+                     alt="重剪版逐帧预览：夜景天台和白 T 恤是 2.35:1 遮幅，红色停车场的舞蹈满屏，粉紫色的第二段是超宽银幕，暗色烟雾厅堂的第三段回到 2.35:1，最后画框合上" width="2268" height="920" loading="lazy">
+              </button>
+              <figcaption>重剪版逐帧预览，每 2 秒一帧：画幅随三首歌开合</figcaption>
+            </figure>
+
+            <p class="links">
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/tree/main/projects/2026-11-13-01-winwin-mix-transitions" target="_blank" rel="noopener">完整作品卡</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-13-01-winwin-mix-transitions/scripts/render.py" target="_blank" rel="noopener">画面渲染器</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-13-01-winwin-mix-transitions/scripts/audio_mix.py" target="_blank" rel="noopener">声音衔接</a>
             </p>
           </div>
         </article>
