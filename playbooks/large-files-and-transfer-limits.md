@@ -8,7 +8,7 @@
 |---|---|---|
 | 电脑 → Claude 云端工作区（传入） | 单文件 ≤ 400 MB，单次 ≤ 500 MB | JRE 整集 1.16 GB 传不上来 |
 | Claude 云端工作区 → 电脑（写回） | 单文件 ≤ 30 MB | 62 MB 的成片写不回文件夹 |
-| 云端工作区访问外网 | 白名单制：YouTube、GitHub LFS 存储都**不通** | 不能直接下载 YouTube；不能从云端上传 LFS |
+| 云端工作区访问外网 | 白名单制：YouTube **不通**；GitHub LFS 早期不通，2026-11-12 起云端可以直接 `git push` 上传 LFS 对象（Hold Me Slowly 的 59 MB 成片就是这样推上来的） | 不能直接下载 YouTube；在云端渲染的成片可以直接推，先确认 `git lfs ls-files` 里有它 |
 | GitHub 普通文件 | 超过 50 MB 警告，**超过 100 MB 拒收** | 109 MB 的拼接版必须走 LFS |
 | GitHub LFS（Free 个人账户） | 每个计费周期 10 GiB 存储 + 10 GiB 流量 | 本库目前约 287 MB，余量充足 |
 
@@ -33,7 +33,7 @@ ffmpeg -i "%SRC%" -map 0:v:0 -map 0:a:0 -c copy -f segment -segment_time 1500 ^
 
 ### 视频要进 GitHub
 - 全部走 **Git LFS**（规则见 [`.gitattributes`](../.gitattributes)）。
-- 因为云端连不上 LFS 存储，**视频从本机推送**：[`tools/publish_videos_lfs.bat`](../tools/publish_videos_lfs.bat)，按 [`tools/video-manifest.csv`](../tools/video-manifest.csv) 逐个校验后上传。
+- 早期云端连不上 LFS 存储，**视频从本机推送**（在云端渲染的成片现在可以直接推）：[`tools/publish_videos_lfs.bat`](../tools/publish_videos_lfs.bat)，按 [`tools/video-manifest.csv`](../tools/video-manifest.csv) 逐个校验后上传。
 - 文档、脚本、缩略图都是小文件，从云端或本机推送都可以。
 
 ### 往电脑写文件的坑（贝叶斯那次遇到）
