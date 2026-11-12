@@ -13,6 +13,7 @@
 <td align="center"><a href="projects/2026-10-24-01-neon-twin-tails/"><img src="projects/2026-10-24-01-neon-twin-tails/thumbs/neon_twin-tails_poster.jpg" width="150"></a><br><sub>NEON 双马尾 · AI 换发型</sub></td>
 <td align="center"><a href="projects/2026-10-29-01-jianlai-wulei-highlight/"><img src="projects/2026-10-29-01-jianlai-wulei-highlight/thumbs/jianlai_wulei-highlight_poster.jpg" width="150"></a><br><sub>剑来 · 陈平安 · 吴磊高光</sub></td>
 <td align="center"><a href="projects/2026-11-10-01-the-moment-you-saw-me/"><img src="projects/2026-11-10-01-the-moment-you-saw-me/thumbs/the-moment-you-saw-me_poster.jpg" width="150"></a><br><sub>The Moment You Saw Me · 歌曲 MV</sub></td>
+<td align="center"><a href="projects/2026-11-12-01-hold-me-slowly/"><img src="projects/2026-11-12-01-hold-me-slowly/thumbs/hold-me-slowly_poster.jpg" width="150"></a><br><sub>Hold Me Slowly · 歌词 MV</sub></td>
 </tr>
 </table>
 
@@ -27,6 +28,7 @@
 | 2026-10-24 | [NEON 双马尾：给 AI 卡通版娃娃换发型](projects/2026-10-24-01-neon-twin-tails/) | 用 Kling 4.0 Video Edit 只改有头发的镜头，参考图让双马尾从第一帧开始；补回被抹掉的字样和签名，量出 Kling 的 1–2 帧延迟后对齐原片，配 MV 原声，成片 0:23.0 | Kling 4.0 Video Edit（Figma Weave） | Claude |
 | 2026-10-29 | [剑来 · 陈平安：吴磊单人高光竖屏混剪](projects/2026-10-29-01-jianlai-wulei-highlight/) | 3:14 的剧集预告只留吴磊的单人镜头，用他本人的四句独白立人设；高潮段按实测 101.9 BPM 的重拍一拍一刀；9:16 窗口按脸取景、避开硬字幕，去水印，逐帧叠闪白、冲击缩放、RGB 错位、火星粒子和逐字字幕，成片 0:31.6 | —（第三方素材） | Claude |
 | 2026-11-10 | [The Moment You Saw Me：同一场雨讲两遍](projects/2026-11-10-01-the-moment-you-saw-me/) | 一首 3:03 的英文歌的 MV。先量 BPM、段落和静默：后半首是前半首的原样重复，所以同一个雨天讲两遍；伴奏停掉的 0.44 秒里雨停在半空。34 张 AI 关键帧加景深视差运镜，雨由程序画。另有两个歌词版：歌词是手指写在起雾玻璃上的字；歌词是一扇窗投进场景里的光和影 | gpt-image-2 关键帧 + Depth Anything V2 | Claude |
+| 2026-11-12 | [Hold Me Slowly：写在夜水里的字](projects/2026-11-12-01-hold-me-slowly/) | 一首 66 秒的歌的歌词 MV。用户只给了某工具识别的 SRT：先把人声分离出来，5 个 Whisper 模型交叉听写、给有分歧的词打分，再对着人声频谱图逐词对时间。画面全部由程序计算：歌词是滴进夜水里的发光的墨，唱完就松开散成烟；副歌里字被留住，冷暖两股墨被涡旋拉成一个光环 | —（全部程序生成） | Claude |
 
 科普片的工作模式基本固定为：**Gemini Notebook 生成解说骨架 → Claude 插入一手证据、核对事实、合成成片**。最新一支 MV 换了做法：**先把歌量清楚 → AI 关键帧 → 景深视差运镜和程序画的雨**。完整清单（每条视频的规格、大小、角色）见 [projects/README.md](projects/README.md)。
 

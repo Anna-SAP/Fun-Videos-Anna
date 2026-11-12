@@ -91,7 +91,7 @@ def warm(t):
     return kf(t, [(0, (0.80 * W, 0.86 * H, 90.0, 0.0)), (ws(3, 2) - 0.2, (0.80 * W, 0.86 * H, 90.0, 0.0)),
                   (ws(3, 2) + 2.0, (0.80 * W, 0.84 * H, 150.0, 0.55)),
                   (ls(4), (0.79 * W, 0.83 * H, 170.0, 0.6)), (le(4), (0.74 * W, 0.78 * H, 280.0, 0.85)),
-                  (T_PRE, (0.72 * W, 0.80 * H, 330.0, 1.15)), (T_PRE + 1.5, (0.72 * W, 0.80 * H, 300.0, 0.78)),
+                  (T_PRE - 0.6, (0.73 * W, 0.80 * H, 280.0, 0.85)), (T_PRE + 0.1, (0.72 * W, 0.80 * H, 360.0, 1.45)), (T_PRE + 1.8, (0.72 * W, 0.80 * H, 300.0, 0.78)),
                   (ls(8), (0.66 * W, 0.76 * H, 300.0, 0.78)), (le(8), (0.56 * W, 0.62 * H, 280.0, 0.7)),
                   (B(12) - 0.25, (0.5 * W, 0.5 * H, 250.0, 0.62)), (B(12) + 0.15, (0.5 * W, 0.5 * H, 330.0, 1.0)),
                   (B(12) + 2.5, (0.5 * W, 0.5 * H, 260.0, 0.62)), (ws(11, 4), (0.5 * W, 0.5 * H, 260.0, 0.58)),
@@ -124,7 +124,7 @@ def vortex(t):
 
 def half_life(t):
     """Seconds for released ink to fade to half."""
-    return kf(t, [(0, 2.2), (T_CH - 1, 2.2), (B(12), 1.0), (DUR, 1.0)])
+    return kf(t, [(0, 1.7), (T_CH - 1, 1.7), (B(12), 1.0), (DUR, 1.0)])
 
 
 def zoom(t):
@@ -404,7 +404,7 @@ def score():
                          6: {'tracking': 0.22, 'emis': 0.55, 'wdur': 0.75, 'color': MOON}}))
     # L4: words 5-6 ("hidden kind") carry almost no light of their own; the warm light finds them
     add(layout_line(4, [Row([1, 2, 3], S400, 118, cx, 1190), Row([4, 5, 6], S500, 140, cx + 30, 1365)],
-                    SILVER, nxt(4), zh=cx, zh_y=1470,
+                    SILVER, nxt(4), zh=cx, zh_y=1470, erase=0.5,
                     per={2: {'color': AMBER},
                          5: {'emis': 0.06, 'scat': 2.6, 'color': HONEY},
                          6: {'emis': 0.06, 'scat': 2.6, 'color': HONEY}}))

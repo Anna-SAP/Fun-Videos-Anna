@@ -177,13 +177,13 @@ class Film:
                 ef = 0.5 ** (1.0 / (w.erase * sc.FPS))
                 env = sc.ease((t - w.hold - 0.25) / 0.6)
                 np.minimum(decay, 1.0 - (1.0 - ef) * w.erase_m * env * (1.0 - still), out=decay)
-        self.ink.advect(fl.u, fl.v, still, decay.astype(np.float32), diffuse=0.22, edecay=0.5 ** (1.0 / (sc.half_life(t) * 0.55 * sc.FPS)))
+        self.ink.advect(fl.u, fl.v, still, decay.astype(np.float32), diffuse=0.32, edecay=0.5 ** (1.0 / (sc.half_life(t) * 0.55 * sc.FPS)))
 
         # sources
         if p:
             x, y, k = p
-            for dx in (-160, 0, 150):
-                self.blob(x + dx, y - 40, 70, sc.AMBER * 0.6 + sc.ROSE * 0.25, 0.016 * k, 0.012 * k)
+            for dx in (-90, 80):
+                self.blob(x + dx, y - 40, 60, sc.AMBER * 0.6 + sc.ROSE * 0.25, 0.034 * k, 0.02 * k)
         if e:
             x, y, k = e
             self.blob(x, y, 30, sc.MOON, 0.0035 * k, 0.012 * k)
