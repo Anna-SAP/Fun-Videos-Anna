@@ -1,6 +1,6 @@
 # 作品索引
 
-目录命名：`YYYY-MM-DD-NN-slug`。按日期排序，`NN` 是当天的序号，`slug` 用小写英文。文档里互相引用时用短名：**贝叶斯**、**NEON**、**AI 意识**、**NEON ×3**、**NEON 双马尾**、**剑来 · 陈平安**、**The Moment**、**Hold Me Slowly**、**WinWin 混剪**、**Bring Jensen Back**。
+目录命名：`YYYY-MM-DD-NN-slug`。按日期排序，`NN` 是当天的序号，`slug` 用小写英文。文档里互相引用时用短名：**贝叶斯**、**NEON**、**AI 意识**、**NEON ×3**、**NEON 双马尾**、**剑来 · 陈平安**、**The Moment**、**Hold Me Slowly**、**WinWin 混剪**、**Bring Jensen Back**、**Bring Jensen Back · LED 墙**。
 
 每个作品目录的结构都一样：
 
@@ -43,6 +43,8 @@ scripts/       这个作品用到的脚本（可选）
 | [WinWin 混剪](2026-11-13-01-winwin-mix-transitions/) | **成片** | `media/winwin-mix_smooth.mp4` | 1:09.3 | 1920×1080 | 42.9 MB | Claude |
 | [Bring Jensen Back](2026-11-14-01-bring-jensen-back/) | **成片** | `media/bring-jensen-back.mp4` | 4:35.2 | 1080×1920 | 178.8 MB | Claude（程序渲染画面，主角为用户提供的抠像） |
 | | 分享版 | `variants/share/bring-jensen-back_share.mp4` | 4:35.2 | 1080×1920 | 68.3 MB | Claude |
+| [Bring Jensen Back · LED 墙](2026-11-14-02-bring-jensen-back-led-wall/) | **成片**（未入库） | `media/bring-jensen-back-led-wall.mp4` | 5:14.8 | 1080×1920 | 243.4 MB | Claude |
+| | 分享版（未入库） | `variants/share/bring-jensen-back-led-wall_share.mp4` | 5:14.8 | 1080×1920 | 105.8 MB | Claude |
 
 The Moment 的三条原画质版（7.0 Mbps，各约 163 MB）留在本机，没有入库；入库的是从分镜文件单独编码的 1.6 Mbps 分享版。
 
@@ -69,6 +71,7 @@ The Moment  歌曲原曲（第三方，不入库）─ 量 BPM、段落、原样
             再加歌词文件（第三方，不入库）─ 逐词对齐 ─ 起雾玻璃上的手写字 ──→ 歌词版（3:03）
 
 WinWin 混剪  专人剪辑的混剪（三支 MV 首尾相接，第三方，不入库）─ 找出 3 个接口，重做画面和声音的衔接 ─→ 重剪版（1:09.3）
+Bring Jensen Back · LED 墙  同一首歌的 girl-intro 版（用户的歌，不入库）─ 歌词取自 MP3 内嵌字段 + 多模型还原改写过的段落，逐字对时间 ─→ 歌词 MV（5:14.8，画面全部程序计算）
 
 AI 意识  Gemini Notebook 方案三 ─┐
          Gemini Notebook 方案四 ─┴─ Clipchamp ─→《AI有意识吗》─┐
