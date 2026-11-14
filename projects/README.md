@@ -43,8 +43,8 @@ scripts/       这个作品用到的脚本（可选）
 | [WinWin 混剪](2026-11-13-01-winwin-mix-transitions/) | **成片** | `media/winwin-mix_smooth.mp4` | 1:09.3 | 1920×1080 | 42.9 MB | Claude |
 | [Bring Jensen Back](2026-11-14-01-bring-jensen-back/) | **成片** | `media/bring-jensen-back.mp4` | 4:35.2 | 1080×1920 | 178.8 MB | Claude（程序渲染画面，主角为用户提供的抠像） |
 | | 分享版 | `variants/share/bring-jensen-back_share.mp4` | 4:35.2 | 1080×1920 | 68.3 MB | Claude |
-| [Bring Jensen Back · LED 墙](2026-11-14-02-bring-jensen-back-led-wall/) | **成片**（未入库） | `media/bring-jensen-back-led-wall.mp4` | 5:14.8 | 1080×1920 | 243.4 MB | Claude |
-| | 分享版（未入库） | `variants/share/bring-jensen-back-led-wall_share.mp4` | 5:14.8 | 1080×1920 | 105.8 MB | Claude |
+| [Bring Jensen Back · LED 墙](2026-11-14-02-bring-jensen-back-led-wall/) | **成片** | `media/bring-jensen-back-led-wall.mp4` | 5:14.8 | 1080×1920 | 243.4 MB | Claude |
+| | 分享版 | `variants/share/bring-jensen-back-led-wall_share.mp4` | 5:14.8 | 1080×1920 | 105.8 MB | Claude |
 
 The Moment 的三条原画质版（7.0 Mbps，各约 163 MB）留在本机，没有入库；入库的是从分镜文件单独编码的 1.6 Mbps 分享版。
 
