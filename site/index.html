@@ -37,8 +37,8 @@
     <section class="hero" id="works" aria-labelledby="works-title">
       <div class="hero__intro">
         <p class="eyebrow">AI 科普短视频 · 学习记录</p>
-        <h1 id="works-title">九支短片，和它们的制作过程。</h1>
-        <p class="hero__lede">解说骨架由 Gemini Notebook 生成；Claude 找来访谈原声作为证据、核对事实，再合成为成片。后两支从一首歌出发：先把歌量清楚，再做成 MV；第八支是歌词 MV，画面全部由程序计算，字是滴进夜水里的墨；最新一支给别人剪的三段 MV 混剪重做转场。</p>
+        <h1 id="works-title">十支短片，和它们的制作过程。</h1>
+        <p class="hero__lede">解说骨架由 Gemini Notebook 生成；Claude 找来访谈原声作为证据、核对事实，再合成为成片。后两支从一首歌出发：先把歌量清楚，再做成 MV；第八支是歌词 MV，画面全部由程序计算，字是滴进夜水里的墨；第九支给别人剪的三段 MV 混剪重做转场；最新一支是一首 4 分半的嘻哈，主角只有一张抠像，每个字都在被唱出来的那一帧盖到画面上。</p>
         <a class="hero__more" href="#process">看看是怎么做的<span aria-hidden="true"> ↓</span></a>
       </div>
 
@@ -217,6 +217,22 @@
             <p class="work__idx">09 · 2026-11-13</p>
             <h2 class="work__title" lang="en">WinWin</h2>
             <p class="work__sub">三段 MV 混剪 · 重做转场</p>
+          </div>
+        </article>
+        <article class="work" style="--i:9">
+          <div class="player" id="hero-bjb" data-player>
+            <video preload="none" playsinline poster="assets/posters/bring-jensen-back.jpg"
+                   src="projects/2026-11-14-01-bring-jensen-back/variants/share/bring-jensen-back_share.mp4"
+                   aria-label="Bring Jensen Back：嘻哈 MV"></video>
+            <button class="player__cover" type="button" aria-label="播放 Bring Jensen Back">
+              <span class="player__btn" aria-hidden="true"></span>
+              <span class="player__time" data-time>4:35</span>
+            </button>
+          </div>
+          <div class="work__meta">
+            <p class="work__idx">10 · 2026-11-14</p>
+            <h2 class="work__title" lang="en">Bring Jensen Back</h2>
+            <p class="work__sub">嘻哈 MV · 每个字都是盖上去的章</p>
           </div>
         </article>
       </div>
@@ -864,7 +880,7 @@
                       data-src="projects/2026-11-10-01-the-moment-you-saw-me/thumbs/the-moment-you-saw-me_sheet.jpg"
                       aria-label="放大成片逐帧预览">
                 <img src="projects/2026-11-10-01-the-moment-you-saw-me/thumbs/the-moment-you-saw-me_sheet.jpg"
-                     alt="The Moment You Saw Me 成片逐帧预览：前半是冷色的雨天，副歌转成逆光的金色太阳雨，第二遍换到他的视角，结尾是清晨的窗" width="2592" height="1536" loading="lazy">
+                     alt="The Moment You Saw Me 成片逐帧预览：前半是冷色的雨天，副歌转成逆光的金色太阳雨，第二遍换到他的视角，结尾是清晨的窗" width="2592" height="2304" loading="lazy">
               </button>
               <figcaption>成片逐帧预览，每 4 秒一帧：冷色的雨天和金色的太阳雨，各出现两遍。歌曲是《今天是太阳雨》主题曲，版权归原作者所有</figcaption>
             </figure>
@@ -957,7 +973,7 @@
                       data-src="projects/2026-11-10-01-the-moment-you-saw-me/thumbs/the-moment-you-saw-me_lyrics_sheet.jpg"
                       aria-label="放大歌词版逐帧预览">
                 <img src="projects/2026-11-10-01-the-moment-you-saw-me/thumbs/the-moment-you-saw-me_lyrics_sheet.jpg"
-                     alt="歌词版逐帧预览：主歌是浓雾上的手写字，副歌玻璃擦开后变成清晰画面上的雾字，第二遍的字带着水痕，结尾清晨的窗玻璃上留着旧指痕" width="2592" height="1536" loading="lazy">
+                     alt="歌词版逐帧预览：主歌是浓雾上的手写字，副歌玻璃擦开后变成清晰画面上的雾字，第二遍的字带着水痕，结尾清晨的窗玻璃上留着旧指痕" width="2592" height="2304" loading="lazy">
               </button>
               <figcaption>歌词版逐帧预览，每 4 秒一帧：主歌是雾上的字，副歌是清晰画面上的雾字</figcaption>
             </figure>
@@ -1229,6 +1245,94 @@
               <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/tree/main/projects/2026-11-13-01-winwin-mix-transitions" target="_blank" rel="noopener">完整作品卡</a>
               <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-13-01-winwin-mix-transitions/scripts/render.py" target="_blank" rel="noopener">画面渲染器</a>
               <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-13-01-winwin-mix-transitions/scripts/audio_mix.py" target="_blank" rel="noopener">声音衔接</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- 10 Bring Jensen Back -->
+        <article class="case" id="case-bjb" aria-labelledby="case-bjb-title">
+          <div class="case__media">
+            <div class="viewer">
+              <div class="seg seg--block" role="group" aria-label="切换示意图与成片">
+                <button type="button" class="seg__btn" aria-pressed="true" data-for="case-bjb-player" data-still
+                        data-caption="一张抠像，四种印法：舞台贴纸、集会网点、报纸油墨、信里的宝丽来">四种印法</button>
+                <button type="button" class="seg__btn" aria-pressed="false" data-for="case-bjb-player"
+                        data-src="projects/2026-11-14-01-bring-jensen-back/variants/share/bring-jensen-back_share.mp4"
+                        data-poster="assets/posters/bring-jensen-back.jpg" data-time="4:35"
+                        data-caption="成片：每个字在被唱出来的那一帧盖上去，主角跟着实测的鼓点点头">成片</button>
+              </div>
+              <div class="player player--case is-still" id="case-bjb-player" data-player>
+                <video preload="none" playsinline poster="assets/posters/bring-jensen-back.jpg"
+                       src="projects/2026-11-14-01-bring-jensen-back/variants/share/bring-jensen-back_share.mp4"
+                       aria-label="Bring Jensen Back 嘻哈 MV"></video>
+                <button class="player__cover" type="button" aria-label="播放">
+                  <span class="player__btn" aria-hidden="true"></span>
+                  <span class="player__time" data-time>4:35</span>
+                </button>
+                <button type="button" class="player__still" data-lightbox data-src="assets/posters/bring-jensen-back-looks.jpg"
+                        aria-label="放大四种印法示意图">
+                  <img src="assets/posters/bring-jensen-back-looks.jpg"
+                       alt="同一张抠像的四种印法：LED 点阵舞台前的彩色贴纸、绿色集会海报上的网点、报纸版面上的油墨网点、信纸上的宝丽来照片" width="720" height="1280" loading="lazy">
+                </button>
+              </div>
+              <p class="viewer__cap" data-viewer-cap>一张抠像，四种印法：舞台贴纸、集会网点、报纸油墨、信里的宝丽来</p>
+            </div>
+          </div>
+
+          <div class="case__body">
+            <p class="case__kicker"><span>10 · 嘻哈 MV</span>2026-11-14 · Suno 歌曲 · 本机 Demucs + Whisper ×2 · 画面程序渲染 · 合成 Claude</p>
+            <h3 class="case__title" id="case-bjb-title"><span lang="en">Bring Jensen Back</span>：每个字都是盖上去的章</h3>
+            <p class="case__lead">一首 4 分 35 秒的中英双语嘻哈，主角只有一张抠好的照片。歌一半在讲新闻标题，一半在喊口号，两样都是印出来的东西，所以每个字在被唱出来的那一帧像橡皮章一样盖到画面上。主角是领喊的 MC，跟着实测的鼓点点头；歌里那个人从不露脸，只以一件挂在后台的皮衣、一把空椅子和一盏一直亮着的绿灯出现。</p>
+
+            <dl class="facts">
+              <div><dt>每个字的独立时间估计</dt><dd>12<small>个</small></dd></div>
+              <div><dt>一拍的帧数（96 BPM · 24 fps）</dt><dd>15<small>帧</small></dd></div>
+              <div><dt>生成模型费用</dt><dd>0<small>元</small></dd></div>
+            </dl>
+
+            <ol class="steps">
+              <li><h4>先量鼓</h4><p>从分离出的伴奏里逐 16 分音符找底鼓和军鼓：前 12 小节没有鼓，第 13 小节鼓进来，第 29 小节伴奏全停，第 58 小节是 Drop。这三处就是片子最大的三个切；全停那一小节，上一句歌词受重力掉出画面，黑底上只剩 33 YEARS 和红色的 ONE WEEK?。</p></li>
+              <li><h4>再确认唱了什么</h4><p>MP3 里嵌的歌词顺序和 txt 不一样；整首识别证实实际顺序和 txt 一致，还找出开头唱了两遍歌名、第一遍副歌少唱一句、Drop 后半是人声切片。逐字时间每个字 12 个估计取中位数，切片对不出词就只跟着起音切画面，不印字。</p></li>
+              <li><h4>一张照片，七种印法</h4><p>彩色贴纸、绿色网点、报纸油墨、复印机黑白、霓虹线描、宝丽来、波普网格；脖子以上在每个实测的鼓点上做一次小角度形变，就是点头。</p></li>
+              <li><h4>字的命运</h4><p>舞台上的大字、报纸标题、案卷里的打字机字、信里的手写字；会被红线划掉、被黑条涂掉、受重力掉落，唱到 run it back 时按演唱的倒序消失，画面跟着倒带。结尾窗里的霓虹招牌按 bring / Jensen / back 逐词重新亮起。</p></li>
+            </ol>
+
+            <aside class="note">
+              <p class="note__tag">注意</p>
+              <p>歌曲由用户用 Suno 生成，原曲音频和歌词不入库；成片音轨是原曲 MP3 流原样复制。歌词涉及真实人物和 2026 年 10–11 月的新闻，片中的日期、K 线、百分比都是按歌词画的示意，没有核实；不出现真人肖像、媒体报头或公司标志。</p>
+            </aside>
+
+            <div class="retro">
+              <div>
+                <h4 class="retro__h retro__h--good">做得好</h4>
+                <ul>
+                  <li>三个最大的切都来自量出来的鼓型，不是凭感觉分段。</li>
+                  <li>只有一张静态抠像也撑满了 4 分半：动作交给鼓点，变化交给印法和场景。</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="retro__h retro__h--next">下次改进</h4>
+                <ul>
+                  <li>行距要按字形的真实边界算，大号英文才不会压住上一行。</li>
+                  <li>主角只能点头和下沉；真要她动起来，几个关键镜头可以换成图生视频。</li>
+                </ul>
+              </div>
+            </div>
+
+            <figure class="sheet">
+              <button type="button" class="sheet__btn" data-lightbox
+                      data-src="projects/2026-11-14-01-bring-jensen-back/thumbs/bring-jensen-back_sheet.jpg"
+                      aria-label="放大逐帧预览">
+                <img src="projects/2026-11-14-01-bring-jensen-back/thumbs/bring-jensen-back_sheet.jpg"
+                     alt="逐帧预览：暖色的餐厅卡座和霓虹招牌；LED 舞台前的主角和大字；绿色集会海报；报纸版面和红色日期章；Drop 的波普网格；深色案卷板；信纸和宝丽来；最后回到卡座，窗外绿灯还亮着" width="2592" height="2304" loading="lazy">
+              </button>
+              <figcaption>逐帧预览，每 4 秒一帧：卡座、舞台、集会、报纸、网格、案卷、信、卡座</figcaption>
+            </figure>
+
+            <p class="links">
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-14-01-bring-jensen-back/storyboard.md" target="_blank" rel="noopener">歌曲分析与分镜</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-14-01-bring-jensen-back/scripts/timeline.py" target="_blank" rel="noopener">逐句设计</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-14-01-bring-jensen-back/scripts/typo.py" target="_blank" rel="noopener">盖章的字</a>
             </p>
           </div>
         </article>
