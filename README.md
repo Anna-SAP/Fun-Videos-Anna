@@ -15,7 +15,7 @@
 <td align="center"><a href="projects/2026-11-10-01-the-moment-you-saw-me/"><img src="projects/2026-11-10-01-the-moment-you-saw-me/thumbs/the-moment-you-saw-me_poster.jpg" width="150"></a><br><sub>The Moment You Saw Me · 歌曲 MV</sub></td>
 <td align="center"><a href="projects/2026-11-12-01-hold-me-slowly/"><img src="projects/2026-11-12-01-hold-me-slowly/thumbs/hold-me-slowly_poster.jpg" width="150"></a><br><sub>Hold Me Slowly · 歌词 MV</sub></td>
 <td align="center"><a href="projects/2026-11-13-01-winwin-mix-transitions/"><img src="projects/2026-11-13-01-winwin-mix-transitions/thumbs/winwin-mix_poster.jpg" width="150"></a><br><sub>WinWin 混剪 · 重做转场</sub></td>
-<td align="center"><a href="projects/2026-11-14-01-bring-jensen-back/"><img src="projects/2026-11-14-01-bring-jensen-back/thumbs/bring-jensen-back_poster.jpg" width="150"></a><br><sub>Bring Jensen Back · 歌词 MV</sub></td>
+<td align="center"><a href="projects/2026-11-14-02-bring-jensen-back-led-wall/"><img src="projects/2026-11-14-02-bring-jensen-back-led-wall/thumbs/bring-jensen-back-led-wall_poster.jpg" width="150"></a><br><sub>Bring Jensen Back · LED 墙</sub></td>
 </tr>
 </table>
 
@@ -32,7 +32,7 @@
 | 2026-11-10 | [The Moment You Saw Me：同一场雨讲两遍](projects/2026-11-10-01-the-moment-you-saw-me/) | 一首 3:03 的英文歌的 MV。先量 BPM、段落和静默：后半首是前半首的原样重复，所以同一个雨天讲两遍；伴奏停掉的 0.44 秒里雨停在半空。34 张 AI 关键帧加景深视差运镜，雨由程序画。另有两个歌词版：歌词是手指写在起雾玻璃上的字；歌词是一扇窗投进场景里的光和影 | gpt-image-2 关键帧 + Depth Anything V2 | Claude |
 | 2026-11-12 | [Hold Me Slowly：写在夜水里的字](projects/2026-11-12-01-hold-me-slowly/) | 一首 66 秒的歌的歌词 MV。用户只给了某工具识别的 SRT：先把人声分离出来，5 个 Whisper 模型交叉听写、给有分歧的词打分，再对着人声频谱图逐词对时间。画面全部由程序计算：歌词是滴进夜水里的发光的墨，唱完就松开散成烟；副歌里字被留住，冷暖两股墨被涡旋拉成一个光环 | —（全部程序生成） | Claude |
 | 2026-11-13 | [WinWin 混剪：重做转场](projects/2026-11-13-01-winwin-mix-transitions/) | 别人剪的 69 秒混剪其实是三支 MV 首尾相接，接口处画幅、亮度、歌和调性同时硬切。让黑色遮幅跟着音乐“呼吸”（睁眼开场、落拍撑满、收成超宽银幕、闭眼收尾），三个接口分别用甩镜推入、回声残影（echo-out + 低音交接）、按亮度把雾溶解成烟（两首歌起音对齐的 25 帧）接过去，三段响度差从 4.4 LU 收到 1.1 LU | —（第三方素材） | Claude |
-| 2026-11-14 | [Bring Jensen Back：一面不肯熄灭的 LED 墙](projects/2026-11-14-01-bring-jensen-back/) | 一首 5:15 的 Suno 嘻哈歌的歌词 MV。歌词取自 MP3 内嵌字段，实际演唱改写过的第二段主歌用 4 个识别模型听写、候选打分还原；画面是一面程序计算的 LED 点阵墙：字随演唱逐字点亮，墙的亮度跟着底鼓呼吸，低音抽空时跟着断电，副歌大字烧进墙里，片尾只剩一盏绿灯 | —（全部程序生成） | Claude |
+| 2026-11-14 | [Bring Jensen Back · LED 墙：一面不肯熄灭的灯墙](projects/2026-11-14-02-bring-jensen-back-led-wall/) | 同一首歌的另一个 Suno 版本（5:15）的歌词 MV。歌词取自 MP3 内嵌字段，实际演唱改写过的第二段主歌用 4 个识别模型听写、候选打分还原；画面是一面程序计算的 LED 点阵墙：字随演唱逐字点亮，墙的亮度跟着底鼓呼吸，低音抽空时跟着断电，副歌大字烧进墙里，片尾只剩一盏绿灯 | —（全部程序生成） | Claude |
 
 科普片的工作模式基本固定为：**Gemini Notebook 生成解说骨架 → Claude 插入一手证据、核对事实、合成成片**。最新一支 MV 换了做法：**先把歌量清楚 → AI 关键帧 → 景深视差运镜和程序画的雨**。完整清单（每条视频的规格、大小、角色）见 [projects/README.md](projects/README.md)。
 

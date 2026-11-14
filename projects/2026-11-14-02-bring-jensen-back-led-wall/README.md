@@ -1,11 +1,11 @@
-# 2026-11-14 · Bring Jensen Back：一面不肯熄灭的 LED 墙
+# 2026-11-14 · Bring Jensen Back · LED 墙：一面不肯熄灭的灯墙
 
 | 项 | 内容 |
 |---|---|
 | 日期 | 2026-11-14 |
 | 类型 | 嘻哈歌词 MV，画面全部由程序计算（一面 135 × 240 颗灯的 LED 点阵墙 + 人群剪影），没有用图片或视频生成模型 |
 | 工具 | Claude Code；numpy / scipy / OpenCV / Pillow；faster-whisper（large-v3、large-v2、medium、small）、sherpa-onnx（SenseVoice、Paraformer）、UVR Kim_Vocal_2（人声分离），均为本机 CPU；ffmpeg |
-| 输入 | Suno 生成的 `bring_jensen_back_girl-intro.mp3`（5:14.78），用户提供，**不入库** |
+| 输入 | Suno 生成的 `bring_jensen_back_girl-intro.mp3`（5:14.78，与 [同日另一支](../2026-11-14-01-bring-jensen-back/) 的 v2 是同一首歌的不同生成版本），用户提供，**不入库** |
 | 产出 | 成片 1 条 + 分享版 1 条（均未入库，见下） |
 | 状态 | 2026-11-14 完成。第二段主歌有 3 处存疑待作者核对；成片是否公开待作者决定 |
 
@@ -13,12 +13,12 @@
 
 | 预览 | 文件 | 时长 | 规格 | 大小 |
 |---|---|---|---|---|
-| <img src="thumbs/bring-jensen-back_poster.jpg" width="160"> | `media/bring-jensen-back.mp4`（母版） | 5:14.8 | 1080×1920 · 30 fps · H.264 6.0 Mbps 两遍（BT.709）· 音轨为原曲 MP3 流原样复制 | 243.4 MB |
-| | `variants/share/bring-jensen-back_share.mp4`（分享版） | 5:14.8 | 同上，2.5 Mbps，编码前轻降噪 | 105.8 MB |
+| <img src="thumbs/bring-jensen-back-led-wall_poster.jpg" width="160"> | `media/bring-jensen-back-led-wall.mp4`（母版） | 5:14.8 | 1080×1920 · 30 fps · H.264 6.0 Mbps 两遍（BT.709）· 音轨为原曲 MP3 流原样复制 | 243.4 MB |
+| | `variants/share/bring-jensen-back-led-wall_share.mp4`（分享版） | 5:14.8 | 同上，2.5 Mbps，编码前轻降噪 | 105.8 MB |
 
 **两条成片都还没有入库。** 歌词点名一位真实人物并写到具体的指控和事件，公开仓库等于公开发布，是否入库、是否上展示网站由作者决定。SHA-256：母版 `3ff671d0…6f3a`，分享版 `21f54829…6588`。
 
-时间对齐校验：[逐字起点画在人声频谱图上](thumbs/bring-jensen-back_timing.jpg)（标签是"句号.字号"，不含歌词）。
+时间对齐校验：[逐字起点画在人声频谱图上](thumbs/bring-jensen-back-led-wall_timing.jpg)（标签是"句号.字号"，不含歌词）。
 
 校验：两条成片的音频包 MD5 都与原曲一致（`a8cc7b3a…0243`），30 / 100 / 200 / 290 s 互相关偏移 0.00 ms；9443 帧，视频 314.767 s、音频 314.760 s（相差 7 ms，不到一帧）；鼓进来的 20.222 s 之后第一帧即闪白，前副歌的字在整句唱完后才落下，第 51 小节墙随低音变暗，312.6 s 熄灯后只剩绿灯和字影，均逐帧确认。
 
