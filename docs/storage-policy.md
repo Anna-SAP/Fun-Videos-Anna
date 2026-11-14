@@ -68,6 +68,7 @@ git lfs pull --include "projects/2026-10-19-01-*"                   # 之后按�
 | NEON 双马尾 | 卡通版片段、官方 MV | 同 NEON。卡通版有头发的镜头经 Kling 改了发型，其余镜头原样使用；MV 只用了音轨 | 同上 |
 | The Moment | 歌曲原曲、歌词文件 | 《今天是太阳雨》主题曲 *The Moment You Saw Me*。歌词文件带署名（作词 / 作曲 Ann515，编曲 Y-Duet/Sung，OP/SP 阳乐二正）和一行权利声明「未经许可,不得翻唱或使用」 | `TheMomentYouSawMe.m4a` / 2.1 MB；`TheMomentYouSawMe_lyrics.txt` / 2 KB |
 | WinWin 混剪 | 专人剪辑的混剪 | 三支 MV 首尾相接（第三段带 SM Entertainment 台标），各段出处未逐一核实；用户经 Google Drive 分享 | `winwin_V2_mixure_clip.mp4` / 70.2 MB |
+| Bring Jensen Back | 歌曲、歌词、主角照片 | 用户提供：Suno 生成的歌曲（MP3 元数据 artist `annasu82`，`made with suno`）、歌词 txt（另有一份顺序不同的歌词嵌在 MP3 元数据里）、一张抠好背景的女孩全身照。歌词涉及真实人物和 2026 年 10–11 月的新闻，未核实 | `bring_jensen_back - v2.mp3` / 6.2 MB；`bring_jensen_back - claude.txt` / 5 KB；PNG 1083×755 / 0.5 MB |
 | AI 意识 | 访谈整集 | *The Joe Rogan Experience* #2541 · Thomas Campbell，[YouTube v2oBLSDCZaY](https://www.youtube.com/watch?v=v2oBLSDCZaY) | `Joe Rogan Experience #2541 - Thomas Campbell.mp4` / 1.16 GB |
 
-成片里包含这些素材的片段（NEON 和 NEON ×3 的 MV、卡通、舞台画面，NEON 双马尾的卡通画面和 MV 音轨，两条访谈实证版里的访谈原声，剑来 · 陈平安的预告画面和原声；The Moment 的两版用整首原曲做音轨，歌词版的画面里有全部歌词；WinWin 混剪是那段混剪本身重做衔接，三支 MV 的画面和原声都在，第三段的 SM 台标原样保留）。NEON 双马尾的 `materials/kling/` 是 Kling 在卡通版画面上改出来的，同样是衍生作品。本库是公开仓库，素材版权归原作者所有，这里只作个人学习记录。
+成片里包含这些素材的片段（NEON 和 NEON ×3 的 MV、卡通、舞台画面，NEON 双马尾的卡通画面和 MV 音轨，两条访谈实证版里的访谈原声，剑来 · 陈平安的预告画面和原声；The Moment 的两版用整首原曲做音轨，歌词版的画面里有全部歌词；WinWin 混剪是那段混剪本身重做衔接，三支 MV 的画面和原声都在，第三段的 SM 台标原样保留；Bring Jensen Back 用整首歌做音轨，画面里有全部歌词和用户提供的人物照片）。NEON 双马尾的 `materials/kling/` 是 Kling 在卡通版画面上改出来的，同样是衍生作品。本库是公开仓库，素材版权归原作者所有，这里只作个人学习记录。
