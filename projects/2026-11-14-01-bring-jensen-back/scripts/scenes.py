@@ -14,7 +14,6 @@ import math
 import cv2
 import numpy as np
 
-import girl as G
 from common import (AMBER, CREAM, GREEN, GREEN_D, H, INK, PAPER, RED, W, clamp01, glyph, halftone_fast, load_rgba,
                     over, over_color, sstep)
 
@@ -112,11 +111,12 @@ def _diner_base(variant):
             if 0 <= lx < W:
                 col = (m[:, lx:lx + 4])
                 img[:, lx:lx + 4][col] *= 0.7
-    # table top (formica + chrome edge)
-    top = np.array([0.86, 0.80, 0.70], np.float32)
-    img[1240:1330, 120:960] = top
-    img[1330:1352, 120:960] = np.array([0.80, 0.80, 0.84], np.float32)
-    img[1352:1700, 500:580] = np.array([0.45, 0.45, 0.48], np.float32)
+    # table top (formica + chrome edge); variant 1 has no table (the across-the-table view brings its own)
+    if variant == 0:
+        top = np.array([0.86, 0.80, 0.70], np.float32)
+        img[1240:1330, 120:960] = top
+        img[1330:1352, 120:960] = np.array([0.80, 0.80, 0.84], np.float32)
+        img[1352:1700, 500:580] = np.array([0.45, 0.45, 0.48], np.float32)
     # checker floor
     fy = 1700
     sq = 90
@@ -147,7 +147,7 @@ def _steam(img, t, cx, cy, strength, seed, phi):
 
 
 def diner(t, p, fi):
-    img = _diner_base(0).copy()
+    img = _diner_base(p.get('variant', 0)).copy()
     green = p.get('green', 0.0)
     if callable(green):
         green = green(t)
