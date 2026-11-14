@@ -8,128 +8,10 @@ import math
 import cv2
 import numpy as np
 
-import girl as G
 import scenes as SC
 import typo as TY
 from common import (AMBER, BEAT, CREAM, GREEN, H, INK, PAPER, RED, T0, W, WHITE, clamp01, ease_out, font, glyph,
                     halftone_fast, over, over_color, sstep)
-
-
-# ------------------------------------------------------------------------------------------------ the MC
-def girl_layer(img, g, tc, t, fi, env, clip=None):
-    """g: dict(x, y, s, anchor, style, kw, nod, sway, flip, rot, enter, t0, alpha, fall_at, bounce)."""
-    k = float(env['kick'][fi])
-    sn = float(env['snare'][fi])
-    nod = g.get('nod', 1.0) * min(1.0, 0.85 * k + 0.6 * sn)
-    tilt = g.get('sway', 1.0) * 1.4 * math.sin(2 * math.pi * (tc - T0) / (4 * BEAT))
-    x, y, s = g['x'], g['y'], g['s']
-    rot = g.get('rot', 0.0)
-    a_mul = g.get('alpha', 1.0)
-    if 'zoom' in g:   # slow push over [t0, t1]
-        z0, z1, za, zb = g['zoom']
-        u = clamp01((tc - za) / max(0.01, zb - za))
-        s = s * (z0 + (z1 - z0) * u)
-    if g.get('enter') and 't0' in g:
-        u = (t - g['t0']) / g.get('enter_dur', 0.22)
-        if u < 1:
-            e = 1 - ease_out(max(0.0, u), 3)
-            if g['enter'] == 'left':
-                x -= 1000 * e
-            elif g['enter'] == 'right':
-                x += 1000 * e
-            elif g['enter'] == 'up':
-                y += 1200 * e
-            elif g['enter'] == 'pop':
-                s *= 1 - 0.3 * e
-                a_mul *= 1 - e
-    if g.get('fall_at') is not None and t > g['fall_at']:
-        d = t - g['fall_at']
-        y += 3200 * d * d
-        rot += 40 * d
-    if g.get('exit_at') is not None and t > g['exit_at']:
-        d = t - g['exit_at']
-        x += g.get('exit_dx', -1600) * d
-    anchor = G.FACE if g.get('anchor') == 'face' else G.BODY
-    rgb, a = G.place(x, y, s, rot=rot, anchor=anchor, nod=nod, tilt=tilt, flip=g.get('flip', False),
-                     squash=g.get('bounce', 0.015) * k)
-    if clip is not None:
-        rgb = rgb * clip[..., None]
-        a = a * clip
-    rgb, a = G.stylize(rgb, a, g.get('style', 'color'), frame_idx=fi, **g.get('kw', {}))
-    if a_mul < 1:
-        rgb, a = rgb * a_mul, a * a_mul
-    return over(img, rgb, a)
-
-
-def girls(gs):
-    def f(img, tc, t, fi, env):
-        for g in gs:
-            img = girl_layer(img, g, tc, t, fi, env)
-        return img
-    return f
-
-
-def polaroid(g, cx, cy, w, h, rot=-4.0, frame=(0.97, 0.96, 0.93)):
-    """The MC inside a white instant-photo frame (bridge)."""
-    def f(img, tc, t, fi, env):
-        M = cv2.getRotationMatrix2D((cx, cy), rot, 1.0)
-        A = np.zeros((H, W), np.float32)
-        pts = np.array([[cx - w / 2, cy - h / 2], [cx + w / 2, cy - h / 2], [cx + w / 2, cy + h / 2], [cx - w / 2, cy + h / 2]])
-        pts = (M[:, :2] @ pts.T).T + M[:, 2]
-        cv2.fillConvexPoly(A, pts.astype(np.int32), 1.0, cv2.LINE_AA)
-        sh = np.roll(np.roll(A, 14, 0), 10, 1)
-        over_color(img, cv2.GaussianBlur(sh, (0, 0), 6), (0, 0, 0), 0.35)
-        over_color(img, A, frame)
-        inner = np.zeros((H, W), np.float32)
-        m = 26
-        pin = np.array([[cx - w / 2 + m, cy - h / 2 + m], [cx + w / 2 - m, cy - h / 2 + m], [cx + w / 2 - m, cy + h / 2 - 120],
-                        [cx - w / 2 + m, cy + h / 2 - 120]])
-        pin = (M[:, :2] @ pin.T).T + M[:, 2]
-        cv2.fillConvexPoly(inner, pin.astype(np.int32), 1.0, cv2.LINE_AA)
-        over_color(img, inner, (0.16, 0.16, 0.18))
-        return girl_layer(img, g, tc, t, fi, env, clip=inner)
-    return f
-
-
-def grid(n, colors, tc0=None, style='duo', s_mul=1.0, gap=10, ink=INK):
-    """Pop-art grid of the MC: n x n cells, each its own background + duotone colour, nodding in turn."""
-    def f(img, tc, t, fi, env):
-        cw, ch = W / n, H / n
-        for j in range(n):
-            for i in range(n):
-                c = colors[(i + j * n + int((tc - T0) / BEAT)) % len(colors)]
-                x0, y0 = int(i * cw), int(j * ch)
-                x1, y1 = int((i + 1) * cw), int((j + 1) * ch)
-                img[y0:y1, x0:x1] = c[0]
-        k = float(env['kick'][fi])
-        sn = float(env['snare'][fi])
-        cell = int(max(5, 11 / n * 1.6))
-        for j in range(n):
-            for i in range(n):
-                c = colors[(i + j * n + int((tc - T0) / BEAT)) % len(colors)]
-                scale = 2.05 / n * s_mul * 1.0
-                cx = (i + 0.5) * W / n
-                cy = (j + 1) * H / n + 20
-                rgb, a = G.place(cx, cy - 330 * scale, scale, nod=min(1, 0.85 * k + 0.6 * sn) * (1 if (i + j) % 2 == 0 else 0.5),
-                                 tilt=1.5 * math.sin(2 * math.pi * (tc - T0) / (4 * BEAT) + i + j))
-                x0, y0 = int(i * W / n), int(j * H / n)
-                x1, y1 = int((i + 1) * W / n), int((j + 1) * H / n)
-                clipm = np.zeros((H, W), np.float32)
-                clipm[y0 + gap // 2:y1 - gap // 2, x0 + gap // 2:x1 - gap // 2] = 1
-                rgb, a = rgb * clipm[..., None], a * clipm
-                if style == 'duo':
-                    rgb, a = G.stylize(rgb, a, 'duo', ink=c[1], paper=c[2], cell=cell, frame_idx=fi)
-                else:
-                    rgb, a = G.stylize(rgb, a, style, frame_idx=fi)
-                over(img, rgb, a)
-        # gutters
-        for i in range(1, n):
-            x = int(i * W / n)
-            img[:, x - gap // 2:x + gap // 2] = ink
-            y = int(i * H / n)
-            img[y - gap // 2:y + gap // 2] = ink
-        return img
-    return f
 
 
 # ------------------------------------------------------------------------------------------------ props & words
@@ -550,4 +432,188 @@ def band_for(line_getter, color=WHITE, pad=(28, 18), rot=-2.0, shadow=INK):
         if shadow is not None:
             over_color(img, np.roll(np.roll(A, 12, 0), 12, 1), shadow)
         return over_color(img, A, color)
+    return f
+
+
+# ------------------------------------------------------------------------------------------------ v2: the witness
+import person as P  # noqa: E402
+
+
+def her(spec, use_content_time=True):
+    """Composite the heroine (person.render) with this shot's spec. Lights may be callables of t."""
+    def f(img, tc, t, fi, env):
+        sp = dict(spec)
+        if 'strobe' in sp:   # a strobe or flash lights her only while it fires
+            k = float(env['snare'][fi]) * sp.pop('strobe')
+            sp['key'] = dict(color=(1.0, 1.0, 1.0), dir=(0, -1), k=k * 1.6, soft=1.0)
+            sp['amb'] = tuple(np.asarray(sp.get('amb', (0.05, 0.05, 0.05)), np.float32) + k * 0.25)
+        if sp.get('t_on') is not None and t < sp['t_on']:
+            return img
+        if sp.get('t_off') is not None and t >= sp['t_off']:
+            return img
+        sp.pop('t_on', None)
+        sp.pop('t_off', None)
+        return P.render(img, sp, tc if use_content_time else t, fi, env, now=t)
+    return f
+
+
+def fg_heads(specs, color=INK, blur=9.0, bob_env='kick', bob=14):
+    """Out-of-focus heads and shoulders of people standing between the camera and her.
+    specs: [(x, y, scale)] - y is the top of the head."""
+    def f(img, tc, t, fi, env):
+        A = np.zeros((H, W), np.float32)
+        k = float(env[bob_env][fi]) if bob_env else 0.0
+        for i, (x, y, s) in enumerate(specs):
+            yb = y - bob * k * (0.6 + 0.4 * math.sin(i * 2.1))
+            cv2.ellipse(A, (int(x), int(yb + 95 * s)), (int(78 * s), int(98 * s)), 0, 0, 360, 1.0, -1, cv2.LINE_AA)
+            cv2.ellipse(A, (int(x), int(yb + 330 * s)), (int(230 * s), int(150 * s)), 0, 180, 360, 1.0, -1, cv2.LINE_AA)
+            cv2.rectangle(A, (int(x - 230 * s), int(yb + 330 * s)), (int(x + 230 * s), H), 1.0, -1)
+        if blur:
+            A = cv2.GaussianBlur(A, (0, 0), blur)
+        return over_color(img, A, color)
+    return f
+
+
+def diner_fg(mugs=1, steam=0.0, table=(), mug_w=150, dof=0.0, candle=None):
+    """The near edge of the diner table (and what stands on it) drawn in front of her."""
+    def f(img, tc, t, fi, env):
+        top = np.array([0.86, 0.80, 0.70], np.float32) * np.array([1.06, 0.97, 0.84], np.float32)
+        layer = img.copy()
+        layer[1240:1330, 120:960] = top
+        layer[1330:1352, 120:960] = np.array([0.80, 0.80, 0.84], np.float32) * np.array([1.06, 0.97, 0.84], np.float32)
+        layer[1352:1700, 500:580] = np.array([0.45, 0.45, 0.48], np.float32) * np.array([1.06, 0.97, 0.84], np.float32)
+        xs = {1: (560,), 2: (430, 690), 3: (300, 540, 780)}.get(mugs, ())
+        for x in xs:
+            SC.put(layer, 'mug', mug_w, x, 1240 - mug_w * 0.36)
+        for name, w, cx, cy in table:
+            SC.put(layer, name, w, cx, cy)
+        if candle:
+            SC.glow(layer, candle[0], candle[1], 40, AMBER, 0.9 + 0.15 * math.sin(t * 17) * math.sin(t * 5.1))
+        m = np.zeros((H, W), np.float32)
+        m[1080:1700] = 1   # only the table band is foreground
+        if dof:
+            layer = cv2.GaussianBlur(layer, (0, 0), dof)
+        return img * (1 - m[..., None]) + layer * m[..., None]
+    return f
+
+
+def scene_blur(sigma, y0=0, y1=H):
+    """Defocus the plate behind her (shallow depth of field when she is the subject)."""
+    def f(img, tc, t, fi, env):
+        s = sigma(t) if callable(sigma) else sigma
+        if s < 0.3:
+            return img
+        img[y0:y1] = cv2.GaussianBlur(img[y0:y1], (0, 0), s)
+        return img
+    return f
+
+
+def haze_beams(n=2, color=(0.6, 1.0, 0.5), k=0.10, t_speed=0.6):
+    """Light beams through haze, drawn IN FRONT of her (depth: the haze is between her and the camera)."""
+    def f(img, tc, t, fi, env):
+        yy, xx = SC._yy_xx()
+        acc = np.zeros((H, W), np.float32)
+        for j in range(n):
+            ang = math.sin(tc * t_speed + j * 2.4) * 0.35 + (j - 0.5) * 0.5
+            sx = 540 + (j - 0.5) * 700
+            dxl = (xx - sx) * math.cos(ang) - (yy + 100) * math.sin(ang)
+            width = 60 + (yy + 100) * 0.22
+            acc += np.exp(-(dxl / width) ** 2) * clamp01((yy + 100) / 900)
+        img += (acc * k)[..., None] * np.asarray(color, np.float32)
+        return img
+    return f
+
+
+def grade(mul=(1, 1, 1), lift=0.0, sat=1.0):
+    """A scene-wide grade applied after she is composited, so she gets exactly the plate's colour."""
+    mul = np.asarray(mul, np.float32)
+
+    def f(img, tc, t, fi, env):
+        if sat != 1.0:
+            g = (img[..., 0] * 0.299 + img[..., 1] * 0.587 + img[..., 2] * 0.114)[..., None]
+            img = g + (img - g) * sat
+        return img * mul + lift
+    return f
+
+
+def flash_lights(colors, env_key='kick'):
+    """Concert wash lights that change colour on each beat (the strobe-revealed crowd)."""
+    def f(img, tc, t, fi, env):
+        i = int((t - T0) / BEAT) % len(colors)
+        k = float(env[env_key][fi])
+        img += np.asarray(colors[i], np.float32) * 0.18 * k
+        return img
+    return f
+
+
+def spotlight(sx, tx, ty, t_on, t_off=1e9, r=170, color=(1.0, 1.0, 0.95), k=0.55, sweep=(-260, 0), sweep_dur=0.3):
+    """A follow spot: a soft cone from above to (tx, ty), swinging in over sweep_dur. Drawn in front (haze)."""
+    def f(img, tc, t, fi, env):
+        if t < t_on or t >= t_off:
+            return img
+        u = ease_out((t - t_on) / sweep_dur, 3)
+        x = tx + sweep[0] * (1 - u)
+        y = ty + sweep[1] * (1 - u)
+        yy, xx = SC._yy_xx()
+        v = clamp01((yy + 100) / (y + 100))
+        cx = sx + (x - sx) * v
+        width = 30 + r * v
+        cone = np.exp(-((xx - cx) / width) ** 2) * (0.25 + 0.75 * v) * (yy < y + r)
+        pool = np.exp(-(((xx - x) / (r * 1.3)) ** 2 + ((yy - y) / (r * 1.1)) ** 2))
+        a = clamp01(cone * 0.35 + pool * 0.6) * k * min(1.0, (t - t_on) / 0.06)
+        img += a[..., None] * np.asarray(color, np.float32)
+        return img
+    return f
+
+
+def near_table(items=(), far=1330, dof=0.0, tone=(0.82, 0.74, 0.62)):
+    """Across-the-table view: the near tabletop fills the bottom of the frame and hides everything below its far
+    edge (the camera sits above table height). items: [(prop, width, cx, cy)] standing on it."""
+    tone = np.asarray(tone, np.float32)
+
+    def f(img, tc, t, fi, env):
+        layer = np.zeros((H, W, 3), np.float32)
+        yy = np.arange(H, dtype=np.float32)[:, None, None]
+        layer[:] = tone * (0.86 + 0.18 * clamp01((yy - far) / (H - far)))
+        layer[far:far + 10] = np.array([0.80, 0.80, 0.84], np.float32)          # chrome trim on the far edge
+        layer[H - 40:] = np.array([0.70, 0.70, 0.74], np.float32)                # and the near edge
+        A = np.zeros((H, W), np.float32)
+        poly = np.array([[40, far], [W - 40, far], [W + 300, H], [-300, H]], np.int32)
+        cv2.fillConvexPoly(A, poly, 1.0, cv2.LINE_AA)
+        for name, w, cx, cy in items:
+            SC.put(layer, name, w, cx, cy)
+            rgb, a = SC.prop(name, int(w))
+            h, ww = a.shape
+            x0, y0 = int(cx - ww / 2), int(cy - h / 2)
+            xa, ya, xb, yb = max(0, x0), max(0, y0), min(W, x0 + ww), min(H, y0 + h)
+            A[ya:yb, xa:xb] = np.maximum(A[ya:yb, xa:xb], a[ya - y0:yb - y0, xa - x0:xb - x0])
+        # a soft reflection of the room's light on the formica
+        if dof:
+            layer = cv2.GaussianBlur(layer, (0, 0), dof)
+            A = cv2.GaussianBlur(A, (0, 0), dof * 0.6)
+        return img * (1 - A[..., None]) + layer * A[..., None]
+    return f
+
+
+def vox_photo(x0, y0, x1, y1, spec, t_on, ink=INK, paper=PAPER):
+    """A small street-interview photo in the newspaper: a box, a hairline frame, her printed inside, caption lines."""
+    def f(img, tc, t, fi, env):
+        if t < t_on:
+            return img
+        p = ease_out((t - t_on) / 0.12, 2)
+        if p < 1:
+            yc = (y0 + y1) / 2
+            ya, yb = int(yc - (yc - y0) * p), int(yc + (y1 - yc) * p)
+        else:
+            ya, yb = y0, y1
+        img[ya:yb, x0:x1] = np.asarray(paper, np.float32) * 0.985
+        if p >= 1:
+            sp = dict(spec)
+            sp.update(look='print', ink=ink, paper=paper, clip=(x0 + 8, y0 + 8, x1 - 8, y1 - 70))
+            P.render(img, sp, tc, fi, env, now=t)
+            img[y0:y0 + 3, x0:x1] = ink
+            img[y1 - 66:y1 - 64, x0 + 8:x1 - 8] = ink * 0.8
+            for k in range(2):
+                img[y1 - 52 + 22 * k:y1 - 44 + 22 * k, x0 + 8:x1 - 8 - 90 * k] = ink * 0.45
+        return img
     return f
