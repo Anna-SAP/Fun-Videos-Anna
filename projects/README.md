@@ -1,6 +1,6 @@
 # 作品索引
 
-目录命名：`YYYY-MM-DD-NN-slug`。按日期排序，`NN` 是当天的序号，`slug` 用小写英文。文档里互相引用时用短名：**贝叶斯**、**NEON**、**AI 意识**、**NEON ×3**、**NEON 双马尾**、**剑来 · 陈平安**、**The Moment**、**Hold Me Slowly**、**WinWin 混剪**、**Bring Jensen Back**、**Bring Jensen Back · LED 墙**。
+目录命名：`YYYY-MM-DD-NN-slug`。按日期排序，`NN` 是当天的序号，`slug` 用小写英文。文档里互相引用时用短名：**贝叶斯**、**NEON**、**AI 意识**、**NEON ×3**、**NEON 双马尾**、**剑来 · 陈平安**、**The Moment**、**Hold Me Slowly**、**WinWin 混剪**、**Bring Jensen Back**、**Bring Jensen Back · LED 墙**、**Bring Jensen Back 2.0**。
 
 每个作品目录的结构都一样：
 
@@ -45,6 +45,8 @@ scripts/       这个作品用到的脚本（可选）
 | | 分享版（第二版） | `variants/share/bring-jensen-back_share.mp4` | 4:35.2 | 1080×1920 | 68.3 MB | Claude |
 | | 第一版 | `variants/v1/bring-jensen-back_v1.mp4` | 4:35.2 | 1080×1920 | 178.8 MB | Claude |
 | [Bring Jensen Back · LED 墙](2026-11-14-02-bring-jensen-back-led-wall/) | **成片** | `media/bring-jensen-back-led-wall.mp4` | 5:14.8 | 1080×1920 | 243.4 MB | Claude |
+| [Bring Jensen Back 2.0](2026-11-17-01-bring-jensen-back-week-two/) | **成片** | `media/bring-jensen-back-week-two.mp4` | 5:03.2 | 1080×1920 | 215.6 MB | Claude |
+| | 分享版 | `variants/share/bring-jensen-back-week-two_share.mp4` | 5:03.2 | 1080×1920 | 82.9 MB | Claude |
 
 The Moment 的三条原画质版（7.0 Mbps，各约 163 MB）留在本机，没有入库；入库的是从分镜文件单独编码的 1.6 Mbps 分享版。
 
