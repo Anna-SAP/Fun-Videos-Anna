@@ -42,3 +42,31 @@ python3 asr_en.py in16k.wav out.jsonl 8       # 流式写 JSONL，可以边跑�
 
 - **中文同音字：** SenseVoice 会把“遥视”识别成“姚氏 / 摇视”，“低熵”识别成“低商”，“缓冲层”识别成“缓冲草”。视频有硬字幕时，**用画面字幕校正**（AI 意识和贝叶斯的旁白文稿都是这样做的）；没有字幕时，按术语表替换。
 - 识别结果只能当检索和定位工具。成片字幕要人工审校，译文要对照原话。
+
+## 歌词逐字时间：两个对齐器互相校验
+
+[门没开，灯没关 · melody1](../projects/2026-11-17-02-bring-jensen-back-door-light/) 里用的做法。已知歌词、要每个字的起点时，不要只信一个强制对齐器，两种原理的错法不一样：
+
+| | 怎么对齐 | 准的地方 | 错的地方 |
+|---|---|---|---|
+| Whisper（faster-whisper 的 `find_alignment`） | 交叉注意力 + DTW | 一句从哪开始、到哪结束 | 把一个词的几个字放在同一瞬间；句首偏早 |
+| MMS 对齐模型（`torchaudio.pipelines.MMS_FA`，汉字先转无声调拼音） | CTC 逐帧后验 + Viterbi | 说唱里音节的间距 | 每句第一个和最后一个字会漂进相邻的句子；一有合唱就失灵（路径的平均后验掉到 0.05 以下） |
+
+```bash
+pip install --break-system-packages torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+pip install --break-system-packages pypinyin
+python3 scripts/align.py     lyrics.txt map.json       align_raw.json   # Whisper，每个字 12 个估计
+python3 scripts/ctc_align.py lyrics.txt align_raw.json align_ctc.json   # CTC，每个字 12 个估计
+python3 scripts/timing.py    lyrics.txt align_raw.json align_ctc.json lyric_timing.json --report
+python3 scripts/qc_strips.py lyric_timing.json work/qc/q 24-31           # 把结果画回频谱图上看
+```
+
+合并规则：两者相差 0.09 秒以内的字当锚点；说唱段里锚点之间的字按音节均匀分布；旋律段以 Whisper 为主；句首用 Whisper；最后吸附到人声轨上最近的起音峰。
+
+三条自检，都抓到过真问题：
+
+1. **相邻两句不能重叠。** 抓到过两个对齐器同时把下一句的开头放进上一句里（差 0.7 秒）。
+2. **每句的起点相对小节线的位置应该缓慢变化。** 同一段里某一句突然差出半拍，多半是错的；副歌每遍的起点应该正好差一小节。
+3. **量出来的速度拿"一句歌词多长"核对。** trap 的三连音 hi-hat 会把自相关带到真实速度的 5/6。
+
+试过但没有采用：把每个字用动态规划分配给检测到的起音峰。在手工核对过的 142 个字上，平均误差和原方法一样（0.16 秒），说明难的地方缺的是信息而不是算法，只能对着频谱图看。

@@ -1,6 +1,6 @@
 # 作品索引
 
-目录命名：`YYYY-MM-DD-NN-slug`。按日期排序，`NN` 是当天的序号，`slug` 用小写英文。文档里互相引用时用短名：**贝叶斯**、**NEON**、**AI 意识**、**NEON ×3**、**NEON 双马尾**、**剑来 · 陈平安**、**The Moment**、**Hold Me Slowly**、**WinWin 混剪**、**Bring Jensen Back**、**Bring Jensen Back · LED 墙**、**Bring Jensen Back 2.0**。
+目录命名：`YYYY-MM-DD-NN-slug`。按日期排序，`NN` 是当天的序号，`slug` 用小写英文。文档里互相引用时用短名：**贝叶斯**、**NEON**、**AI 意识**、**NEON ×3**、**NEON 双马尾**、**剑来 · 陈平安**、**The Moment**、**Hold Me Slowly**、**WinWin 混剪**、**Bring Jensen Back**、**Bring Jensen Back · LED 墙**、**Bring Jensen Back 2.0**、**门没开，灯没关 · melody1**。
 
 每个作品目录的结构都一样：
 
@@ -47,6 +47,8 @@ scripts/       这个作品用到的脚本（可选）
 | [Bring Jensen Back · LED 墙](2026-11-14-02-bring-jensen-back-led-wall/) | **成片** | `media/bring-jensen-back-led-wall.mp4` | 5:14.8 | 1080×1920 | 243.4 MB | Claude |
 | [Bring Jensen Back 2.0](2026-11-17-01-bring-jensen-back-week-two/) | **成片** | `media/bring-jensen-back-week-two.mp4` | 5:03.2 | 1080×1920 | 215.6 MB | Claude |
 | | 分享版 | `variants/share/bring-jensen-back-week-two_share.mp4` | 5:03.2 | 1080×1920 | 82.9 MB | Claude |
+| [门没开，灯没关 · melody1](2026-11-17-02-bring-jensen-back-door-light/) | **成片** | `media/bring-jensen-back-door-light.mp4` | 5:01.2 | 1080×1920 | 214.4 MB | Claude |
+| | 分享版 | `variants/share/bring-jensen-back-door-light_share.mp4` | 5:01.2 | 1080×1920 | 90.1 MB | Claude |
 
 The Moment 的三条原画质版（7.0 Mbps，各约 163 MB）留在本机，没有入库；入库的是从分镜文件单独编码的 1.6 Mbps 分享版。
 
@@ -74,6 +76,7 @@ The Moment  歌曲原曲（第三方，不入库）─ 量 BPM、段落、原样
 
 WinWin 混剪  专人剪辑的混剪（三支 MV 首尾相接，第三方，不入库）─ 找出 3 个接口，重做画面和声音的衔接 ─→ 重剪版（1:09.3）
 Bring Jensen Back · LED 墙  同一首歌的 girl-intro 版（用户的歌，不入库）─ 歌词取自 MP3 内嵌字段 + 多模型还原改写过的段落，逐字对时间 ─→ 歌词 MV（5:14.8，画面全部程序计算）
+门没开，灯没关 · melody1  Bring Jensen Back 2.0 的 melody1 版（用户的歌，不入库）+ 提示词里的歌词 ─ 两个强制对齐器互相校验 + 频谱图手工修正 ─→ 歌词 MV（5:01.2，画面全部程序计算）
 
 AI 意识  Gemini Notebook 方案三 ─┐
          Gemini Notebook 方案四 ─┴─ Clipchamp ─→《AI有意识吗》─┐
@@ -87,12 +90,12 @@ AI 意识  Gemini Notebook 方案三 ─┐
 - **对齐 / 同步**：NEON、NEON ×3（三路闭环 + 拍点网格）、AI 意识（素材拼接分析、分段校准）、NEON 双马尾（AI 编辑后的画面逐帧对齐原片）、The Moment（成片音轨对原曲互相关，查出 59.5 ms 的错位）
 - **AI 视频生成 / 编辑**：NEON 双马尾（Kling 4.0 Video Edit 改发型，参考图，补回字样和签名）
 - **AI 关键帧 + 景深视差**：The Moment（34 张 gpt-image-2 关键帧，一张参考像管人物一致，Depth Anything V2 分层运镜，雨和光由程序画）
-- **从歌曲出发的 MV**：The Moment（先量 BPM、段落、原样重复和静默，再让结构决定叙事）、Hold Me Slowly（歌词 MV，画面全部程序生成）、Bring Jensen Back（嘻哈 MV：实测鼓型决定三个最大的切；第二版把女主从"摆进去的 MC"改成渗进画面的见证者）
-- **拍点 / 卡点剪辑**：NEON ×3（130 BPM 网格，按小节编排）、剑来 · 陈平安（101.9 BPM 重拍网格，一拍一刀，最后四分之一拍快闪）、The Moment（72 BPM，24 fps 下每小节正好 80 帧，硬切都在小节线上）、WinWin 混剪（三首歌各自的速度和调性，转场卡在落拍和重拍上）、Bring Jensen Back（96 BPM，24 fps 下一拍 15 帧；点头和冲击缩放读分离伴奏里实测的底鼓、军鼓）
+- **从歌曲出发的 MV**：The Moment（先量 BPM、段落、原样重复和静默，再让结构决定叙事）、Hold Me Slowly（歌词 MV，画面全部程序生成）、Bring Jensen Back（嘻哈 MV：实测鼓型决定三个最大的切；第二版把女主从"摆进去的 MC"改成渗进画面的见证者）、门没开，灯没关 · melody1（歌名就是规则：字是门上透出来的光；歌词单上的编曲备注和实测不符时以实测为准）
+- **拍点 / 卡点剪辑**：NEON ×3（130 BPM 网格，按小节编排）、剑来 · 陈平安（101.9 BPM 重拍网格，一拍一刀，最后四分之一拍快闪）、The Moment（72 BPM，24 fps 下每小节正好 80 帧，硬切都在小节线上）、WinWin 混剪（三首歌各自的速度和调性，转场卡在落拍和重拍上）、Bring Jensen Back（96 BPM，24 fps 下一拍 15 帧；点头和冲击缩放读分离伴奏里实测的底鼓、军鼓）、门没开，灯没关 · melody1（84.99 BPM；三连音 hi-hat 把自相关带到 70.8，用梳状拟合纠正；一句一小节，门缝的光跟底鼓）
 - **竖屏构图**：NEON（分屏）、NEON ×3（三分屏 ↔ 全屏动态版式、主体跟随裁切）、贝叶斯 / AI 意识（相框嵌入）、剑来 · 陈平安（按脸取景，窗口避开硬字幕，甩镜）
-- **特效与动态字幕**：NEON ×3（霓虹扫线、扫描线变身）、剑来 · 陈平安（闪白、冲击缩放、RGB 错位、径向模糊、火星粒子、逐字落下的字幕）、The Moment（挂在变速时钟上的雨粒子；歌词版的起雾玻璃和手写歌词）、Hold Me Slowly（2D 流体里的发光墨字、水面雨纹、光束、副歌的光环）、Bring Jensen Back（盖章式逐字歌词、两端对齐的海报字、划掉 / 涂黑 / 重力掉落 / 倒带消失、LED 点阵墙、波普网格）
+- **特效与动态字幕**：NEON ×3（霓虹扫线、扫描线变身）、剑来 · 陈平安（闪白、冲击缩放、RGB 错位、径向模糊、火星粒子、逐字落下的字幕）、The Moment（挂在变速时钟上的雨粒子；歌词版的起雾玻璃和手写歌词）、Hold Me Slowly（2D 流体里的发光墨字、水面雨纹、光束、副歌的光环）、Bring Jensen Back（盖章式逐字歌词、两端对齐的海报字、划掉 / 涂黑 / 重力掉落 / 倒带消失、LED 点阵墙、波普网格）、门没开，灯没关 · melody1（字是门板上的切口：几何 / 发光 / 染色三张图合成，辉光、放射光柱、灰尘、砸门的波纹；地面透视的光字；Drop 极性翻转）
 - **人物混剪 / 选镜头**：剑来 · 陈平安（逐镜头认人，只用一个角色的镜头和台词）
 - **转场 / 衔接设计**：WinWin 混剪（会呼吸的遮幅、甩镜推入、回声残影 + 低音交接、按亮度溶解，声音和画面一起转）、AI 意识（0.4 秒溶解）、NEON ×3（霓虹扫线、扫描线变身）
-- **语音识别 / 字幕**：AI 意识（ASR）、贝叶斯（硬字幕像素差分）、剑来 · 陈平安（硬字幕读台词时间，声谱图确认人声起止）、The Moment（whisper-1 词级时间取中位数，句首对着频谱图手工改）、Hold Me Slowly（人声分离 + 5 个本机 Whisper 模型交叉听写、候选打分、强制对齐，校对一份识别出来的 SRT）、Bring Jensen Back（Demucs 分离人声，中英混唱按字 / 按词强制对齐，每个单位 12 个估计取中位数）
+- **语音识别 / 字幕**：AI 意识（ASR）、贝叶斯（硬字幕像素差分）、剑来 · 陈平安（硬字幕读台词时间，声谱图确认人声起止）、The Moment（whisper-1 词级时间取中位数，句首对着频谱图手工改）、Hold Me Slowly（人声分离 + 5 个本机 Whisper 模型交叉听写、候选打分、强制对齐，校对一份识别出来的 SRT）、Bring Jensen Back（Demucs 分离人声，中英混唱按字 / 按词强制对齐，每个单位 12 个估计取中位数）、门没开，灯没关 · melody1（Whisper 强制对齐 + MMS 的 CTC 对齐互相校验，一致处作锚点，频谱图手工修正 32 句）
 - **事实核对 / 纠错**：AI 意识（原话与骨架不符）、贝叶斯（先验 ≠ 偏见）
 - **同题多版本对比**：Bring Jensen Back（第一版 MC vs 第二版见证者，同一时刻对照）、贝叶斯（2:08 vs 1:04）、NEON（fit vs crop）、NEON ×3（同一段音乐的三个版本）、NEON 双马尾（原版 vs 双马尾，逐镜头对照）、剑来 · 陈平安（31.6 秒 vs 60 秒加长版）、The Moment（原版 vs 歌词版，镜头和剪辑点相同）

@@ -18,6 +18,7 @@
 <td align="center"><a href="projects/2026-11-14-01-bring-jensen-back/"><img src="projects/2026-11-14-01-bring-jensen-back/thumbs/bring-jensen-back_poster.jpg" width="150"></a><br><sub>Bring Jensen Back · 嘻哈 MV（第二版）</sub></td>
 <td align="center"><a href="projects/2026-11-14-02-bring-jensen-back-led-wall/"><img src="projects/2026-11-14-02-bring-jensen-back-led-wall/thumbs/bring-jensen-back-led-wall_poster.jpg" width="150"></a><br><sub>Bring Jensen Back · LED 墙</sub></td>
 <td align="center"><a href="projects/2026-11-17-01-bring-jensen-back-week-two/"><img src="projects/2026-11-17-01-bring-jensen-back-week-two/thumbs/bring-jensen-back-week-two_poster.jpg" width="150"></a><br><sub>Bring Jensen Back 2.0 · 门没开，灯没关</sub></td>
+<td align="center"><a href="projects/2026-11-17-02-bring-jensen-back-door-light/"><img src="projects/2026-11-17-02-bring-jensen-back-door-light/thumbs/bring-jensen-back-door-light_poster.jpg" width="150"></a><br><sub>Bring Jensen Back 2.0 · melody1 版</sub></td>
 </tr>
 </table>
 
@@ -37,6 +38,7 @@
 | 2026-11-14 | [Bring Jensen Back：一首嘻哈的“先要证据”](projects/2026-11-14-01-bring-jensen-back/) | 一首 4:35 的中英双语嘻哈（Suno 生成）的 MV，主角只有一张抠像。先从分离出的伴奏里量出鼓型：前 12 小节无鼓、第 29 小节伴奏全停、第 58 小节 Drop，就是片子最大的三个切。每个字在被唱出来的那一帧像橡皮章一样盖到画面上（中英混唱逐字对齐，每个字 12 个估计取中位数）；歌里那个人从不露脸，只以皮衣、空椅子和绿灯出现。第二版按反馈重做女主：她是歌里的"我们"（见证者），被每个场景自己的光照亮、被前景遮挡、和场景同一种成像方式，只在情绪落点走近，只有呼吸和重心摆动这样真实的动作 | —（用户提供的抠像，画面程序渲染） | Claude |
 | 2026-11-14 | [Bring Jensen Back · LED 墙：一面不肯熄灭的灯墙](projects/2026-11-14-02-bring-jensen-back-led-wall/) | 同一首歌的另一个 Suno 版本（5:15）的歌词 MV。歌词取自 MP3 内嵌字段，实际演唱改写过的第二段主歌用 4 个识别模型听写、候选打分还原；画面是一面程序计算的 LED 点阵墙：字随演唱逐字点亮，墙的亮度跟着底鼓呼吸，低音抽空时跟着断电，副歌大字烧进墙里，片尾只剩一盏绿灯 | —（全部程序生成） | Claude |
 | 2026-11-17 | [Bring Jensen Back 2.0：门没开，灯没关](projects/2026-11-17-01-bring-jensen-back-week-two/) | 这个系列的第三支，一首新歌（5:03）的创意歌词 MV。规则来自歌名：画面是一扇关着的门，门后的灯一直亮着，每个唱出的字都是门上被敲穿、透出光的洞，最新唱出的字最亮；每段换一扇门（正门、战情室钢门、华盛顿白门、董事会门、国会软包门），间奏去看海那边亮了灯的整面墙。后半首速度漂移，用逐拍跟踪；每个字 12 个对齐估计取中位数，重复段按音节起音分配 | —（全部程序生成） | Claude |
+| 2026-11-17 | [Bring Jensen Back 2.0 · melody1 版](projects/2026-11-17-02-bring-jensen-back-door-light/) | 同一首歌的另一个 Suno 版本（melody1，5:01）的歌词 MV，由另一个会话同时独立完成，和上一行那支可以对照着看：两边都从歌名得出"字是门上透光的洞"。这一支只有一扇门，变化在镜头距离和光上。规则来自歌名：门没开，所以要看见里面的灯只能透过字。每个字在被唱出的那一帧在门板上切开、漏出灯光，唱完熄灭留成疤；镜头退到走廊时，歌词是门槛下铺在地上的光；Drop 把规则翻过来，整扇门烧亮、字是唯一黑的东西。逐字时间用 Whisper 和 CTC 两个强制对齐器互相校验，再对着频谱图手工改 | —（全部程序生成） | Claude |
 
 科普片的工作模式基本固定为：**Gemini Notebook 生成解说骨架 → Claude 插入一手证据、核对事实、合成成片**。最新一支 MV 换了做法：**先把歌量清楚 → AI 关键帧 → 景深视差运镜和程序画的雨**。完整清单（每条视频的规格、大小、角色）见 [projects/README.md](projects/README.md)。
 
