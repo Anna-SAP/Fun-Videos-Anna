@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fun Videos · Anna — 用 AI 做科普短视频</title>
-  <meta name="description" content="八支用 AI 做的短视频，以及它们的关键制作过程：从 Gemini Notebook 骨架加访谈证据的科普片，到先把一首歌量清楚、再做成的 MV 和歌词 MV。">
+  <meta name="description" content="十一支用 AI 做的短视频，以及它们的关键制作过程：从 Gemini Notebook 骨架加访谈证据的科普片，到先把一首歌量清楚、再做成的 MV 和歌词 MV。">
   <meta name="theme-color" content="#FAF8F4">
   <meta property="og:title" content="Fun Videos · Anna">
-  <meta property="og:description" content="八支用 AI 做的短视频，以及它们是怎么做出来的。">
+  <meta property="og:description" content="十一支用 AI 做的短视频，以及它们是怎么做出来的。">
   <meta property="og:image" content="assets/posters/bayes.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23D9572A'/%3E%3Cpath d='M12.5 9.5v13l10-6.5z' fill='%23fff'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/style.css">
@@ -37,8 +37,8 @@
     <section class="hero" id="works" aria-labelledby="works-title">
       <div class="hero__intro">
         <p class="eyebrow">AI 科普短视频 · 学习记录</p>
-        <h1 id="works-title">十支短片，和它们的制作过程。</h1>
-        <p class="hero__lede">解说骨架由 Gemini Notebook 生成；Claude 找来访谈原声作为证据、核对事实，再合成为成片。后两支从一首歌出发：先把歌量清楚，再做成 MV；第八支是歌词 MV，画面全部由程序计算，字是滴进夜水里的墨；第九支给别人剪的三段 MV 混剪重做转场；最新一支是一首 4 分半的嘻哈，每个字都在被唱出来的那一帧盖到画面上；第二版把女主从"摆进去的 MC"改成渗进画面的见证者。</p>
+        <h1 id="works-title">十一支短片，和它们的制作过程。</h1>
+        <p class="hero__lede">解说骨架由 Gemini Notebook 生成；Claude 找来访谈原声作为证据、核对事实，再合成为成片。后两支从一首歌出发：先把歌量清楚，再做成 MV；第八支是歌词 MV，画面全部由程序计算，字是滴进夜水里的墨；第九支给别人剪的三段 MV 混剪重做转场；第十支是一首 4 分半的嘻哈，每个字都在被唱出来的那一帧盖到画面上，第二版把女主从"摆进去的 MC"改成渗进画面的见证者；最新一支是作者写自己这一年的歌，画面是机场里的一面翻牌屏，每个字在被唱出的那一帧翻到位。</p>
         <a class="hero__more" href="#process">看看是怎么做的<span aria-hidden="true"> ↓</span></a>
       </div>
 
@@ -233,6 +233,22 @@
             <p class="work__idx">10 · 2026-11-14</p>
             <h2 class="work__title" lang="en">Bring Jensen Back</h2>
             <p class="work__sub">嘻哈 MV · 第二版：她是歌里的"我们"</p>
+          </div>
+        </article>
+        <article class="work" style="--i:10">
+          <div class="player" id="hero-c43" data-player>
+            <video preload="none" playsinline poster="assets/posters/countdown-43.jpg"
+                   src="projects/2026-11-18-01-countdown-43/variants/share/countdown-43_share.mp4"
+                   aria-label="Countdown 43：一面机场翻牌屏，整夜倒数"></video>
+            <button class="player__cover" type="button" aria-label="播放 Countdown 43">
+              <span class="player__btn" aria-hidden="true"></span>
+              <span class="player__time" data-time>5:30</span>
+            </button>
+          </div>
+          <div class="work__meta">
+            <p class="work__idx">11 · 2026-11-18</p>
+            <h2 class="work__title" lang="en">Countdown 43</h2>
+            <p class="work__sub">歌词 MV · 一面机场翻牌屏，整夜倒数</p>
           </div>
         </article>
       </div>
@@ -1333,6 +1349,94 @@
               <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-14-01-bring-jensen-back/storyboard.md" target="_blank" rel="noopener">歌曲分析与分镜</a>
               <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-14-01-bring-jensen-back/scripts/timeline.py" target="_blank" rel="noopener">逐句设计</a>
               <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-14-01-bring-jensen-back/scripts/typo.py" target="_blank" rel="noopener">盖章的字</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- 11 Countdown 43 -->
+        <article class="case" id="case-c43" aria-labelledby="case-c43-title">
+          <div class="case__media">
+            <div class="viewer">
+              <div class="seg seg--block" role="group" aria-label="切换示意图与成片">
+                <button type="button" class="seg__btn" aria-pressed="true" data-for="case-c43-player" data-still
+                        data-caption="墙的四个时刻：写满、清零、重写、天亮">四个时刻</button>
+                <button type="button" class="seg__btn" aria-pressed="false" data-for="case-c43-player"
+                        data-src="projects/2026-11-18-01-countdown-43/variants/share/countdown-43_share.mp4"
+                        data-poster="assets/posters/countdown-43.jpg" data-time="5:30"
+                        data-caption="成片：每个字是一块翻牌，在被唱出的那一帧翻到位">成片</button>
+              </div>
+              <div class="player player--case is-still" id="case-c43-player" data-player>
+                <video preload="none" playsinline poster="assets/posters/countdown-43.jpg"
+                       src="projects/2026-11-18-01-countdown-43/variants/share/countdown-43_share.mp4"
+                       aria-label="Countdown 43 歌词 MV"></video>
+                <button class="player__cover" type="button" aria-label="播放">
+                  <span class="player__btn" aria-hidden="true"></span>
+                  <span class="player__time" data-time>5:30</span>
+                </button>
+                <button type="button" class="player__still" data-lightbox data-src="assets/posters/countdown-43-turns.jpg"
+                        aria-label="放大墙的四个时刻示意图">
+                  <img src="assets/posters/countdown-43-turns.jpg"
+                       alt="墙的四个时刻：主歌唱过的句子一行行留在暖光照着的翻牌墙上；唱到一键清零，镜头退远，整面墙的字从一处向外翻回空白；最后一遍副歌把这一年所有的句子重新写满整面墙；天亮时计数器从 43 翻到 42" width="720" height="1280" loading="lazy">
+                </button>
+              </div>
+              <p class="viewer__cap" data-viewer-cap>墙的四个时刻：写满、清零、重写、天亮</p>
+            </div>
+          </div>
+
+          <div class="case__body">
+            <p class="case__kicker"><span>11 · 歌词 MV</span>2026-11-18 · 用户的歌 · 本机人声分离 + Whisper + CTC 对齐 · 画面程序计算 · 合成 Claude</p>
+            <h3 class="case__title" id="case-c43-title"><span lang="en">Countdown 43</span>：一面机场翻牌屏，整夜倒数</h3>
+            <p class="case__lead">一首 5 分 30 秒的华语说唱，写的是作者自己的 2026：世界这一年的大事、在厦门的第十年被裁、这一年还剩 43 天。画面从歌词里来：尾声的两条跑道给了地点，"还剩 43 天"给了倒计时，一月到十一月给了一整年，合起来是厦门高崎机场出发大厅里的一面翻牌屏，一个通宵。每个字是一块翻牌，在被唱出的那一帧"咔嗒"翻到位；主歌唱过的句子都留在墙上，墙渐渐写满这一年。墙顶的计数器整夜是 43，只有天亮时才翻到 42。</p>
+
+            <dl class="facts">
+              <div><dt>整面墙的翻牌</dt><dd>45 × 51<small>格</small></dd></div>
+              <div><dt>逐字对齐的字和词</dt><dd>1283<small>个</small></dd></div>
+              <div><dt>生成模型费用</dt><dd>0<small>元</small></dd></div>
+            </dl>
+
+            <ol class="steps">
+              <li><h4>先量歌</h4><p>90 BPM，一小节 2.667 秒，主歌一句正好一小节，所以镜头一句一移。底鼓在 1、3 拍，副歌里底鼓推一下镜头；Bridge 是全曲唯一鼓全停的一段，画面在这里最暗、最慢。</p></li>
+              <li><h4>一块翻牌</h4><p>上半片朝镜头翻下、压扁到转轴，过了 90° 露出背面的新字下半，落下盖住旧字。落定一个字之前先翻过三四个别的字，最后一翻正好结束在这个字被唱出的时刻；每帧在快门时间里取三个相位平均，得到运动模糊。</p></li>
+              <li><h4>规则转三次</h4><p>唱到「一键清零」，整面墙的字从这一句开始一圈圈翻回空白，只剩这一句；最后一遍副歌唱到「重写」，整面墙把这一年所有主歌和 Bridge 的句子重新写回来，副歌里说的"清不空这十年"在画面上成真；尾声说到明天，计数器翻到 42。</p></li>
+              <li><h4>逐字对时间</h4><p>分离人声后，Whisper 和 CTC 两个原理不同的强制对齐器各自给出每个字的时间，句首以 Whisper 为准，并用自由转写的词时间核对；Drop 的口号和前奏的机器人报数直接按转写和人声起音逐字手工给。</p></li>
+            </ol>
+
+            <aside class="note">
+              <p class="note__tag">注意</p>
+              <p>歌曲和歌词由作者提供，原曲音频和歌词文件不入库；成片音轨是原曲 MP3 流原样复制（音频包 MD5 与原曲一致）。片中的"厦门高崎国际机场""出发 DEPARTURES"、日期和"DAYS LEFT"是布景，不是歌词。录音里有几处重复（喊了三声的 No!、尾声重复的和声），没有加字，只让同一块翻牌在每一次上再翻一遍。</p>
+            </aside>
+
+            <div class="retro">
+              <div>
+                <h4 class="retro__h retro__h--good">做得好</h4>
+                <ul>
+                  <li>画面上最大的三件事（清零、重写、43 → 42）就是歌里最重的三句。</li>
+                  <li>字一直留在墙上，后面的清零才有分量：被清掉的是看得见的一整年。</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="retro__h retro__h--next">下次改进</h4>
+                <ul>
+                  <li>镜头离开一句之前要等它最后一个字落定；第一版有几句的结尾是在镜头移走时才翻到位的。</li>
+                  <li>主光跟着镜头长距离滑动时，新一句的头几个字会落在暗处；远距离要淡出淡入，不要滑过去。</li>
+                </ul>
+              </div>
+            </div>
+
+            <figure class="sheet">
+              <button type="button" class="sheet__btn" data-lightbox
+                      data-src="projects/2026-11-18-01-countdown-43/thumbs/countdown-43_sheet.jpg"
+                      aria-label="放大逐帧预览">
+                <img src="projects/2026-11-18-01-countdown-43/thumbs/countdown-43_sheet.jpg"
+                     alt="逐帧预览：黑暗里的计数器 43；暖光下一句句写进墙里的主歌；橙红光里的副歌公告栏；冷蓝的第二段主歌；Drop 里翻到 42 的计数器和绿色翻牌；紫蓝的第三段主歌和被清空的墙；几乎全黑的 Bridge；重新写满的整面墙；天亮时翻到 42 的计数器" width="2592" height="2688" loading="lazy">
+              </button>
+              <figcaption>逐帧预览，每 4 秒一帧：前奏、主歌、副歌、Drop、清零、Bridge、重写、天亮</figcaption>
+            </figure>
+
+            <p class="links">
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-18-01-countdown-43/storyboard.md" target="_blank" rel="noopener">歌曲分析与分镜</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-18-01-countdown-43/scripts/score.py" target="_blank" rel="noopener">整面墙的时间表</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-18-01-countdown-43/scripts/flap.py" target="_blank" rel="noopener">一块翻牌</a>
             </p>
           </div>
         </article>
