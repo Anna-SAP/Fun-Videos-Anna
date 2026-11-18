@@ -16,7 +16,7 @@
 | <img src="thumbs/countdown-43_poster.jpg" width="160"> | [`media/countdown-43.mp4`](media/countdown-43.mp4)（母版） | 5:30.0 | 1080×1920 · 30 fps · H.264 5.2 Mbps 两遍（BT.709）· 音轨为原曲 MP3 流原样复制 | 219.6 MB |
 | | [`variants/share/countdown-43_share.mp4`](variants/share/countdown-43_share.mp4)（分享版，适合微信等转发） | 5:30.0 | 同上，2.0 Mbps，编码前轻降噪 | 87.8 MB |
 
-两条成片经 Git LFS 提交在本次的分支上（云端直接推送）。歌里写的是作者本人这一年的经历；合并进主分支、是否放上展示网站由作者决定（这次没有改 `site/`）。SHA-256：母版 `db585011…a788`，分享版 `55f33921…2349`。
+两条成片经 Git LFS 提交（云端直接推送）。按作者的要求，分享版已放上[展示网站](https://anna-sap.github.io/Fun-Videos-Anna/)：作品第 11 支，制作历程里有一节，示意图是墙的四个时刻（写满、清零、重写、天亮）。SHA-256：母版 `db585011…a788`，分享版 `55f33921…2349`。
 
 逐帧预览：[每 4 秒一帧](thumbs/countdown-43_sheet.jpg) · 每句一帧：[全部 114 句，各在最后一个字唱出后 0.15 秒](thumbs/countdown-43_lines.jpg) · 时间对齐校验：[逐字起点画在人声频谱图上](thumbs/countdown-43_timing.jpg)（标签是"第几句.第几个字"，不含歌词）。
 
