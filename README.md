@@ -19,6 +19,7 @@
 <td align="center"><a href="projects/2026-11-14-02-bring-jensen-back-led-wall/"><img src="projects/2026-11-14-02-bring-jensen-back-led-wall/thumbs/bring-jensen-back-led-wall_poster.jpg" width="150"></a><br><sub>Bring Jensen Back · LED 墙</sub></td>
 <td align="center"><a href="projects/2026-11-17-01-bring-jensen-back-week-two/"><img src="projects/2026-11-17-01-bring-jensen-back-week-two/thumbs/bring-jensen-back-week-two_poster.jpg" width="150"></a><br><sub>Bring Jensen Back 2.0 · 门没开，灯没关</sub></td>
 <td align="center"><a href="projects/2026-11-17-02-bring-jensen-back-door-light/"><img src="projects/2026-11-17-02-bring-jensen-back-door-light/thumbs/bring-jensen-back-door-light_poster.jpg" width="150"></a><br><sub>Bring Jensen Back 2.0 · melody1 版</sub></td>
+<td align="center"><a href="projects/2026-11-18-01-countdown-43/"><img src="projects/2026-11-18-01-countdown-43/thumbs/countdown-43_poster.jpg" width="150"></a><br><sub>Countdown 43 · 翻牌屏歌词 MV</sub></td>
 </tr>
 </table>
 
@@ -39,6 +40,7 @@
 | 2026-11-14 | [Bring Jensen Back · LED 墙：一面不肯熄灭的灯墙](projects/2026-11-14-02-bring-jensen-back-led-wall/) | 同一首歌的另一个 Suno 版本（5:15）的歌词 MV。歌词取自 MP3 内嵌字段，实际演唱改写过的第二段主歌用 4 个识别模型听写、候选打分还原；画面是一面程序计算的 LED 点阵墙：字随演唱逐字点亮，墙的亮度跟着底鼓呼吸，低音抽空时跟着断电，副歌大字烧进墙里，片尾只剩一盏绿灯 | —（全部程序生成） | Claude |
 | 2026-11-17 | [Bring Jensen Back 2.0：门没开，灯没关](projects/2026-11-17-01-bring-jensen-back-week-two/) | 这个系列的第三支，一首新歌（5:03）的创意歌词 MV。规则来自歌名：画面是一扇关着的门，门后的灯一直亮着，每个唱出的字都是门上被敲穿、透出光的洞，最新唱出的字最亮；每段换一扇门（正门、战情室钢门、华盛顿白门、董事会门、国会软包门），间奏去看海那边亮了灯的整面墙。后半首速度漂移，用逐拍跟踪；每个字 12 个对齐估计取中位数，重复段按音节起音分配 | —（全部程序生成） | Claude |
 | 2026-11-17 | [Bring Jensen Back 2.0 · melody1 版](projects/2026-11-17-02-bring-jensen-back-door-light/) | 同一首歌的另一个 Suno 版本（melody1，5:01）的歌词 MV，由另一个会话同时独立完成，和上一行那支可以对照着看：两边都从歌名得出"字是门上透光的洞"。这一支只有一扇门，变化在镜头距离和光上。规则来自歌名：门没开，所以要看见里面的灯只能透过字。每个字在被唱出的那一帧在门板上切开、漏出灯光，唱完熄灭留成疤；镜头退到走廊时，歌词是门槛下铺在地上的光；Drop 把规则翻过来，整扇门烧亮、字是唯一黑的东西。逐字时间用 Whisper 和 CTC 两个强制对齐器互相校验，再对着频谱图手工改 | —（全部程序生成） | Claude |
+| 2026-11-18 | [Countdown 43：一面机场翻牌屏，整夜倒数](projects/2026-11-18-01-countdown-43/) | 一首 5:30 的华语说唱（作者自己这一年的歌：世界的 2026、第十年被裁、还剩 43 天）的歌词 MV。规则从歌词里取：厦门高崎机场出发大厅的一面翻牌屏，一个通宵。每个字是一块翻牌，在被唱出的那一帧翻到位；主歌的每一句写进墙里留着，墙渐渐写满这一年，「一键清零」把整面墙翻回空白，最后一遍副歌的「重写」让整面墙把一年写回来；墙顶的计数器整夜是 43，天亮时才翻到 42。逐字时间用 Whisper 和 CTC 两个对齐器 + 转写词时间 + 起音手工修正 | —（全部程序生成） | Claude |
 
 科普片的工作模式基本固定为：**Gemini Notebook 生成解说骨架 → Claude 插入一手证据、核对事实、合成成片**。最新一支 MV 换了做法：**先把歌量清楚 → AI 关键帧 → 景深视差运镜和程序画的雨**。完整清单（每条视频的规格、大小、角色）见 [projects/README.md](projects/README.md)。
 
