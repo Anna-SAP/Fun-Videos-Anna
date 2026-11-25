@@ -22,6 +22,7 @@
 <td align="center"><a href="projects/2026-11-18-01-countdown-43/"><img src="projects/2026-11-18-01-countdown-43/thumbs/countdown-43_poster.jpg" width="150"></a><br><sub>Countdown 43 · 翻牌屏歌词 MV</sub></td>
 <td align="center"><a href="projects/2026-11-23-01-jensens-back/"><img src="projects/2026-11-23-01-jensens-back/thumbs/jensens-back_poster.jpg" width="150"></a><br><sub>Jensen's Back · 动态排版歌词 MV</sub></td>
 <td align="center"><a href="projects/2026-11-25-01-wanda-dou-yi-quan/"><img src="projects/2026-11-25-01-wanda-dou-yi-quan/thumbs/dou-yi-quan_poster.jpg" width="150"></a><br><sub>兜一圈 · 一句一圈的唱片 MV</sub></td>
+<td align="center"><a href="projects/2026-11-25-02-bie-huida-coldwave/"><img src="projects/2026-11-25-02-bie-huida-coldwave/thumbs/bie-huida-coldwave_poster.jpg" width="150"></a><br><sub>别回答 · Coldwave 歌词 MV</sub></td>
 </tr>
 </table>
 
@@ -45,6 +46,7 @@
 | 2026-11-18 | [Countdown 43：一面机场翻牌屏，整夜倒数](projects/2026-11-18-01-countdown-43/) | 一首 5:30 的华语说唱（作者自己这一年的歌：世界的 2026、第十年被裁、还剩 43 天）的歌词 MV。规则从歌词里取：厦门高崎机场出发大厅的一面翻牌屏，一个通宵。每个字是一块翻牌，在被唱出的那一帧翻到位；主歌的每一句写进墙里留着，墙渐渐写满这一年，「一键清零」把整面墙翻回空白，最后一遍副歌的「重写」让整面墙把一年写回来；墙顶的计数器整夜是 43，天亮时才翻到 42。逐字时间用 Whisper 和 CTC 两个对齐器 + 转写词时间 + 起音手工修正 | —（全部程序生成） | Claude |
 | 2026-11-23 | [Jensen's Back：回来了的是实心，没回来的是空心](projects/2026-11-23-01-jensens-back/) | 这个系列的第五支，一首新歌（Bring Jensen Back 4.0，4:26，中英双语说唱）的动态排版歌词 MV。规则来自歌的转折"人回来了，事实没回来"：已经回来的东西字是实心的，还没回来的是空心的，呼应句是从另一侧砸回来的反色块；片尾下一首歌的歌名一直空心到最后一帧。段落标注里的编曲词各对应一种材质：剪贴报纸（old school）、夜里的行情屏（trap）、满屏放射光上的黑色巨字（EDM Drop）、一盏暖光（钢琴 Bridge）。实测 75.00 BPM；量到尾段 Hook 是第一段的原样重复（间隔 198.40 s）、Drop 每小节重复，口号段的逐字时间因此只手工定一份；主歌用 CTC 强制对齐的四种估计取中位数 | —（全部程序生成） | Claude |
 | 2026-11-25 | [兜一圈：一句一圈，刻进唱片](projects/2026-11-25-01-wanda-dou-yi-quan/) | 作者为"万达入沪20载 AI歌曲创作大赛"写的歌（2:47）的 MV。量到一句歌词正好两小节、到 Bridge 之前正好唱了 20 句，所以唱片每两小节转一圈，每唱完一句就绕成一圈刻进唱片，像年轮一样从里往外长，第二遍副歌唱完正好 20 圈；Bridge 里一滴水把 20 圈从五角场荡到临港的滴水湖，那个圆的湖就是"下一张唱片"。所有场景（五角场、新家、夜饭桌、小赛车）都是俯视的、共用一个圆心；歌的速度全程在慢慢变快，唱片转角直接读逐拍跟踪的拍点 | —（全部程序生成，Skia 矢量绘制） | Claude |
+| 2026-11-25 | [别回答 · Coldwave 版：被照到就是暴露](projects/2026-11-25-02-bie-huida-coldwave/) | 《别回答》冷浪版（4:24）的歌词 MV，按 lyric-mv Skill 的完整流程，设计由用户写定、切点由测量决定。量到速度从 111 漂到 114.5 BPM、第 65 小节只有两拍、Bridge 伴奏抽空 14.37 s（在行 1–3 下面而不是设计以为的行 6 之后）、"心一停"那句鼓机正好停一小节、尾奏脉冲周期 4.19 s。主歌的字是探照灯透过镂空字模、按景深投到场景上的光；副歌泛光过曝，字是唯一的影子；GAP 里全片静止，乐队回来时白光压下、显影成一张蓝晒相纸 | gpt-image-2 关键帧（26 + 重做 6，$1.31）+ Depth Anything V2 | Claude |
 
 科普片的工作模式基本固定为：**Gemini Notebook 生成解说骨架 → Claude 插入一手证据、核对事实、合成成片**。最新一支 MV 换了做法：**先把歌量清楚 → AI 关键帧 → 景深视差运镜和程序画的雨**。完整清单（每条视频的规格、大小、角色）见 [projects/README.md](projects/README.md)。
 
