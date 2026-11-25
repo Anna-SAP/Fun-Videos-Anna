@@ -21,6 +21,7 @@
 <td align="center"><a href="projects/2026-11-17-02-bring-jensen-back-door-light/"><img src="projects/2026-11-17-02-bring-jensen-back-door-light/thumbs/bring-jensen-back-door-light_poster.jpg" width="150"></a><br><sub>Bring Jensen Back 2.0 · melody1 版</sub></td>
 <td align="center"><a href="projects/2026-11-18-01-countdown-43/"><img src="projects/2026-11-18-01-countdown-43/thumbs/countdown-43_poster.jpg" width="150"></a><br><sub>Countdown 43 · 翻牌屏歌词 MV</sub></td>
 <td align="center"><a href="projects/2026-11-23-01-jensens-back/"><img src="projects/2026-11-23-01-jensens-back/thumbs/jensens-back_poster.jpg" width="150"></a><br><sub>Jensen's Back · 动态排版歌词 MV</sub></td>
+<td align="center"><a href="projects/2026-11-25-01-wanda-dou-yi-quan/"><img src="projects/2026-11-25-01-wanda-dou-yi-quan/thumbs/dou-yi-quan_poster.jpg" width="150"></a><br><sub>兜一圈 · 一句一圈的唱片 MV</sub></td>
 </tr>
 </table>
 
@@ -43,6 +44,7 @@
 | 2026-11-17 | [Bring Jensen Back 2.0 · melody1 版](projects/2026-11-17-02-bring-jensen-back-door-light/) | 同一首歌的另一个 Suno 版本（melody1，5:01）的歌词 MV，由另一个会话同时独立完成，和上一行那支可以对照着看：两边都从歌名得出"字是门上透光的洞"。这一支只有一扇门，变化在镜头距离和光上。规则来自歌名：门没开，所以要看见里面的灯只能透过字。每个字在被唱出的那一帧在门板上切开、漏出灯光，唱完熄灭留成疤；镜头退到走廊时，歌词是门槛下铺在地上的光；Drop 把规则翻过来，整扇门烧亮、字是唯一黑的东西。逐字时间用 Whisper 和 CTC 两个强制对齐器互相校验，再对着频谱图手工改 | —（全部程序生成） | Claude |
 | 2026-11-18 | [Countdown 43：一面机场翻牌屏，整夜倒数](projects/2026-11-18-01-countdown-43/) | 一首 5:30 的华语说唱（作者自己这一年的歌：世界的 2026、第十年被裁、还剩 43 天）的歌词 MV。规则从歌词里取：厦门高崎机场出发大厅的一面翻牌屏，一个通宵。每个字是一块翻牌，在被唱出的那一帧翻到位；主歌的每一句写进墙里留着，墙渐渐写满这一年，「一键清零」把整面墙翻回空白，最后一遍副歌的「重写」让整面墙把一年写回来；墙顶的计数器整夜是 43，天亮时才翻到 42。逐字时间用 Whisper 和 CTC 两个对齐器 + 转写词时间 + 起音手工修正 | —（全部程序生成） | Claude |
 | 2026-11-23 | [Jensen's Back：回来了的是实心，没回来的是空心](projects/2026-11-23-01-jensens-back/) | 这个系列的第五支，一首新歌（Bring Jensen Back 4.0，4:26，中英双语说唱）的动态排版歌词 MV。规则来自歌的转折"人回来了，事实没回来"：已经回来的东西字是实心的，还没回来的是空心的，呼应句是从另一侧砸回来的反色块；片尾下一首歌的歌名一直空心到最后一帧。段落标注里的编曲词各对应一种材质：剪贴报纸（old school）、夜里的行情屏（trap）、满屏放射光上的黑色巨字（EDM Drop）、一盏暖光（钢琴 Bridge）。实测 75.00 BPM；量到尾段 Hook 是第一段的原样重复（间隔 198.40 s）、Drop 每小节重复，口号段的逐字时间因此只手工定一份；主歌用 CTC 强制对齐的四种估计取中位数 | —（全部程序生成） | Claude |
+| 2026-11-25 | [兜一圈：一句一圈，刻进唱片](projects/2026-11-25-01-wanda-dou-yi-quan/) | 作者为"万达入沪20载 AI歌曲创作大赛"写的歌（2:47）的 MV。量到一句歌词正好两小节、到 Bridge 之前正好唱了 20 句，所以唱片每两小节转一圈，每唱完一句就绕成一圈刻进唱片，像年轮一样从里往外长，第二遍副歌唱完正好 20 圈；Bridge 里一滴水把 20 圈从五角场荡到临港的滴水湖，那个圆的湖就是"下一张唱片"。所有场景（五角场、新家、夜饭桌、小赛车）都是俯视的、共用一个圆心；歌的速度全程在慢慢变快，唱片转角直接读逐拍跟踪的拍点 | —（全部程序生成，Skia 矢量绘制） | Claude |
 
 科普片的工作模式基本固定为：**Gemini Notebook 生成解说骨架 → Claude 插入一手证据、核对事实、合成成片**。最新一支 MV 换了做法：**先把歌量清楚 → AI 关键帧 → 景深视差运镜和程序画的雨**。完整清单（每条视频的规格、大小、角色）见 [projects/README.md](projects/README.md)。
 

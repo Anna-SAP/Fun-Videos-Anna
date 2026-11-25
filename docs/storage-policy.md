@@ -71,6 +71,7 @@ git lfs pull --include "projects/2026-10-19-01-*"                   # 之后按�
 | Bring Jensen Back | 歌曲、歌词、主角照片 | 用户提供：Suno 生成的歌曲（MP3 元数据 artist `annasu82`，`made with suno`）、歌词 txt（另有一份顺序不同的歌词嵌在 MP3 元数据里）、一张抠好背景的女孩全身照。歌词涉及真实人物和 2026 年 10–11 月的新闻，未核实 | `bring_jensen_back - v2.mp3` / 6.2 MB；`bring_jensen_back - claude.txt` / 5 KB；PNG 1083×755 / 0.5 MB |
 | 门没开，灯没关 · melody1 | 歌曲、歌词 | 用户提供：Suno 生成的歌曲（MP3 元数据 artist `annasu82`，`made with suno`，2026-11-17）；歌词写在提示词里。歌词涉及真实人物，所述事件未核实 | `bring jensen back 2.0 chinese-melody1 门没开，灯没关.mp3` / 7.0 MB；歌词约 5 KB |
 | Jensen's Back | 歌曲、歌词 | 用户提供：musicful 生成的歌曲（文件名标注，MP3 元数据里没有署名）和歌词 txt。歌词涉及真实人物，所述事件未核实 | `Bring Jensen Back 4.0 … - futurebass1_musicful.mp3` / 4.3 MB；歌词 4 KB |
+| 兜一圈 | 歌曲、歌词 | 作者自己为"万达入沪20载 AI歌曲创作大赛"写的参赛作品：成品 MP3（标题字段"兜一圈"，内嵌一份谐音写法的歌词）和最终歌词 txt | `…LUMI.mp3` / 3.8 MB；歌词 1.4 KB |
 | AI 意识 | 访谈整集 | *The Joe Rogan Experience* #2541 · Thomas Campbell，[YouTube v2oBLSDCZaY](https://www.youtube.com/watch?v=v2oBLSDCZaY) | `Joe Rogan Experience #2541 - Thomas Campbell.mp4` / 1.16 GB |
 
 成片里包含这些素材的片段（NEON 和 NEON ×3 的 MV、卡通、舞台画面，NEON 双马尾的卡通画面和 MV 音轨，两条访谈实证版里的访谈原声，剑来 · 陈平安的预告画面和原声；The Moment 的两版用整首原曲做音轨，歌词版的画面里有全部歌词；WinWin 混剪是那段混剪本身重做衔接，三支 MV 的画面和原声都在，第三段的 SM 台标原样保留；Bring Jensen Back 用整首歌做音轨，画面里有全部歌词和用户提供的人物照片）。NEON 双马尾的 `materials/kling/` 是 Kling 在卡通版画面上改出来的，同样是衍生作品。本库是公开仓库，素材版权归原作者所有，这里只作个人学习记录。

@@ -1,6 +1,6 @@
 # 作品索引
 
-目录命名：`YYYY-MM-DD-NN-slug`。按日期排序，`NN` 是当天的序号，`slug` 用小写英文。文档里互相引用时用短名：**贝叶斯**、**NEON**、**AI 意识**、**NEON ×3**、**NEON 双马尾**、**剑来 · 陈平安**、**The Moment**、**Hold Me Slowly**、**WinWin 混剪**、**Bring Jensen Back**、**Bring Jensen Back · LED 墙**、**Bring Jensen Back 2.0**、**门没开，灯没关 · melody1**、**Countdown 43**、**Jensen's Back**。
+目录命名：`YYYY-MM-DD-NN-slug`。按日期排序，`NN` 是当天的序号，`slug` 用小写英文。文档里互相引用时用短名：**贝叶斯**、**NEON**、**AI 意识**、**NEON ×3**、**NEON 双马尾**、**剑来 · 陈平安**、**The Moment**、**Hold Me Slowly**、**WinWin 混剪**、**Bring Jensen Back**、**Bring Jensen Back · LED 墙**、**Bring Jensen Back 2.0**、**门没开，灯没关 · melody1**、**Countdown 43**、**Jensen's Back**、**兜一圈**。
 
 每个作品目录的结构都一样：
 
@@ -53,6 +53,8 @@ scripts/       这个作品用到的脚本（可选）
 | | 分享版 | `variants/share/countdown-43_share.mp4` | 5:30.0 | 1080×1920 | 87.8 MB | Claude |
 | [Jensen's Back](2026-11-23-01-jensens-back/) | **成片** | `media/jensens-back.mp4` | 4:26.4 | 1080×1920 | 177.4 MB | Claude |
 | | 分享版 | `variants/share/jensens-back_share.mp4` | 4:26.4 | 1080×1920 | 71.1 MB | Claude |
+| [兜一圈](2026-11-25-01-wanda-dou-yi-quan/) | **成片** | `media/dou-yi-quan.mp4` | 2:47.2 | 1080×1920 | 129.3 MB | Claude |
+| | 分享版 | `variants/share/dou-yi-quan_share.mp4` | 2:47.2 | 1080×1920 | 49.6 MB | Claude |
 
 The Moment 的三条原画质版（7.0 Mbps，各约 163 MB）留在本机，没有入库；入库的是从分镜文件单独编码的 1.6 Mbps 分享版。
 
