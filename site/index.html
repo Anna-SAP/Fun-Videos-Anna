@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fun Videos · Anna — 用 AI 做科普短视频</title>
-  <meta name="description" content="十一支用 AI 做的短视频，以及它们的关键制作过程：从 Gemini Notebook 骨架加访谈证据的科普片，到先把一首歌量清楚、再做成的 MV 和歌词 MV。">
+  <meta name="description" content="十二支用 AI 做的短视频，以及它们的关键制作过程：从 Gemini Notebook 骨架加访谈证据的科普片，到先把一首歌量清楚、再做成的 MV 和歌词 MV。">
   <meta name="theme-color" content="#FAF8F4">
   <meta property="og:title" content="Fun Videos · Anna">
-  <meta property="og:description" content="十一支用 AI 做的短视频，以及它们是怎么做出来的。">
+  <meta property="og:description" content="十二支用 AI 做的短视频，以及它们是怎么做出来的。">
   <meta property="og:image" content="assets/posters/bayes.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23D9572A'/%3E%3Cpath d='M12.5 9.5v13l10-6.5z' fill='%23fff'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/style.css">
@@ -37,8 +37,8 @@
     <section class="hero" id="works" aria-labelledby="works-title">
       <div class="hero__intro">
         <p class="eyebrow">AI 科普短视频 · 学习记录</p>
-        <h1 id="works-title">十一支短片，和它们的制作过程。</h1>
-        <p class="hero__lede">解说骨架由 Gemini Notebook 生成；Claude 找来访谈原声作为证据、核对事实，再合成为成片。后两支从一首歌出发：先把歌量清楚，再做成 MV；第八支是歌词 MV，画面全部由程序计算，字是滴进夜水里的墨；第九支给别人剪的三段 MV 混剪重做转场；第十支是一首 4 分半的嘻哈，每个字都在被唱出来的那一帧盖到画面上，第二版把女主从"摆进去的 MC"改成渗进画面的见证者；最新一支是作者写自己这一年的歌，画面是机场里的一面翻牌屏，每个字在被唱出的那一帧翻到位。</p>
+        <h1 id="works-title">十二支短片，和它们的制作过程。</h1>
+        <p class="hero__lede">解说骨架由 Gemini Notebook 生成；Claude 找来访谈原声作为证据、核对事实，再合成为成片。后两支从一首歌出发：先把歌量清楚，再做成 MV；第八支是歌词 MV，画面全部由程序计算，字是滴进夜水里的墨；第九支给别人剪的三段 MV 混剪重做转场；第十支是一首 4 分半的嘻哈，每个字都在被唱出来的那一帧盖到画面上，第二版把女主从"摆进去的 MC"改成渗进画面的见证者；第十一支是作者写自己这一年的歌，画面是机场里的一面翻牌屏，每个字在被唱出的那一帧翻到位；最新一支是为上海万达二十周年写的歌，一句歌词正好是唱片的一圈，唱完就刻进唱片。</p>
         <a class="hero__more" href="#process">看看是怎么做的<span aria-hidden="true"> ↓</span></a>
       </div>
 
@@ -249,6 +249,22 @@
             <p class="work__idx">11 · 2026-11-18</p>
             <h2 class="work__title" lang="en">Countdown 43</h2>
             <p class="work__sub">歌词 MV · 一面机场翻牌屏，整夜倒数</p>
+          </div>
+        </article>
+        <article class="work" style="--i:11">
+          <div class="player" id="hero-dyq" data-player>
+            <video preload="none" playsinline poster="assets/posters/dou-yi-quan.jpg"
+                   src="projects/2026-11-25-01-wanda-dou-yi-quan/variants/share/dou-yi-quan_share.mp4"
+                   aria-label="兜一圈：一句一圈，刻进唱片"></video>
+            <button class="player__cover" type="button" aria-label="播放 兜一圈">
+              <span class="player__btn" aria-hidden="true"></span>
+              <span class="player__time" data-time>2:47</span>
+            </button>
+          </div>
+          <div class="work__meta">
+            <p class="work__idx">12 · 2026-11-25</p>
+            <h2 class="work__title">兜一圈</h2>
+            <p class="work__sub">MV · 一句一圈，刻进唱片</p>
           </div>
         </article>
       </div>
@@ -1437,6 +1453,94 @@
               <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-18-01-countdown-43/storyboard.md" target="_blank" rel="noopener">歌曲分析与分镜</a>
               <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-18-01-countdown-43/scripts/score.py" target="_blank" rel="noopener">整面墙的时间表</a>
               <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-18-01-countdown-43/scripts/flap.py" target="_blank" rel="noopener">一块翻牌</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- 12 兜一圈 -->
+        <article class="case" id="case-dyq" aria-labelledby="case-dyq-title">
+          <div class="case__media">
+            <div class="viewer">
+              <div class="seg seg--block" role="group" aria-label="切换示意图与成片">
+                <button type="button" class="seg__btn" aria-pressed="true" data-for="case-dyq-player" data-still
+                        data-caption="圆的四个时刻：走出一个圆、一句一圈、荡开、下一张">四个时刻</button>
+                <button type="button" class="seg__btn" aria-pressed="false" data-for="case-dyq-player"
+                        data-src="projects/2026-11-25-01-wanda-dou-yi-quan/variants/share/dou-yi-quan_share.mp4"
+                        data-poster="assets/posters/dou-yi-quan.jpg" data-time="2:47"
+                        data-caption="成片：每唱完一句，这一句就绕成一圈刻进唱片">成片</button>
+              </div>
+              <div class="player player--case is-still" id="case-dyq-player" data-player>
+                <video preload="none" playsinline poster="assets/posters/dou-yi-quan.jpg"
+                       src="projects/2026-11-25-01-wanda-dou-yi-quan/variants/share/dou-yi-quan_share.mp4"
+                       aria-label="兜一圈 MV"></video>
+                <button class="player__cover" type="button" aria-label="播放">
+                  <span class="player__btn" aria-hidden="true"></span>
+                  <span class="player__time" data-time>2:47</span>
+                </button>
+                <button type="button" class="player__still" data-lightbox data-src="assets/posters/dou-yi-quan-states.jpg"
+                        aria-label="放大圆的四个时刻示意图">
+                  <img src="assets/posters/dou-yi-quan-states.jpg"
+                       alt="圆的四个时刻：冬夜的五角场，两个人沿环岛走出的线合成一个亮的圆；蓝色唱片上，唱过的十六句歌词从里往外排成一把扇面；水滴落下后，一圈圈刻纹带着歌词向外荡开，下面露出夜里的上海；日出色的新唱片上，唱针刚刚落下" width="720" height="1280" loading="lazy">
+                </button>
+              </div>
+              <p class="viewer__cap" data-viewer-cap>圆的四个时刻：走出一个圆、一句一圈、荡开、下一张</p>
+            </div>
+          </div>
+
+          <div class="case__body">
+            <p class="case__kicker"><span>12 · MV</span>2026-11-25 · 用户的歌 · 本机人声分离 + Whisper + CTC 对齐 · 画面程序计算（Skia）· 合成 Claude</p>
+            <h3 class="case__title" id="case-dyq-title">兜一圈：一句一圈，刻进唱片</h3>
+            <p class="case__lead">一首 2 分 47 秒的歌，作者为"万达入沪20载 AI歌曲创作大赛"写的：2006 年冬天在五角场随便兜的一圈，一兜就是二十年。歌里的"兜一圈"是逛一圈、一年、唱片转一圈、涟漪。量出来的事实是：一句歌词正好两小节，到 Bridge 之前正好唱了 20 句。所以片子里唱片每两小节转一圈，每唱完一句，这一句就绕成一圈刻进唱片，像年轮一样从里往外长；第二遍副歌唱完，唱片上正好 20 圈。Bridge 里一滴水把这 20 圈荡出去，从五角场荡到临港的滴水湖；那个圆的湖，就是最后一遍副歌里的"下一张唱片"。</p>
+
+            <dl class="facts">
+              <div><dt>Bridge 前唱的句数 = 唱片上的圈数</dt><dd>20<small>圈</small></dd></div>
+              <div><dt>逐字出现的字</dt><dd>329<small>个</small></dd></div>
+              <div><dt>生成模型费用</dt><dd>0<small>元</small></dd></div>
+            </dl>
+
+            <ol class="steps">
+              <li><h4>先量歌</h4><p>约 112 BPM，但全程在慢慢变快：每拍从 0.541 秒缩到 0.5285 秒，所以不用固定网格，逐拍跟踪 312 拍。唱片的转角直接读拍点，片子里的唱片真的越转越快。伴奏有两处整体停掉：第一段预副歌里的一拍，和结尾道别的那一秒。</p></li>
+              <li><h4>一句一圈</h4><p>正在唱的一句沿唱片下沿的弧线逐字出现；到下一个乐句的强拍收进唱片，成为一圈刻纹，从此跟着唱片转。唱片每 8 拍转一圈，所以每到乐句开头，刻好的句子都转回正下方叠成一把扇面，新的一句接在它下面。念白不刻，用手写体写在旁边。</p></li>
+              <li><h4>同一个圆心</h4><p>五角场的环岛、新家的圆地毯、夜饭桌上的转盘、小赛车的赛道、滴水湖、唱片，全部俯视，画在同一个圆心上。主歌里镜头在回忆里，唱片只剩一圈玻璃的边；副歌拉开，场景像光圈一样收进唱片中心。第二遍副歌的前两句，镜头锁到唱片上一起转，歌词扇面停下来可以读。</p></li>
+              <li><h4>逐字对时间</h4><p>分离人声后，两遍独立转写加三种 CTC 强制对齐，每个字 5 个估计，取最大一簇的中位数。三遍副歌互相校验：第二遍的每个字比第一遍晚 43.00 秒，误差 ±0.03 秒。句首再和人声轨电平从静到响的那一刻对照。</p></li>
+            </ol>
+
+            <aside class="note">
+              <p class="note__tag">注意</p>
+              <p>歌曲和歌词是作者的原创参赛作品，原曲音频和歌词文件不入库；成片音轨是原曲 MP3 流原样复制（音频包 MD5 与原曲一致）。画面没有用任何图片、视频或地图素材：上海地图是手工放的二十几个点连成的示意，只保证五个地方的相对方位；片中的"万达入沪二十载"、年份和地名是布景，不是歌词，也没有使用任何标志。逐字时间来自识别和测量，没有人听过核对。</p>
+            </aside>
+
+            <div class="retro">
+              <div>
+                <h4 class="retro__h retro__h--good">做得好</h4>
+                <ul>
+                  <li>规则是数出来的：数句子数到 20，歌词里的"二十圈"和画面就接上了。</li>
+                  <li>所有场景共用一个圆心和一个俯视角度，换场景只是换"圆里是什么"。</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="retro__h retro__h--next">下次改进</h4>
+                <ul>
+                  <li>先用"一句歌词多长"核对速度：通用测速把 112 BPM 量成了 74。</li>
+                  <li>刻纹起初从外往里长，扇面读起来是倒序的；从里往外才顺。</li>
+                </ul>
+              </div>
+            </div>
+
+            <figure class="sheet">
+              <button type="button" class="sheet__btn" data-lightbox
+                      data-src="projects/2026-11-25-01-wanda-dou-yi-quan/thumbs/dou-yi-quan_sheet.jpg"
+                      aria-label="放大逐帧预览">
+                <img src="projects/2026-11-25-01-wanda-dou-yi-quan/thumbs/dou-yi-quan_sheet.jpg"
+                     alt="逐帧预览：空白的蓝唱片和落下的唱针；冬夜的五角场和彩蛋；蓝唱片上一圈圈刻进去的歌词；新家的蓝窗帘、夜饭的圆桌、小赛车的赛道、傍晚的公园；镜头跟着唱片转时静止的歌词扇面；夜里的水面、上海地图和滴水湖边的鲸鱼；日出色的新唱片；清晨地图上五张转着的小唱片；最后圈在一个圆里的两个人" width="2376" height="1536" loading="lazy">
+              </button>
+              <figcaption>逐帧预览，每 4 秒一帧：唱针、五角场、副歌、新家、夜饭、赛车、扇面、水滴、滴水湖、新唱片、地图、两个人</figcaption>
+            </figure>
+
+            <p class="links">
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-25-01-wanda-dou-yi-quan/storyboard.md" target="_blank" rel="noopener">歌曲分析与分镜</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-25-01-wanda-dou-yi-quan/scripts/score.py" target="_blank" rel="noopener">全片的钟</a>
+              <a href="https://github.com/Anna-SAP/Fun-Videos-Anna/blob/main/projects/2026-11-25-01-wanda-dou-yi-quan/scripts/disc.py" target="_blank" rel="noopener">唱片和歌词</a>
             </p>
           </div>
         </article>

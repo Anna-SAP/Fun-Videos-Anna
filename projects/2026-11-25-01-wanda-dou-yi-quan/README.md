@@ -16,7 +16,7 @@
 | <img src="thumbs/dou-yi-quan_poster.jpg" width="160"> | [`media/dou-yi-quan.mp4`](media/dou-yi-quan.mp4)（母版） | 2:47.2 | 1080×1920 · 30 fps · H.264 6.0 Mbps 两遍（BT.709）· 音轨为原曲 MP3 流原样复制 | 129.3 MB |
 | | [`variants/share/dou-yi-quan_share.mp4`](variants/share/dou-yi-quan_share.mp4)（分享版，适合微信 / 小红书转发） | 2:47.2 | 同上，2.2 Mbps，编码前轻降噪 | 49.6 MB |
 
-逐帧预览：[每 4 秒一帧](thumbs/dou-yi-quan_sheet.jpg)。SHA-256：母版 `57fbefff…5223`，分享版 `90468886…89da`。
+逐帧预览：[每 4 秒一帧](thumbs/dou-yi-quan_sheet.jpg)。分享版已放上[展示网站](https://anna-sap.github.io/Fun-Videos-Anna/)：作品第 12 支，制作历程里有一节，示意图是圆的四个时刻（走出一个圆、一句一圈、荡开、下一张）。SHA-256：母版 `57fbefff…5223`，分享版 `90468886…89da`。
 
 校验：两条成片的音频包 MD5 都与原曲一致（`db5d72f7…cb0a`），16.7 / 58.5 / 100.3 / 142.1 s 互相关偏移 0.00 ms；5017 帧，视频 167.233 s、音频 167.22 s；从成片抽查 6 个字（主歌、副歌、Bridge、念白、最后一遍副歌各取一个）：起点前 0.13 s 的那一帧都还没有这个字，起点后 0.07 s 的那一帧都已经出现。
 
