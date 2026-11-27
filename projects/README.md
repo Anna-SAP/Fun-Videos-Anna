@@ -57,6 +57,8 @@ scripts/       这个作品用到的脚本（可选）
 | | 分享版 | `variants/share/dou-yi-quan_share.mp4` | 2:47.2 | 1080×1920 | 49.6 MB | Claude |
 | [别回答 · Coldwave](2026-11-25-02-bie-huida-coldwave/) | **成片** | `media/bie-huida-coldwave.mp4` | 4:24.4 | 1080×1920 | 236.1 MB | Claude |
 | | 分享版 | `variants/share/bie-huida-coldwave_share.mp4` | 4:24.4 | 1080×1920 | 57.3 MB | Claude |
+| [三十秒](2026-11-27-01-thirty-seconds/) | **成片** | `media/thirty-seconds.mp4` | 3:57.6 | 1080×1920 | 211.8 MB | Claude |
+| | 分享版 | `variants/share/thirty-seconds_share.mp4` | 3:57.6 | 1080×1920 | 51.5 MB | Claude |
 
 The Moment 的三条原画质版（7.0 Mbps，各约 163 MB）留在本机，没有入库；入库的是从分镜文件单独编码的 1.6 Mbps 分享版。
 
